@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
     { name: '축제소개', href: '/festival-intro' },
@@ -14,19 +13,8 @@ const Header = () => {
     { name: '공지사항', href: '/notice' }
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#2c2c2d] shadow-lg' : 'bg-[#2c2c2d]/95 backdrop-blur-sm'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#2c2c2d]">
       <div className="h-[85px]">
         <div className="container mx-auto h-full px-6 md:px-16 max-w-full">
           <div className="flex items-center justify-between h-full">

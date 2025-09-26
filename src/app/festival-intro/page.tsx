@@ -57,11 +57,11 @@ export default function FestivalIntroPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] mt-[85px]">
+      <section className="relative h-[375px] mt-[85px]">
         <div className="absolute inset-0">
           <img src={imgHeroBg} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
+        <div className="absolute inset-0 bg-[rgba(44,44,45,0.9)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
@@ -170,42 +170,42 @@ export default function FestivalIntroPage() {
           {/* Company Logos Grid - Row 1 */}
           <div className="mb-10">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow1[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" style={{ maxWidth: '217px' }} />
-              <img src={companyLogosRow1[1]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" style={{ maxWidth: '216px' }} />
-              <img src={companyLogosRow1[2]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" style={{ maxWidth: '168px' }} />
-              <img src={companyLogosRow1[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" style={{ maxWidth: '176px' }} />
-              <img src={companyLogosRow1[4]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" style={{ maxWidth: '140px' }} />
+              <img src={companyLogosRow1[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
+              <img src={companyLogosRow1[1]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
+              <img src={companyLogosRow1[2]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
+              <img src={companyLogosRow1[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
+              <img src={companyLogosRow1[4]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
             </div>
           </div>
 
           {/* Company Logos Grid - Row 2 */}
           <div className="mb-10">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow2[0]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" style={{ maxWidth: '175px' }} />
-              <img src={companyLogosRow2[1]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" style={{ maxWidth: '154px' }} />
-              <img src={companyLogosRow2[2]} alt="" className="h-[25px] md:h-[35px] w-auto mx-auto" style={{ maxWidth: '138px' }} />
-              <img src={companyLogosRow2[3]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" style={{ maxWidth: '119px' }} />
-              <img src={companyLogosRow2[4]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" style={{ maxWidth: '222px' }} />
+              <img src={companyLogosRow2[0]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
+              <img src={companyLogosRow2[1]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
+              <img src={companyLogosRow2[2]} alt="" className="h-[25px] md:h-[35px] w-auto mx-auto" />
+              <img src={companyLogosRow2[3]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
+              <img src={companyLogosRow2[4]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
             </div>
           </div>
 
           {/* Company Logos Grid - Row 3 */}
           <div className="mb-10">
             <div className="grid grid-cols-2 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow3[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" style={{ maxWidth: '179px' }} />
-              <img src={companyLogosRow3[1]} alt="" className="h-[30px] md:h-[44px] w-auto mx-auto" style={{ maxWidth: '241px' }} />
-              <img src={companyLogosRow3[2]} alt="" className="h-[35px] md:h-[56px] w-auto mx-auto" style={{ maxWidth: '215px' }} />
-              <img src={companyLogosRow3[3]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" style={{ maxWidth: '295px' }} />
+              <img src={companyLogosRow3[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
+              <img src={companyLogosRow3[1]} alt="" className="h-[30px] md:h-[44px] w-auto mx-auto" />
+              <img src={companyLogosRow3[2]} alt="" className="h-[35px] md:h-[56px] w-auto mx-auto" />
+              <img src={companyLogosRow3[3]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
             </div>
           </div>
 
           {/* Company Logos Grid - Row 4 */}
           <div>
             <div className="grid grid-cols-2 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow4[0]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" style={{ maxWidth: '207px' }} />
-              <img src={companyLogosRow4[1]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" style={{ maxWidth: '97px' }} />
-              <img src={companyLogosRow4[2]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" style={{ maxWidth: '273px' }} />
-              <img src={companyLogosRow4[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" style={{ maxWidth: '264px' }} />
+              <img src={companyLogosRow4[0]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
+              <img src={companyLogosRow4[1]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
+              <img src={companyLogosRow4[2]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
+              <img src={companyLogosRow4[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
             </div>
           </div>
         </div>
