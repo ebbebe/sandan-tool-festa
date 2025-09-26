@@ -8,7 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
-    { name: '축제소개', href: '#about' },
+    { name: '축제소개', href: '/festival-intro' },
     { name: '프로그램', href: '#program' },
     { name: '현장안내', href: '#guide' },
     { name: '공지사항', href: '#notice' }
