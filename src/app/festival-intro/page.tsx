@@ -85,12 +85,12 @@ export default function FestivalIntroPage() {
             </p>
           </div>
 
-          <div className="flex justify-center mb-20">
+          <div className="flex justify-center mb-12">
             <img src={imgFeatures} alt="" className="max-w-[645px] w-full" />
           </div>
 
-          <div className="text-center">
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[25px] leading-relaxed text-[#2c2c2d] mb-8">
+          <div className="text-center mb-20">
+            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[25px] leading-relaxed text-[#2c2c2d]">
               시민이 직접 만나 교류하는 이 행사는<br />
               <span className="font-bold">산업계</span>와 <span className="font-bold">시민</span> 모두에게 <span className="font-bold">실질적 도움과 경험을 제공</span>
             </p>
@@ -99,7 +99,7 @@ export default function FestivalIntroPage() {
       </section>
 
       {/* Goals Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="flex justify-center mb-12">
             <img src={imgGoals} alt="" className="max-w-[645px] w-full" />
@@ -122,106 +122,47 @@ export default function FestivalIntroPage() {
         </div>
       </section>
 
-      {/* Features Cards */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* 산단기업전시 */}
-            <div className="bg-[#388e72] rounded-lg p-8 text-white text-center">
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-bold mb-4">산단기업전시</h3>
-              <div className="h-px bg-white/30 mb-4" />
-              <h4 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-lg font-bold mb-4">산업공구전시</h4>
-              <div className="h-px bg-white/30 mb-4" />
-              <h4 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-lg font-bold mb-4">시민체험</h4>
-            </div>
-
-            {/* 채용박람회 */}
-            <div className="bg-[#388e72] rounded-lg p-8 text-white text-center">
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-bold mb-4">채용박람회</h3>
-              <div className="space-y-4 mt-8">
-                <p className="text-sm">시민이 직접 만나 교류하는 이 행사는</p>
-                <p className="text-sm">산업계와 시민 모두에게 실질적 도움과 경험을 제공</p>
-              </div>
-            </div>
-
-            {/* 산업공구전시 */}
-            <div className="bg-[#388e72] rounded-lg p-8 text-white text-center">
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-bold mb-4">산업공구전시</h3>
-              <div className="space-y-4 mt-8">
-                <p className="text-sm">시민이 직접 만나 교류하는 이 행사는</p>
-                <p className="text-sm">산업계와 시민 모두에게 실질적 도움과 경험을 제공</p>
-              </div>
-            </div>
-
-            {/* 시민체험 */}
-            <div className="bg-[#388e72] rounded-lg p-8 text-white text-center">
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-bold mb-4">시민체험</h3>
-              <div className="space-y-4 mt-8">
-                <p className="text-sm">시민이 직접 만나 교류하는 이 행사는</p>
-                <p className="text-sm">산업계와 시민 모두에게 실질적 도움과 경험을 제공</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Points */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid md:grid-cols-4 gap-12 text-center">
-            <div>
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-5xl font-black text-[#388e72] mb-4">기술</h3>
-              <div className="w-2 h-2 bg-[#388e72] rounded-full mx-auto mb-4" />
-              <h4 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-xl font-bold text-[#2c2c2d] mb-4">기업</h4>
-              <div className="w-2 h-2 bg-[#388e72] rounded-full mx-auto mb-4" />
-              <h4 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-xl font-bold text-[#2c2c2d] mb-4">공업</h4>
-              <div className="w-2 h-2 bg-[#388e72] rounded-full mx-auto mb-4" />
-              <h4 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-xl font-bold text-[#2c2c2d]">도시</h4>
-            </div>
-            <div className="md:col-span-3 flex items-center">
-              <div className="space-y-6 text-left">
-                <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[20px] text-[#363636]">
-                  <span className="font-bold">'기술'</span>이 시민과 만나는 산업문화의 대중화
-                </p>
-                <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[20px] text-[#363636]">
-                  <span className="font-bold">'기업'</span>이 인재와 만나는 실질적 채용연계
-                </p>
-                <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[20px] text-[#363636]">
-                  <span className="font-bold">'산업 제품'</span>과 소비자와 만나는 B2C 융합시장 형성
-                </p>
-                <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[20px] text-[#363636]">
-                  <span className="font-bold">'도시'</span>가 산업 브랜드화되는 산업문화 도시 모델
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Partners Section */}
-      <section className="py-20 bg-[#338e72]">
+      <section className="relative py-20 bg-[#338e72]">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-12">
-            <img src={imgToolfesta} alt="" className="w-10 h-10" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[40px] font-black text-white drop-shadow-lg">
+            <img src={imgToolfesta} alt="" className="w-[41px] h-[41px]" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif', textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px' }} className="text-[40px] font-black text-white">
               협력사
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+          {/* Main Partner Logos */}
+          <div className="flex justify-between items-center mb-16">
             {partnerLogos.map((logo, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 flex items-center justify-center h-24">
+              <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-center" style={{ width: '180px', height: '100px' }}>
                 <img src={logo} alt={`Partner ${index + 1}`} className="max-h-full max-w-full object-contain" />
               </div>
             ))}
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {companyLogos.map((logo, index) => (
-              <div key={index} className="bg-white/10 rounded p-4 flex items-center justify-center h-16">
-                <img src={logo} alt={`Company ${index + 1}`} className="max-h-full max-w-full object-contain" />
-              </div>
-            ))}
+          {/* Company Logos Grid */}
+          <div className="space-y-8">
+            <div className="flex justify-around items-center">
+              {companyLogos.slice(0, 5).map((logo, index) => (
+                <img key={index} src={logo} alt={`Company ${index + 1}`} className="h-auto" style={{ maxHeight: '43px' }} />
+              ))}
+            </div>
+            <div className="flex justify-around items-center">
+              {companyLogos.slice(5, 10).map((logo, index) => (
+                <img key={index + 5} src={logo} alt={`Company ${index + 6}`} className="h-auto" style={{ maxHeight: '35px' }} />
+              ))}
+            </div>
+            <div className="flex justify-around items-center">
+              {companyLogos.slice(10, 14).map((logo, index) => (
+                <img key={index + 10} src={logo} alt={`Company ${index + 11}`} className="h-auto" style={{ maxHeight: '44px' }} />
+              ))}
+            </div>
+            <div className="flex justify-around items-center">
+              {companyLogos.slice(14, 18).map((logo, index) => (
+                <img key={index + 14} src={logo} alt={`Company ${index + 15}`} className="h-auto" style={{ maxHeight: '23px' }} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
