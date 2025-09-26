@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -24,6 +25,10 @@ const notices = [
 ]
 
 export default function NoticePage() {
+  const handleNoticeClick = (id: number) => {
+    window.location.href = `/notice/${id}`
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
@@ -82,7 +87,11 @@ export default function NoticePage() {
               </thead>
               <tbody>
                 {notices.map((notice) => (
-                  <tr key={notice.id} className="border-b border-[#d9d9d9] hover:bg-gray-50 transition-colors cursor-pointer">
+                  <tr
+                    key={notice.id}
+                    className="border-b border-[#d9d9d9] hover:bg-gray-50 transition-colors cursor-pointer"
+                    onClick={() => handleNoticeClick(notice.id)}
+                  >
                     <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
                       {notice.id}
                     </td>
