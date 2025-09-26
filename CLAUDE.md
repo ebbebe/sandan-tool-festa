@@ -47,19 +47,29 @@ npm run type-check
 npm run lint
 ```
 
-## Figma 디자인 통합
-프로젝트는 Figma 디자인 파일의 에셋을 직접 다운로드 받아 사용합니다. 이러한 에셋은 로컬 에셋 서버(localhost:3845)를 통해 제공되며 다음을 포함합니다:
-- 로고 이미지
-- 각 섹션의 배경 이미지
-- 소셜 미디어 아이콘
-- 장식 요소 (점, 도형)
-- INDUSTRIAL COMPLEX TOOLFESTA 배너 이미지
+## 에셋 관리
+프로젝트는 혼합된 에셋 접근 방식을 사용합니다:
+
+### 로컬 에셋 (`/assets/`)
+- 공통 아이콘 (dot-icon.png)
+- 소셜 미디어 아이콘 (social-1.png, social-2.png, social-3.png)
+- 협력사 로고 (partner-1.png ~ partner-18.png)
+- 이벤트 카드 이미지 (event-card-1.png ~ event-card-3.png)
+- 일반적인 UI 요소 (divider.png, btn-guide.svg 등)
+- 성공적으로 다운로드된 Figma 에셋 (festival-hero-bg.png)
+
+### Figma 서버 에셋 (`http://localhost:3845/assets/`)
+- 각 페이지별 고유 배경 이미지
+- 프로그램 세부 이미지
+- 체험 프로그램 이미지
+- 툴 아이콘들
+- 기타 Figma에서만 제공되는 에셋
 
 ### 주요 디자인 요소
-1. **헤더**: 실제 Figma 로고 이미지와 소셜 아이콘 사용
-2. **히어로 섹션**: TOOLFESTA는 텍스트가 아닌 이미지 에셋
-3. **행사 정보 섹션**: YouTube와 행사 세부사항이 공유 배경(Rectangle 247)과 함께 통합
-4. **행사 카드**: 각 카드마다 고유한 Figma 이미지 에셋 보유
+1. **헤더**: 로컬 로고 이미지와 소셜 아이콘 사용
+2. **히어로 섹션**: TOOLFESTA는 텍스트가 아닌 이미지 에셋 (Figma 서버)
+3. **행사 정보 섹션**: YouTube와 행사 세부사항이 공유 배경과 함께 통합 (Figma 서버)
+4. **행사 카드**: 각 카드마다 고유한 이미지 에셋 (로컬 저장)
 5. **타이포그래피**: 제목은 WantedGothic 폰트, 본문은 Pretendard 사용
 
 ## 주요 구현 세부사항
@@ -73,9 +83,11 @@ npm run lint
 각 섹션은 다음 패턴을 따릅니다:
 ```tsx
 <section className="relative py-16 md:py-24">
-  {/* 배경 이미지 */}
+  {/* 배경 이미지 - 로컬 또는 Figma 서버 */}
   <div className="absolute inset-0">
-    <img src="figma-asset-url" />
+    <img src="/assets/local-image.png" /> {/* 로컬 에셋 */}
+    {/* 또는 */}
+    <img src="http://localhost:3845/assets/figma-hash.png" /> {/* Figma 서버 */}
   </div>
 
   {/* 다크 오버레이 */}
@@ -109,21 +121,24 @@ style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}
 ```
 
 ## 향후 개발 참고사항
-1. 협력사 로고는 현재 플레이스홀더 - 실제 로고 제공 시 교체 필요
-2. YouTube 비디오 통합에 실제 비디오 ID 필요
-3. 네비게이션 링크에 적절한 라우팅 구현 필요
-4. 폼 제출 기능(있는 경우) 백엔드 통합 필요
-5. 더 나은 UX를 위한 애니메이션 추가 고려
-6. 적절한 SEO 메타 태그 구현
+1. **에셋 최적화**: Figma 서버 에셋들을 점진적으로 로컬로 이전 필요
+2. **협력사 로고**: 현재 실제 로고 사용 중 - 업데이트 시 partner-*.png 파일 교체
+3. **YouTube 비디오**: 실제 비디오 ID로 교체 필요
+4. **네비게이션**: 모든 페이지 라우팅 구현 완료
+5. **폼 기능**: 향후 백엔드 통합 시 필요
+6. **성능 개선**: 애니메이션 및 로딩 최적화 고려
+7. **SEO**: 메타 태그 및 구조화된 데이터 추가
 
 ## 테스트 체크리스트
 - [ ] 모바일, 태블릿, 데스크톱에서 반응형 디자인
-- [ ] 모든 Figma 에셋 올바르게 로딩
-- [ ] 네비게이션 링크 작동
+- [ ] 로컬 에셋 (/assets/) 올바르게 로딩
+- [ ] Figma 서버 에셋 (localhost:3845) 접근 가능
+- [ ] 네비게이션 링크 작동 (메인, 축제소개, 프로그램, 현장안내, 공지사항)
 - [ ] 한국어 텍스트 올바르게 표시
-- [ ] 폰트 올바르게 로딩
+- [ ] 폰트 (Pretendard, WantedGothic) 올바르게 로딩
 - [ ] 다크 테마 일관성
 - [ ] 브라우저 호환성 (Chrome, Firefox, Safari, Edge)
+- [ ] 공지사항 페이지 동적 라우팅 작동
 
 ## 배포
 프로젝트는 표준 Next.js 배포 준비 완료:

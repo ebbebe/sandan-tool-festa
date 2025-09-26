@@ -4,8 +4,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const imgHeroBg = "http://localhost:3845/assets/adf09b1cf6c64ef3e55dae89fdbabc5b190421cb.png"
-const imgIconProgram = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
-const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
+const imgIconProgram = "/assets/dot-icon.png"
+const imgDivider = "/assets/divider.png"
 
 // Program images
 const imgProgram1 = "http://localhost:3845/assets/f0b3acd396bb508fc92c707429ef78244726a93a.png"

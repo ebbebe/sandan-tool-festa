@@ -6,11 +6,11 @@ import Footer from '@/components/Footer'
 import Script from 'next/script'
 
 const imgHeroBg = "http://localhost:3845/assets/1850d0b4e9293c01ce4ee462407749816cbdded3.png"
-const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
+const imgDivider = "/assets/divider.png"
 const imgMapPlaceholder = "http://localhost:3845/assets/83856390414c09404f8ac3bddec91b5888ec5467.png"
 const imgParking1 = "http://localhost:3845/assets/f45cc72308f0f81522f56bfb94a0d6e53059e897.png"
 const imgParking2 = "http://localhost:3845/assets/65032ddea55aec1f43dc08f906d03cff2f8a6539.png"
-const imgLocationIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
+const imgLocationIcon = "/assets/dot-icon.png"
 
 interface KakaoMap {
   setCenter: (latlng: unknown) => void

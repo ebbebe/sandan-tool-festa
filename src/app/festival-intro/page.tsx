@@ -3,22 +3,22 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const imgHeroBg = "http://localhost:3845/assets/2e4ed3f77f17331ca0609e3195860120829368f1.png"
-const imgWhatIs = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
-const imgFeatures = "http://localhost:3845/assets/ef71dfb5b7137ee9d7a742d51d877996ed35d184.png"
-const imgGoals = "http://localhost:3845/assets/5bc6e11c61ee114bdad1dc02efab537d94e10361.png"
-const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
+const imgHeroBg = "/assets/festival-hero-bg.png"
+const imgWhatIs = "/assets/dot-icon.png"
+const imgFeatures = "/assets/festival-features.png"
+const imgGoals = "/assets/festival-goals.png"
+const imgDivider = "/assets/divider.png"
 
 // Tool icons
 const toolIcons = [
-  "http://localhost:3845/assets/bf2cf264d89900c37ed0866c0ac9941c13bb1798.png", // image 103
-  "http://localhost:3845/assets/963c6c237312654e9f4cfa4c150e3a9305fd5416.png", // image 106
-  "http://localhost:3845/assets/2d0b6d5c667664004781a9edf4c4724ead35fa6b.png", // image 104
-  "http://localhost:3845/assets/fa8c0b6e54918e2c548d106f4a74d2e8a038966c.png", // image 101
-  "http://localhost:3845/assets/2fe31353972229d8363e44667a47642be61c244f.png", // image 102
+  "/assets/tool-icon-1.png", // image 103
+  "/assets/tool-icon-2.png", // image 106
+  "/assets/tool-icon-3.png", // image 104
+  "/assets/tool-icon-4.png", // image 101
+  "/assets/tool-icon-5.png", // image 102
 ]
 
-const imgToolfesta = "http://localhost:3845/assets/cccd5dba529a68d460962243637992f0e6dbcd4a.png"
+const imgToolfesta = "/assets/toolfesta-icon.png"
 
 // Company logos organized by rows
 const companyLogosRow1 = [

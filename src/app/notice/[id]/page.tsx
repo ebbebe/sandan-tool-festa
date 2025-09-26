@@ -7,8 +7,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const imgHeroBg = "http://localhost:3845/assets/945208d7854e1b74af3b553f15b0752fe5f3493e.png"
-const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
-const imgNoticeIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
+const imgDivider = "/assets/divider.png"
+const imgNoticeIcon = "/assets/dot-icon.png"
 
 // Type definition for notice
 interface Notice {
