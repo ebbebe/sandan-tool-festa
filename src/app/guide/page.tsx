@@ -12,13 +12,25 @@ const imgParking1 = "http://localhost:3845/assets/f45cc72308f0f81522f56bfb94a0d6
 const imgParking2 = "http://localhost:3845/assets/65032ddea55aec1f43dc08f906d03cff2f8a6539.png"
 const imgLocationIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
 
+interface KakaoMap {
+  setCenter: (latlng: unknown) => void
+}
+
+interface KakaoMarker {
+  setMap: (map: KakaoMap | null) => void
+}
+
+interface KakaoInfoWindow {
+  open: (map: KakaoMap, marker?: KakaoMarker) => void
+}
+
 declare global {
   interface Window {
     kakao: {
       maps: {
-        Map: new (container: HTMLElement, options: object) => unknown
-        Marker: new (options: object) => unknown
-        InfoWindow: new (options: object) => unknown
+        Map: new (container: HTMLElement, options: object) => KakaoMap
+        Marker: new (options: object) => KakaoMarker
+        InfoWindow: new (options: object) => KakaoInfoWindow
         LatLng: new (lat: number, lng: number) => unknown
         load: (callback: () => void) => void
       }
@@ -54,7 +66,7 @@ export default function GuidePage() {
         const markerPosition = new window.kakao.maps.LatLng(37.4082, 126.6742)
         const marker = new window.kakao.maps.Marker({
           position: markerPosition
-        })
+        }) as KakaoMarker
         marker.setMap(map)
 
         // 인포윈도우 추가
@@ -63,7 +75,7 @@ export default function GuidePage() {
         const infowindow = new window.kakao.maps.InfoWindow({
           position: iwPosition,
           content: iwContent
-        })
+        }) as KakaoInfoWindow
         infowindow.open(map, marker)
         setMapLoaded(true)
       } catch (error) {
