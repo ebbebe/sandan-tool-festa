@@ -47,7 +47,7 @@ const EventInfo = () => {
           {/* Date and Location Info */}
           <div className="max-w-6xl mx-auto">
             {/* Date */}
-            <div className="flex items-start mb-8">
+            <div className="flex items-start justify-center mb-8">
               <img
                 src="/assets/dot-icon.png"
                 alt=""
@@ -76,7 +76,7 @@ const EventInfo = () => {
             </div>
 
             {/* Location with Button */}
-            <div className="flex items-start">
+            <div className="flex items-start justify-center">
               <img
                 src="/assets/dot-icon.png"
                 alt=""
