@@ -36,10 +36,10 @@ export default function NoticePage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-5xl font-black text-white">
+            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               공지사항
             </p>
           </div>
@@ -52,30 +52,30 @@ export default function NoticePage() {
       </div>
 
       {/* Notice Board Section */}
-      <section className="pt-20 pb-150 bg-white">
-        <div className="container mx-auto px-8 max-w-7xl">
+      <section className="pt-16 md:pt-20 pb-32 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgNoticeIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[34px] font-black text-[#363636]">
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
               공지사항
             </h2>
           </div>
 
           {/* Notice Table */}
-          <div className="mb-12">
-            <table className="w-full">
+          <div className="mb-12 overflow-x-auto">
+            <table className="w-full min-w-[600px]">
               <thead>
                 <tr className="border-b-[5px] border-[#2c2c2d]">
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-lg text-[#2c2c2d] w-[10%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[10%]">
                     번호
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-left pl-4 font-black text-lg text-[#2c2c2d] w-[55%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-left pl-4 font-black text-base md:text-lg text-[#2c2c2d] w-[55%]">
                     제목
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-lg text-[#2c2c2d] w-[20%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[20%]">
                     작성일
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-lg text-[#2c2c2d] w-[15%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[15%]">
                     조회
                   </th>
                 </tr>
@@ -83,16 +83,16 @@ export default function NoticePage() {
               <tbody>
                 {notices.map((notice) => (
                   <tr key={notice.id} className="border-b border-[#d9d9d9] hover:bg-gray-50 transition-colors cursor-pointer">
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
                       {notice.id}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 pl-4 font-bold text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 pl-4 font-bold text-base md:text-lg text-[#2c2c2d]">
                       {notice.title}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
                       {notice.date}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
                       {notice.views.toLocaleString()}
                     </td>
                   </tr>
@@ -102,14 +102,14 @@ export default function NoticePage() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-3 md:gap-6">
             <button className="text-[#666666] hover:text-[#2c2c2d] transition-colors">
               <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 1L2 6L7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </button>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <button className="relative w-6 h-6 flex items-center justify-center">
                 <span className="absolute inset-0 bg-[#388d71] rounded-full"></span>
                 <span style={{ fontFamily: 'SUIT, sans-serif' }} className="relative text-white text-[15px] z-10">1</span>
