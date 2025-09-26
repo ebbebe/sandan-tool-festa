@@ -1,7 +1,9 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Script from 'next/script'
 
 const imgHeroBg = "http://localhost:3845/assets/1850d0b4e9293c01ce4ee462407749816cbdded3.png"
 const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
@@ -10,9 +12,94 @@ const imgParking1 = "http://localhost:3845/assets/f45cc72308f0f81522f56bfb94a0d6
 const imgParking2 = "http://localhost:3845/assets/65032ddea55aec1f43dc08f906d03cff2f8a6539.png"
 const imgLocationIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
 
+declare global {
+  interface Window {
+    kakao: any
+  }
+}
+
 export default function GuidePage() {
+  const mapContainer = useRef<HTMLDivElement>(null)
+  const [mapError, setMapError] = useState(false)
+  const [mapLoaded, setMapLoaded] = useState(false)
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout
+    const initializeMap = () => {
+      try {
+        if (!window.kakao || !window.kakao.maps) {
+          timeout = setTimeout(initializeMap, 100)
+          return
+        }
+
+        const container = mapContainer.current
+        if (!container) return
+
+        const options = {
+          center: new window.kakao.maps.LatLng(37.4082, 126.6742), // 소래포구 해오름 광장 좌표
+          level: 3
+        }
+
+        const map = new window.kakao.maps.Map(container, options)
+
+        // 마커 추가
+        const markerPosition = new window.kakao.maps.LatLng(37.4082, 126.6742)
+        const marker = new window.kakao.maps.Marker({
+          position: markerPosition
+        })
+        marker.setMap(map)
+
+        // 인포윈도우 추가
+        const iwContent = '<div style="padding:5px;">2025 산단툴페스타<br>소래포구 해오름 광장</div>'
+        const iwPosition = new window.kakao.maps.LatLng(37.4082, 126.6742)
+        const infowindow = new window.kakao.maps.InfoWindow({
+          position: iwPosition,
+          content: iwContent
+        })
+        infowindow.open(map, marker)
+        setMapLoaded(true)
+      } catch (error) {
+        console.error('Map initialization error:', error)
+        setMapError(true)
+      }
+    }
+
+    // API 키가 없거나 잘못된 경우 타임아웃 설정
+    const loadTimeout = setTimeout(() => {
+      if (!mapLoaded) {
+        setMapError(true)
+      }
+    }, 3000)
+
+    initializeMap()
+
+    return () => {
+      clearTimeout(timeout)
+      clearTimeout(loadTimeout)
+    }
+  }, [mapLoaded])
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* NOTE: Replace YOUR_KAKAO_API_KEY with actual Kakao Maps API key */}
+      {!mapError && (
+        <Script
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_API_KEY&autoload=false&libraries=services"
+          strategy="afterInteractive"
+          onError={() => setMapError(true)}
+          onLoad={() => {
+            if (window.kakao && window.kakao.maps) {
+              window.kakao.maps.load(() => {
+                // 맵 로드 완료 후 초기화
+                const event = new CustomEvent('kakaoMapLoaded')
+                window.dispatchEvent(event)
+              })
+            } else {
+              setMapError(true)
+            }
+          }}
+        />
+      )}
       <Header />
 
       {/* Hero Section */}
@@ -48,16 +135,23 @@ export default function GuidePage() {
             </h2>
           </div>
 
-          {/* Map Placeholder */}
+          {/* Kakao Map or Placeholder */}
           <div className="mb-12">
-            <div className="relative rounded-[13px] overflow-hidden h-[500px] mb-4">
-              <img src={imgMapPlaceholder} alt="" className="w-full h-full object-cover" />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[40px] font-black text-[#be2e2e]">
-                  카카오 맵
-                </p>
+            {mapError ? (
+              <div className="relative rounded-[13px] overflow-hidden h-[500px] mb-4">
+                <img src={imgMapPlaceholder} alt="" className="w-full h-full object-cover" />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[40px] font-black text-[#be2e2e]">
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div
+                ref={mapContainer}
+                className="rounded-[13px] overflow-hidden h-[500px] mb-4"
+                style={{ width: '100%' }}
+              />
+            )}
 
             <div className="flex justify-between items-start">
               <div>
