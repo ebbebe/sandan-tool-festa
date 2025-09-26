@@ -5,7 +5,9 @@
       "Bash(xcopy:*)",
       "mcp__figma-dev-mode__get_metadata",
       "Bash(npm run build:*)",
-      "Bash(npm run type-check:*)"
+      "Bash(npm run type-check:*)",
+      "Bash(npx eslint:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
