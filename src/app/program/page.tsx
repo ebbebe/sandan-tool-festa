@@ -215,7 +215,7 @@ export default function ProgramPage() {
           </div>
 
           {/* Saturday */}
-          <div className="mb-8">
+          <div className="mb-8 border border-gray-500">
             <div className="bg-[#388d71] text-white text-center py-3">
               <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black">
                 11월15일 (토)
@@ -223,32 +223,32 @@ export default function ProgramPage() {
             </div>
             <table className="w-full border-collapse">
               <tbody>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">11:00</td>
-                  <td className="p-4 font-bold text-xl">개막식</td>
+                <tr className="border-b border-gray-500">
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">11:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">개막식</td>
                 </tr>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">11:30</td>
-                  <td className="p-4 font-bold text-xl">소래포구 건강걷기</td>
+                <tr className="border-b border-gray-500">
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">11:30</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">소래포구 건강걷기</td>
                 </tr>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">12:00</td>
-                  <td className="p-4 font-bold text-xl">아라곳 오케스트라 공연 (35인조)</td>
+                <tr className="border-b border-gray-500">
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">12:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">아라곳 오케스트라 공연 (35인조)</td>
                 </tr>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">15:00</td>
-                  <td className="p-4 font-bold text-xl">기술경진대회</td>
+                <tr className="border-b border-gray-500">
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">15:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">기술경진대회</td>
                 </tr>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">15:00 ~ 18:00</td>
-                  <td className="p-4 font-bold text-xl">산업제품 시연 + 전시관, 체험존, 채용박람회 운영</td>
+                <tr>
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">15:00 ~ 18:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">산업제품 시연 + 전시관, 체험존, 채용박람회 운영</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           {/* Sunday */}
-          <div>
+          <div className="border border-gray-500">
             <div className="bg-[#388d71] text-white text-center py-3">
               <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black">
                 11월16일 (일)
@@ -256,13 +256,13 @@ export default function ProgramPage() {
             </div>
             <table className="w-full border-collapse">
               <tbody>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl">11:00 ~ 12:00</td>
-                  <td className="p-4 font-bold text-xl">소래포구 트레일런</td>
+                <tr className="border-b border-gray-500">
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500">11:00 ~ 12:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">소래포구 트레일런</td>
                 </tr>
-                <tr className="border-b">
-                  <td className="w-1/5 p-4 text-center font-bold text-xl align-top">15:00<br/>~<br/>18:00</td>
-                  <td className="p-4 font-bold text-xl">기술경진대회, 산업제품 시연 + 전시관, 체험존, 채용박람회 운영</td>
+                <tr>
+                  <td className="w-1/6 p-4 text-center font-bold text-xl text-[#2c2c2d] border-r border-gray-500 align-top">15:00<br/>~<br/>18:00</td>
+                  <td className="p-4 font-bold text-xl text-[#2c2c2d]">기술경진대회, 산업제품 시연 + 전시관, 체험존, 채용박람회 운영</td>
                 </tr>
               </tbody>
             </table>
