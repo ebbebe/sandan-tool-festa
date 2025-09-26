@@ -63,19 +63,19 @@ export default function NoticePage() {
 
           {/* Notice Table */}
           <div className="mb-12 overflow-x-auto">
-            <table className="w-full min-w-[600px]">
+            <table className="w-full min-w-[500px]">
               <thead>
                 <tr className="border-b-[5px] border-[#2c2c2d]">
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[10%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[12%] md:w-[10%]">
                     번호
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-left pl-4 font-black text-base md:text-lg text-[#2c2c2d] w-[55%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-left pl-2 md:pl-4 font-black text-sm md:text-lg text-[#2c2c2d] w-[48%] md:w-[55%]">
                     제목
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[20%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[22%] md:w-[20%]">
                     작성일
                   </th>
-                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-4 text-center font-black text-base md:text-lg text-[#2c2c2d] w-[15%]">
+                  <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[18%] md:w-[15%]">
                     조회
                   </th>
                 </tr>
@@ -83,16 +83,16 @@ export default function NoticePage() {
               <tbody>
                 {notices.map((notice) => (
                   <tr key={notice.id} className="border-b border-[#d9d9d9] hover:bg-gray-50 transition-colors cursor-pointer">
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
                       {notice.id}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 pl-4 font-bold text-base md:text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 pl-2 md:pl-4 font-bold text-sm md:text-lg text-[#2c2c2d] break-words">
                       {notice.title}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
                       {notice.date}
                     </td>
-                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-6 text-center font-bold text-base md:text-lg text-[#2c2c2d]">
+                    <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
                       {notice.views.toLocaleString()}
                     </td>
                   </tr>
@@ -102,26 +102,26 @@ export default function NoticePage() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-3 md:gap-6">
-            <button className="text-[#666666] hover:text-[#2c2c2d] transition-colors">
+          <div className="flex items-center justify-center gap-2 md:gap-6">
+            <button className="text-[#666666] hover:text-[#2c2c2d] transition-colors p-2">
               <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 1L2 6L7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </button>
 
-            <div className="flex items-center gap-2 md:gap-4">
-              <button className="relative w-6 h-6 flex items-center justify-center">
+            <div className="flex items-center gap-1 md:gap-4">
+              <button className="relative w-8 h-8 md:w-6 md:h-6 flex items-center justify-center">
                 <span className="absolute inset-0 bg-[#388d71] rounded-full"></span>
-                <span style={{ fontFamily: 'SUIT, sans-serif' }} className="relative text-white text-[15px] z-10">1</span>
+                <span style={{ fontFamily: 'SUIT, sans-serif' }} className="relative text-white text-sm md:text-[15px] z-10">1</span>
               </button>
               {[2, 3, 4, 5].map((page) => (
-                <button key={page} style={{ fontFamily: 'SUIT, sans-serif' }} className="text-[#666666] hover:text-[#2c2c2d] text-[15px] px-2 transition-colors">
+                <button key={page} style={{ fontFamily: 'SUIT, sans-serif' }} className="text-[#666666] hover:text-[#2c2c2d] text-sm md:text-[15px] px-2 py-1 transition-colors">
                   {page}
                 </button>
               ))}
             </div>
 
-            <button className="text-[#666666] hover:text-[#2c2c2d] transition-colors">
+            <button className="text-[#666666] hover:text-[#2c2c2d] transition-colors p-2">
               <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
