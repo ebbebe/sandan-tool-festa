@@ -2,43 +2,53 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Image from 'next/image'
 
 const imgHeroBg = "http://localhost:3845/assets/2e4ed3f77f17331ca0609e3195860120829368f1.png"
 const imgWhatIs = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
 const imgFeatures = "http://localhost:3845/assets/ef71dfb5b7137ee9d7a742d51d877996ed35d184.png"
 const imgGoals = "http://localhost:3845/assets/5bc6e11c61ee114bdad1dc02efab537d94e10361.png"
 
-const partnerLogos = [
-  "http://localhost:3845/assets/963c6c237312654e9f4cfa4c150e3a9305fd5416.png",
-  "http://localhost:3845/assets/fa8c0b6e54918e2c548d106f4a74d2e8a038966c.png",
-  "http://localhost:3845/assets/2fe31353972229d8363e44667a47642be61c244f.png",
-  "http://localhost:3845/assets/bf2cf264d89900c37ed0866c0ac9941c13bb1798.png",
-  "http://localhost:3845/assets/2d0b6d5c667664004781a9edf4c4724ead35fa6b.png"
+// Tool icons
+const toolIcons = [
+  "http://localhost:3845/assets/bf2cf264d89900c37ed0866c0ac9941c13bb1798.png", // image 103
+  "http://localhost:3845/assets/963c6c237312654e9f4cfa4c150e3a9305fd5416.png", // image 106
+  "http://localhost:3845/assets/2d0b6d5c667664004781a9edf4c4724ead35fa6b.png", // image 104
+  "http://localhost:3845/assets/fa8c0b6e54918e2c548d106f4a74d2e8a038966c.png", // image 101
+  "http://localhost:3845/assets/2fe31353972229d8363e44667a47642be61c244f.png", // image 102
 ]
 
-const companyLogos = [
+const imgToolfesta = "http://localhost:3845/assets/cccd5dba529a68d460962243637992f0e6dbcd4a.png"
+
+// Company logos organized by rows
+const companyLogosRow1 = [
   "http://localhost:3845/assets/caad686db2ea78c1f64c190306b551871ef9fe09.png",
-  "http://localhost:3845/assets/5492befe73b07950e13816bc53c4c29b44d8d6c3.png",
   "http://localhost:3845/assets/7bdcb28ae355e2c26918dd74430f72ed7f838ac8.png",
   "http://localhost:3845/assets/a0c12736db6832c596e6d6649e6e9beda11d305e.png",
   "http://localhost:3845/assets/8720a1b7e3424275d7c3a2b212fb7e44e277eb8c.png",
+  "http://localhost:3845/assets/5492befe73b07950e13816bc53c4c29b44d8d6c3.png"
+]
+
+const companyLogosRow2 = [
   "http://localhost:3845/assets/53452348a813bf938417e473904db6b4af161ac1.png",
   "http://localhost:3845/assets/ed5b0351d88e45401bb33ba389a93563acd2d88a.png",
   "http://localhost:3845/assets/b5e4c8326108a7436aeb9ba4e2ffc4b533445a3f.png",
   "http://localhost:3845/assets/46b4694b68135bfdf99f3984c4d28f09df68cab7.png",
-  "http://localhost:3845/assets/f0941ce8c827b13b657e88d6c25b1fddcf92edc9.png",
+  "http://localhost:3845/assets/f0941ce8c827b13b657e88d6c25b1fddcf92edc9.png"
+]
+
+const companyLogosRow3 = [
   "http://localhost:3845/assets/8cc0c9dbe7d5e65c01bc531692562aefb730b87f.png",
   "http://localhost:3845/assets/f663c2d74e5846d33677adc032736ad40ac92eee.png",
   "http://localhost:3845/assets/dff792148478a824c4fa655e8b728ac800435dc4.png",
-  "http://localhost:3845/assets/cf07a186fa8cf5628aa2d8f563d1e777903e6e3f.png",
+  "http://localhost:3845/assets/cf07a186fa8cf5628aa2d8f563d1e777903e6e3f.png"
+]
+
+const companyLogosRow4 = [
   "http://localhost:3845/assets/946545957981c1d430eff783815b1542f63afe3f.png",
   "http://localhost:3845/assets/89348c9db527d63718a88f5b2ebc7e585908f421.png",
   "http://localhost:3845/assets/b8983fe2e941dad303bf1121d105f6ca758b53f2.png",
   "http://localhost:3845/assets/1f2de7f9e6556761bcbac559a9e1a3096d87dd6f.png"
 ]
-
-const imgToolfesta = "http://localhost:3845/assets/cccd5dba529a68d460962243637992f0e6dbcd4a.png"
 
 export default function FestivalIntroPage() {
   return (
@@ -105,63 +115,87 @@ export default function FestivalIntroPage() {
             <img src={imgGoals} alt="" className="max-w-[645px] w-full" />
           </div>
 
-          <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="space-y-2 text-[25px] text-[#2c2c2d]">
-            <p className="font-medium">
-              <span className="font-bold">'기술'</span>이 시민과 만나는 산업문화의 대중화
-            </p>
-            <p className="font-medium">
-              <span className="font-bold">'기업'</span>이 인재와 만나는 실질적 채용연계
-            </p>
-            <p className="font-medium">
-              <span className="font-bold">'산업 제품'</span>과 소비자와 만나는 B2C 융합시장 형성
-            </p>
-            <p className="font-medium">
-              <span className="font-bold">'도시'</span>가 산업 브랜드화되는 산업문화 도시 모델
-            </p>
+          <div className="text-center">
+            <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="space-y-2 text-[25px] text-[#2c2c2d] inline-block text-left">
+              <p className="font-medium">
+                <span className="font-bold">'기술'</span>이 시민과 만나는 산업문화의 대중화
+              </p>
+              <p className="font-medium">
+                <span className="font-bold">'기업'</span>이 인재와 만나는 실질적 채용연계
+              </p>
+              <p className="font-medium">
+                <span className="font-bold">'산업 제품'</span>과 소비자와 만나는 B2C 융합시장 형성
+              </p>
+              <p className="font-medium">
+                <span className="font-bold">'도시'</span>가 산업 브랜드화되는 산업문화 도시 모델
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tool Icons Section */}
+      <section className="pt-16 pb-0 bg-white">
+        <div className="container mx-auto px-8 max-w-7xl">
+          <div className="flex justify-around items-end">
+            <img src={toolIcons[0]} alt="" className="h-[103px] w-[106px] object-contain" />
+            <img src={toolIcons[1]} alt="" className="h-[89px] w-[62px] object-contain" />
+            <img src={toolIcons[2]} alt="" className="h-[83px] w-[83px] object-contain" />
+            <img src={toolIcons[3]} alt="" className="h-[83px] w-[107px] object-contain" />
+            <img src={toolIcons[4]} alt="" className="h-[113px] w-[118px] object-contain" />
           </div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section className="relative py-20 bg-[#338e72]">
+      <section className="relative pt-14 pb-20 bg-[#338e72]">
         <div className="container mx-auto px-8 max-w-7xl">
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgToolfesta} alt="" className="w-[41px] h-[41px]" />
             <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif', textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px' }} className="text-[40px] font-black text-white">
               협력사
             </h2>
           </div>
 
-          {/* Main Partner Logos */}
-          <div className="flex justify-between items-center mb-16">
-            {partnerLogos.map((logo, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-center" style={{ width: '180px', height: '100px' }}>
-                <img src={logo} alt={`Partner ${index + 1}`} className="max-h-full max-w-full object-contain" />
-              </div>
-            ))}
+          {/* Company Logos Grid - Row 1 */}
+          <div className="mb-10">
+            <div className="flex justify-between items-center">
+              <img src={companyLogosRow1[0]} alt="" className="h-[43px] w-auto" style={{ maxWidth: '217px' }} />
+              <img src={companyLogosRow1[1]} alt="" className="h-[43px] w-auto" style={{ maxWidth: '216px' }} />
+              <img src={companyLogosRow1[2]} alt="" className="h-[43px] w-auto" style={{ maxWidth: '168px' }} />
+              <img src={companyLogosRow1[3]} alt="" className="h-[23px] w-auto" style={{ maxWidth: '176px' }} />
+              <img src={companyLogosRow1[4]} alt="" className="h-[24px] w-auto" style={{ maxWidth: '140px' }} />
+            </div>
           </div>
 
-          {/* Company Logos Grid */}
-          <div className="space-y-8">
-            <div className="flex justify-around items-center">
-              {companyLogos.slice(0, 5).map((logo, index) => (
-                <img key={index} src={logo} alt={`Company ${index + 1}`} className="h-auto" style={{ maxHeight: '43px' }} />
-              ))}
+          {/* Company Logos Grid - Row 2 */}
+          <div className="mb-10">
+            <div className="flex justify-between items-center">
+              <img src={companyLogosRow2[0]} alt="" className="h-[24px] w-auto" style={{ maxWidth: '175px' }} />
+              <img src={companyLogosRow2[1]} alt="" className="h-[24px] w-auto" style={{ maxWidth: '154px' }} />
+              <img src={companyLogosRow2[2]} alt="" className="h-[35px] w-auto" style={{ maxWidth: '138px' }} />
+              <img src={companyLogosRow2[3]} alt="" className="h-[27px] w-auto" style={{ maxWidth: '119px' }} />
+              <img src={companyLogosRow2[4]} alt="" className="h-[27px] w-auto" style={{ maxWidth: '222px' }} />
             </div>
-            <div className="flex justify-around items-center">
-              {companyLogos.slice(5, 10).map((logo, index) => (
-                <img key={index + 5} src={logo} alt={`Company ${index + 6}`} className="h-auto" style={{ maxHeight: '35px' }} />
-              ))}
+          </div>
+
+          {/* Company Logos Grid - Row 3 */}
+          <div className="mb-10">
+            <div className="flex justify-between items-center">
+              <img src={companyLogosRow3[0]} alt="" className="h-[43px] w-auto" style={{ maxWidth: '179px' }} />
+              <img src={companyLogosRow3[1]} alt="" className="h-[44px] w-auto" style={{ maxWidth: '241px' }} />
+              <img src={companyLogosRow3[2]} alt="" className="h-[56px] w-auto" style={{ maxWidth: '215px' }} />
+              <img src={companyLogosRow3[3]} alt="" className="h-[24px] w-auto" style={{ maxWidth: '295px' }} />
             </div>
-            <div className="flex justify-around items-center">
-              {companyLogos.slice(10, 14).map((logo, index) => (
-                <img key={index + 10} src={logo} alt={`Company ${index + 11}`} className="h-auto" style={{ maxHeight: '44px' }} />
-              ))}
-            </div>
-            <div className="flex justify-around items-center">
-              {companyLogos.slice(14, 18).map((logo, index) => (
-                <img key={index + 14} src={logo} alt={`Company ${index + 15}`} className="h-auto" style={{ maxHeight: '23px' }} />
-              ))}
+          </div>
+
+          {/* Company Logos Grid - Row 4 */}
+          <div>
+            <div className="flex justify-between items-center">
+              <img src={companyLogosRow4[0]} alt="" className="h-[23px] w-auto" style={{ maxWidth: '207px' }} />
+              <img src={companyLogosRow4[1]} alt="" className="h-[23px] w-auto" style={{ maxWidth: '97px' }} />
+              <img src={companyLogosRow4[2]} alt="" className="h-[27px] w-auto" style={{ maxWidth: '273px' }} />
+              <img src={companyLogosRow4[3]} alt="" className="h-[23px] w-auto" style={{ maxWidth: '264px' }} />
             </div>
           </div>
         </div>
