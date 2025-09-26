@@ -52,7 +52,7 @@ export default function NoticePage() {
       </div>
 
       {/* Notice Board Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 pb-150 bg-white">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgNoticeIcon} alt="" className="w-9 h-9" />
