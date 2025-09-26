@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/aa/Desktop/OutSourcingScript/next_js/sandan-tool-festa2/**)",
-      "Bash(xcopy:*)"
+      "Bash(xcopy:*)",
+      "mcp__figma-dev-mode__get_metadata"
     ],
     "deny": [],
     "ask": []

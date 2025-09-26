@@ -7,6 +7,7 @@ const imgHeroBg = "http://localhost:3845/assets/2e4ed3f77f17331ca0609e3195860120
 const imgWhatIs = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
 const imgFeatures = "http://localhost:3845/assets/ef71dfb5b7137ee9d7a742d51d877996ed35d184.png"
 const imgGoals = "http://localhost:3845/assets/5bc6e11c61ee114bdad1dc02efab537d94e10361.png"
+const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
 
 // Tool icons
 const toolIcons = [
@@ -72,6 +73,11 @@ export default function FestivalIntroPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-white">
+        <img src={imgDivider} alt="" className="w-full h-[29px]" />
+      </div>
 
       {/* What is Section */}
       <section className="py-24">
