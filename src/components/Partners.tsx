@@ -34,7 +34,10 @@ const Partners = () => {
 
   return (
     <section className="relative py-16 md:py-24 bg-[#2c2c2d]">
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+      {/* Top gradient transition from EventCards section */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#2c2c2d] to-transparent z-[5]" />
+
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         {/* Section Title */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-8">

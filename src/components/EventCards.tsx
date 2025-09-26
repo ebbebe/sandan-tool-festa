@@ -135,6 +135,9 @@ const EventCards = () => {
           ))}
         </div>
       </div>
+
+      {/* Bottom gradient transition to Partners section */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-[#2c2c2d] z-[5]" />
     </section>
   );
 };
