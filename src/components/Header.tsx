@@ -28,7 +28,7 @@ const Header = () => {
       isScrolled ? 'bg-[#2c2c2d] shadow-lg' : 'bg-[#2c2c2d]/95 backdrop-blur-sm'
     }`}>
       <div className="h-[85px]">
-        <div className="container mx-auto h-full px-4 md:px-8 max-w-7xl">
+        <div className="container mx-auto h-full px-6 md:px-16 max-w-full">
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
             <Link href="/" className="flex items-center">
