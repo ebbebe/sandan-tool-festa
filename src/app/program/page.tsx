@@ -56,19 +56,18 @@ export default function ProgramPage() {
             </h2>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-16">
             {/* Program 1 */}
-            <div className="flex items-start gap-8">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 bg-[#2c2c2d] rounded-full flex items-center justify-center">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">1</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
                   산업용 제품·부품·소재·공구 전시·판매관
                 </h3>
               </div>
-            </div>
-            <div className="flex gap-8">
+              <div className="flex gap-8">
               <div className="flex-shrink-0">
                 <img src={imgProgram1} alt="" className="rounded-xl w-[540px] h-[375px] object-cover" />
               </div>
@@ -81,20 +80,20 @@ export default function ProgramPage() {
                   <li>수출 상담회, 산학연 협력 세션 등을 통해 신사업 기회 창출</li>
                 </ul>
               </div>
+              </div>
             </div>
 
             {/* Program 2 */}
-            <div className="flex items-start gap-8">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 bg-[#2c2c2d] rounded-full flex items-center justify-center">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">2</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
                   채용·취업 연계 프로그램
                 </h3>
               </div>
-            </div>
-            <div className="flex gap-8">
+              <div className="flex gap-8">
               <div className="flex-shrink-0">
                 <img src={imgProgram2} alt="" className="rounded-xl w-[540px] h-[361px] object-cover" />
               </div>
@@ -105,20 +104,20 @@ export default function ProgramPage() {
                   <li>창업 준비 중인 구직자를 위한 지원 정책·멘토링 제공 청년 창업 상담 부스</li>
                 </ul>
               </div>
+              </div>
             </div>
 
             {/* Program 3 */}
-            <div className="flex items-start gap-8">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 bg-[#2c2c2d] rounded-full flex items-center justify-center">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">3</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
                   산업문화·체험 콘텐츠
                 </h3>
               </div>
-            </div>
-            <div className="flex gap-8">
+              <div className="flex gap-8">
               <div className="flex-shrink-0">
                 <img src={imgProgram3} alt="" className="rounded-xl w-[540px] h-[375px] object-cover" />
               </div>
@@ -129,13 +128,14 @@ export default function ProgramPage() {
                   <li>친환경 산업존 (ESG·친환경 제품 전시·참여 프로그램)</li>
                 </ul>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Experience Programs Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgIconProgram} alt="" className="w-9 h-9" />
@@ -147,7 +147,7 @@ export default function ProgramPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Experience 1 */}
             <div>
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4">
+              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
                 가족 중심 시민체험 프로그램
               </h3>
               <img src={imgExperience1} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
@@ -161,7 +161,7 @@ export default function ProgramPage() {
 
             {/* Experience 2 */}
             <div>
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4">
+              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
                 포토존·인증샷 미션 이벤트
               </h3>
               <img src={imgExperience2} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
@@ -175,7 +175,7 @@ export default function ProgramPage() {
 
             {/* Experience 3 */}
             <div>
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4">
+              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
                 쇼카 존·전기차 전시
               </h3>
               <img src={imgExperience3} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
@@ -189,7 +189,7 @@ export default function ProgramPage() {
 
             {/* Experience 4 */}
             <div>
-              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4">
+              <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
                 건강걷기 대회
               </h3>
               <img src={imgExperience4} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
