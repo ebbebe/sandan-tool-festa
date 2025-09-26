@@ -10,8 +10,17 @@ const imgHeroBg = "http://localhost:3845/assets/945208d7854e1b74af3b553f15b0752f
 const imgDivider = "http://localhost:3845/assets/76873654c83e8f7026252140e3155eb4b146470c.png"
 const imgNoticeIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3ff01df16a191960.png"
 
+// Type definition for notice
+interface Notice {
+  id: number
+  title: string
+  date: string
+  views: number
+  content: string
+}
+
 // Sample notice detail data - In real app, this would come from API
-const noticeData = {
+const noticeData: Record<number, Notice> = {
   1: {
     id: 1,
     title: "[공지] 2025년 산단툴페스타_인천 모집공고 안내",
@@ -114,9 +123,9 @@ const noticeData = {
 export default function NoticeDetailPage() {
   const params = useParams()
   const router = useRouter()
-  const [notice, setNotice] = useState<any>(null)
-  const [nextNotice, setNextNotice] = useState<any>(null)
-  const [prevNotice, setPrevNotice] = useState<any>(null)
+  const [notice, setNotice] = useState<Notice | null>(null)
+  const [nextNotice, setNextNotice] = useState<Notice | null>(null)
+  const [prevNotice, setPrevNotice] = useState<Notice | null>(null)
 
   useEffect(() => {
     // Get notice data based on ID
