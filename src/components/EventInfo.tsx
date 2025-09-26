@@ -5,6 +5,9 @@ const EventInfo = () => {
     <>
       {/* Combined YouTube and Event Info Section - Rectangle 247 */}
       <section id="event-info" className="relative py-16 md:py-24 min-h-[800px]">
+        {/* Top gradient transition from HeroSection */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[rgba(51,51,51,0.9)] to-transparent z-[5]" />
+
         {/* Background image from Figma - Scene 14 1 */}
         <div className="absolute inset-0">
           <img

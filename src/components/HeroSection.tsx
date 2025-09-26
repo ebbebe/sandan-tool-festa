@@ -38,8 +38,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2c2c2d] to-transparent" />
+      {/* Bottom gradient transition to EventInfo section */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-[rgba(51,51,51,0.9)] z-[5]" />
     </section>
   );
 };
