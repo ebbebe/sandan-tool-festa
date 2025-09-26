@@ -14,7 +14,15 @@ const imgLocationIcon = "http://localhost:3845/assets/2b74a568f13f320f229c1baf3f
 
 declare global {
   interface Window {
-    kakao: any
+    kakao: {
+      maps: {
+        Map: new (container: HTMLElement, options: object) => unknown
+        Marker: new (options: object) => unknown
+        InfoWindow: new (options: object) => unknown
+        LatLng: new (lat: number, lng: number) => unknown
+        load: (callback: () => void) => void
+      }
+    }
   }
 }
 
