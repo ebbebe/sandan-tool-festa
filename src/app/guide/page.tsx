@@ -137,11 +137,8 @@ export default function GuidePage() {
                 제공 예정
               </p>
               <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[40px] font-black text-[#be2e2e] leading-tight mb-8">
-                Q. 맵 일러스트 이미지로 밑에 각 버튼 클릭시<br />
-                위치를 알려줄 수 있게끔 가능한지?
               </p>
               <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-[40px] font-black text-[#00e82a]">
-                개발자님~ 내용 남겨주세요.
               </p>
             </div>
           </div>

@@ -57,7 +57,7 @@ const Header = () => {
             </nav>
 
             {/* Social Icons (Desktop) */}
-            <div className="hidden md:flex items-center space-x-3">
+            <div className="hidden md:flex items-center space-x-7">
               <a href="#">
                 <img
                   src="/assets/social-1.png"
@@ -114,7 +114,7 @@ const Header = () => {
             </Link>
           ))}
           {/* Mobile Social Links */}
-          <div className="flex items-center space-x-4 px-6 py-4 border-t border-gray-700">
+          <div className="flex items-center space-x-6 px-6 py-4 border-t border-gray-700">
             <a href="#">
               <img
                 src="/assets/social-1.png"
