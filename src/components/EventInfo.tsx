@@ -24,7 +24,7 @@ const EventInfo = () => {
           {/* YouTube Section */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-12"
-                style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
               <span>_인천</span>
@@ -58,7 +58,7 @@ const EventInfo = () => {
               />
               <div className="text-white whitespace-nowrap">
                 <p className="text-2xl md:text-3xl lg:text-[34px] font-black leading-relaxed inline-flex items-center flex-wrap md:flex-nowrap"
-                   style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                   style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                   <span>기간: 2025년 11월 15일</span>
                   <span className="inline-flex items-center align-middle mx-2">
                     <span className="inline-flex items-center justify-center w-12 h-12 bg-contain bg-no-repeat bg-center"
@@ -87,7 +87,7 @@ const EventInfo = () => {
               />
               <div className="text-white flex items-center">
                 <p className="text-2xl md:text-3xl lg:text-[34px] font-black"
-                   style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                   style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                   장소: 소래포구 해오름 광장
                 </p>
               </div>
@@ -105,7 +105,7 @@ const EventInfo = () => {
                   height: '45px'
                 }}
               >
-                <span style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>행사장 안내</span>
+                <span style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>행사장 안내</span>
               </a>
             </div>
           </div>

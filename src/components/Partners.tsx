@@ -47,7 +47,7 @@ const Partners = () => {
               className="w-9 h-9 mr-4"
             />
             <h2 className="text-3xl md:text-4xl font-black text-white"
-                style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               협력사
             </h2>
           </div>

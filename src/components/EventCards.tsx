@@ -70,14 +70,14 @@ const EventCards = () => {
               className="w-10 h-10 md:w-12 md:h-12 mr-4"
             />
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white"
-                style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
               <span>_인천</span>
             </h2>
           </div>
           <p className="text-2xl md:text-3xl lg:text-4xl text-white font-black"
-             style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+             style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
             주요 행사 안내
           </p>
         </div>
@@ -91,13 +91,13 @@ const EventCards = () => {
                 <div className="relative mr-3 flex-shrink-0">
                   <div className="relative w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                     <span className="text-white font-black text-lg"
-                          style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                          style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                       {card.id}
                     </span>
                   </div>
                 </div>
                 <h3 className="text-xl md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-tight"
-                    style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+                    style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                   {card.title}
                 </h3>
               </div>
