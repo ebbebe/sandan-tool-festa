@@ -94,9 +94,9 @@ export default function FestivalIntroPage() {
               <span className="font-black">『산단툴페스타_인천』</span>
               <span className="font-medium">은 한국산업단지공단 인천지역에</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
-              <span className="font-medium">입주한 기업들이 중심이 되어, 최신 산업기술과 제품을 전시&middot;홍보하고,</span>
+              <span className="font-medium">입주한 기업들이 중심이 되어, 최신 산업기술과 제품을 전시·홍보하고,</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
-              <span className="font-medium">산업현장에 필요한 공구&middot;자재&middot;시스템을 제조&middot;유통하는</span>
+              <span className="font-medium">산업현장에 필요한 공구·자재·시스템을 제조·유통하는</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">기업들과의 실질적 협업을 강화하는 산업 교류형 페스티벌입니다.</span><br /><br />
               <span className="font-medium">특히, 인천지역 산업단지 입주기업에게 직접적이고 실질적인 가치를 제공</span>
@@ -128,16 +128,16 @@ export default function FestivalIntroPage() {
           <div className="text-center">
             <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="space-y-2 text-lg md:text-[25px] text-[#2c2c2d] inline-block text-left">
               <p className="font-medium">
-                <span className="font-bold">&apos;기술&apos;</span>이 시민과 만나는 산업문화의 대중화
+                <span className="font-bold">'기술'</span>이 시민과 만나는 산업문화의 대중화
               </p>
               <p className="font-medium">
-                <span className="font-bold">&apos;기업&apos;</span>이 인재와 만나는 실질적 채용연계
+                <span className="font-bold">'기업'</span>이 인재와 만나는 실질적 채용연계
               </p>
               <p className="font-medium">
-                <span className="font-bold">&apos;산업 제품&apos;</span>과 소비자와 만나는 B2C 융합시장 형성
+                <span className="font-bold">'산업 제품'</span>과 소비자와 만나는 B2C 융합시장 형성
               </p>
               <p className="font-medium">
-                <span className="font-bold">&apos;도시&apos;</span>가 산업 브랜드화되는 산업문화 도시 모델
+                <span className="font-bold">'도시'</span>가 산업 브랜드화되는 산업문화 도시 모델
               </p>
             </div>
           </div>

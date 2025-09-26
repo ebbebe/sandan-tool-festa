@@ -64,7 +64,7 @@ export default function ProgramPage() {
                   <span className="text-white font-black text-base">1</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
-                  산업용 제품&middot;부품&middot;소재&middot;공구 전시&middot;판매관
+                  산업용 제품·부품·소재·공구 전시·판매관
                 </h3>
               </div>
               <div className="flex flex-col md:flex-row gap-8">
@@ -74,9 +74,9 @@ export default function ProgramPage() {
               <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d] space-y-2">
                 <ul className="list-disc space-y-2 ml-6">
                   <li>입주기업의 주력 제품 및 첨단 기술 전시</li>
-                  <li>친환경&middot;에너지 절감형 공구 및 장비, 스마트 팩토리 솔루션 자동화 기술 전시</li>
-                  <li>협력 기업(공구&middot;자재&middot;시스템 제조 및 유통사)과의 공급&middot;거래 연계</li>
-                  <li>참여 기업과 구매자, 전문가가 교류할 수 있는 상담&middot;미팅 공간 운영을 통한 실질적 비즈니스 기회 창출</li>
+                  <li>친환경·에너지 절감형 공구 및 장비, 스마트 팩토리 솔루션 자동화 기술 전시</li>
+                  <li>협력 기업(공구·자재·시스템 제조 및 유통사)과의 공급·거래 연계</li>
+                  <li>참여 기업과 구매자, 전문가가 교류할 수 있는 상담·미팅 공간 운영을 통한 실질적 비즈니스 기회 창출</li>
                   <li>수출 상담회, 산학연 협력 세션 등을 통해 신사업 기회 창출</li>
                 </ul>
               </div>
@@ -90,7 +90,7 @@ export default function ProgramPage() {
                   <span className="text-white font-black text-base">2</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
-                  채용&middot;취업 연계 프로그램
+                  채용·취업 연계 프로그램
                 </h3>
               </div>
               <div className="flex flex-col md:flex-row gap-8">
@@ -99,9 +99,9 @@ export default function ProgramPage() {
               </div>
               <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d] space-y-2">
                 <ul className="list-disc space-y-2 ml-6">
-                  <li>인천지역 청년 및 구직자 대상 현장 면접&middot;채용 상담</li>
+                  <li>인천지역 청년 및 구직자 대상 현장 면접·채용 상담</li>
                   <li>입주기업 인력난 해소 및 우수 인재 확보 지원</li>
-                  <li>창업 준비 중인 구직자를 위한 지원 정책&middot;멘토링 제공 청년 창업 상담 부스</li>
+                  <li>창업 준비 중인 구직자를 위한 지원 정책·멘토링 제공 청년 창업 상담 부스</li>
                 </ul>
               </div>
               </div>
@@ -114,7 +114,7 @@ export default function ProgramPage() {
                   <span className="text-white font-black text-base">3</span>
                 </div>
                 <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
-                  산업문화&middot;체험 콘텐츠
+                  산업문화·체험 콘텐츠
                 </h3>
               </div>
               <div className="flex flex-col md:flex-row gap-8">
@@ -123,9 +123,9 @@ export default function ProgramPage() {
               </div>
               <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d] space-y-2">
                 <ul className="list-disc space-y-2 ml-6">
-                  <li>산업용 로봇&middot;3D프린팅&middot;AR 등 첨단기술 체험존</li>
-                  <li>지역 소상공인 연계 문화&middot;버스킹 공연</li>
-                  <li>친환경 산업존 (ESG&middot;친환경 제품 전시&middot;참여 프로그램)</li>
+                  <li>산업용 로봇·3D프린팅·AR 등 첨단기술 체험존</li>
+                  <li>지역 소상공인 연계 문화·버스킹 공연</li>
+                  <li>친환경 산업존 (ESG·친환경 제품 전시·참여 프로그램)</li>
                 </ul>
               </div>
               </div>
@@ -162,7 +162,7 @@ export default function ProgramPage() {
             {/* Experience 2 */}
             <div>
               <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
-                포토존&middot;인증샷 미션 이벤트
+                포토존·인증샷 미션 이벤트
               </h3>
               <img src={imgExperience2} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
               <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d]">
@@ -176,7 +176,7 @@ export default function ProgramPage() {
             {/* Experience 3 */}
             <div>
               <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] mb-4 text-center">
-                쇼카 존&middot;전기차 전시
+                쇼카 존·전기차 전시
               </h3>
               <img src={imgExperience3} alt="" className="rounded-xl w-full h-[375px] object-cover mb-4" />
               <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d]">
