@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -13,7 +14,7 @@ const imgNoticeIcon = "/assets/dot-icon.png"
 
 const ITEMS_PER_PAGE = 10
 
-export default function NoticePage() {
+function NoticeList() {
   const [notices, setNotices] = useState<Notice[]>([])
   const [totalCount, setTotalCount] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -72,6 +73,141 @@ export default function NoticePage() {
   }
 
   return (
+    <>
+      {/* Write Button (Admin) */}
+      <div className="flex justify-end mb-4">
+        <Link
+          href="/notice/write"
+          className="inline-flex items-center px-6 py-2.5 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors"
+          style={{ fontFamily: 'Pretendard, sans-serif' }}
+        >
+          글쓰기
+        </Link>
+      </div>
+
+      {/* Notice List */}
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+        {loading ? (
+          <div className="text-center py-10">
+            <p className="text-gray-500">로딩중...</p>
+          </div>
+        ) : notices.length === 0 ? (
+          <div className="text-center py-10">
+            <p className="text-gray-500">등록된 공지사항이 없습니다.</p>
+          </div>
+        ) : (
+          <ul className="divide-y divide-gray-200">
+            {notices.map((notice, index) => (
+              <li
+                key={notice.id}
+                onClick={() => handleNoticeClick(notice.id)}
+                className="hover:bg-gray-50 transition cursor-pointer px-4 py-4 md:px-6"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <span className="text-[#388d71] font-bold text-lg md:text-xl">
+                      {totalCount - ((currentPage - 1) * ITEMS_PER_PAGE) - index}
+                    </span>
+                    <h3 style={{ fontFamily: 'Pretendard, sans-serif' }} className="text-base md:text-lg font-medium text-[#363636]">
+                      {notice.title}
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <span className="hidden md:block">조회 {notice.views}</span>
+                    <span>{formatDate(notice.created_at)}</span>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center mt-8 gap-2">
+          {/* First Page */}
+          <button
+            onClick={() => handlePageChange(1)}
+            disabled={currentPage === 1}
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Previous */}
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex items-center gap-1 md:gap-4">
+            {(() => {
+              const pageNumbers = []
+              const maxVisible = 5
+              let start = Math.max(1, currentPage - 2)
+              const end = Math.min(totalPages, start + maxVisible - 1)
+
+              if (end - start < maxVisible - 1) {
+                start = Math.max(1, end - maxVisible + 1)
+              }
+
+              for (let i = start; i <= end; i++) {
+                pageNumbers.push(i)
+              }
+
+              return pageNumbers.map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium ${
+                    currentPage === page
+                      ? 'bg-[#388d71] text-white'
+                      : 'border border-gray-300 bg-white hover:bg-gray-50'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))
+            })()}
+          </div>
+
+          {/* Next */}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Last Page */}
+          <button
+            onClick={() => handlePageChange(totalPages)}
+            disabled={currentPage === totalPages}
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      )}
+    </>
+  )
+}
+
+export default function NoticePage() {
+  return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
 
@@ -108,135 +244,13 @@ export default function NoticePage() {
             </h2>
           </div>
 
-          {/* Write Button (Admin) */}
-          <div className="flex justify-end mb-4">
-            <Link
-              href="/notice/write"
-              className="inline-flex items-center px-6 py-2.5 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors"
-              style={{ fontFamily: 'Pretendard, sans-serif' }}
-            >
-              글쓰기
-            </Link>
-          </div>
-
-          {/* Notice Table */}
-          <div className="mb-12 overflow-x-auto">
-            {loading ? (
-              <div className="flex justify-center py-12">
-                <div className="text-gray-500">로딩 중...</div>
-              </div>
-            ) : notices.length === 0 ? (
-              <div className="text-center py-12 text-gray-500">
-                등록된 공지사항이 없습니다.
-              </div>
-            ) : (
-              <table className="w-full min-w-[500px]">
-                <thead>
-                  <tr className="border-b-[5px] border-[#2c2c2d]">
-                    <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[12%] md:w-[10%]">
-                      번호
-                    </th>
-                    <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-left pl-2 md:pl-4 font-black text-sm md:text-lg text-[#2c2c2d] w-[48%] md:w-[55%]">
-                      제목
-                    </th>
-                    <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[22%] md:w-[20%]">
-                      작성일
-                    </th>
-                    <th style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="py-3 md:py-4 text-center font-black text-sm md:text-lg text-[#2c2c2d] w-[18%] md:w-[15%]">
-                      조회
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {notices.map((notice, index) => {
-                    const noticeNumber = totalCount - ((currentPage - 1) * ITEMS_PER_PAGE) - index
-                    return (
-                      <tr
-                        key={notice.id}
-                        className="border-b border-[#d9d9d9] hover:bg-gray-50 transition-colors cursor-pointer"
-                        onClick={() => handleNoticeClick(notice.id)}
-                      >
-                        <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
-                          {noticeNumber}
-                        </td>
-                        <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 pl-2 md:pl-4 font-bold text-sm md:text-lg text-[#2c2c2d] break-words">
-                          {notice.title}
-                        </td>
-                        <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
-                          {formatDate(notice.created_at)}
-                        </td>
-                        <td style={{ fontFamily: 'Pretendard, sans-serif' }} className="py-4 md:py-6 text-center font-bold text-sm md:text-lg text-[#2c2c2d]">
-                          {notice.views.toLocaleString()}
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            )}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 md:gap-6">
-              <button
-                className="text-[#666666] hover:text-[#2c2c2d] transition-colors p-2 disabled:opacity-30 disabled:cursor-not-allowed"
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-              >
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 1L2 6L7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </button>
-
-              <div className="flex items-center gap-1 md:gap-4">
-                {(() => {
-                  const pageNumbers = []
-                  const maxVisible = 5
-                  let start = Math.max(1, currentPage - 2)
-                  const end = Math.min(totalPages, start + maxVisible - 1)
-
-                  if (end - start < maxVisible - 1) {
-                    start = Math.max(1, end - maxVisible + 1)
-                  }
-
-                  for (let i = start; i <= end; i++) {
-                    pageNumbers.push(i)
-                  }
-
-                  return pageNumbers.map((page) => (
-                    <button
-                      key={page}
-                      onClick={() => handlePageChange(page)}
-                      className={page === currentPage
-                        ? "relative w-8 h-8 md:w-6 md:h-6 flex items-center justify-center"
-                        : "text-[#666666] hover:text-[#2c2c2d] text-sm md:text-[15px] px-2 py-1 transition-colors"
-                      }
-                    >
-                      {page === currentPage ? (
-                        <>
-                          <span className="absolute inset-0 bg-[#388d71] rounded-full"></span>
-                          <span style={{ fontFamily: 'SUIT, sans-serif' }} className="relative text-white text-sm md:text-[15px] z-10">{page}</span>
-                        </>
-                      ) : (
-                        <span style={{ fontFamily: 'SUIT, sans-serif' }}>{page}</span>
-                      )}
-                    </button>
-                  ))
-                })()}
-              </div>
-
-              <button
-                className="text-[#666666] hover:text-[#2c2c2d] transition-colors p-2 disabled:opacity-30 disabled:cursor-not-allowed"
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-              >
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L6 6L1 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </button>
+          <Suspense fallback={
+            <div className="text-center py-10">
+              <p className="text-gray-500">로딩중...</p>
             </div>
-          )}
+          }>
+            <NoticeList />
+          </Suspense>
         </div>
       </section>
 
