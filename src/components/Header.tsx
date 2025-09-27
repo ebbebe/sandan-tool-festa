@@ -123,15 +123,30 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-[#2c2c2d] border-t border-gray-700">
+        <motion.div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu */}
+      <motion.nav
+        className="fixed top-[85px] right-0 w-[80%] max-w-sm h-[calc(100vh-85px)] bg-[#2c2c2d] z-50 md:hidden border-l border-gray-700"
+        initial={{ x: '100%' }}
+        animate={{ x: isMenuOpen ? 0 : '100%' }}
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      >
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="block px-6 py-4 text-white hover:bg-[#388d71] transition-colors"
+              className="block px-6 py-5 text-lg text-white hover:bg-[#388d71]/20 transition-colors border-b border-gray-700/50"
               style={{ fontFamily: 'Pretendard, sans-serif' }}
             >
               {item.name}
@@ -161,8 +176,7 @@ const Header = () => {
               />
             </a>
           </div>
-        </nav>
-      )}
+        </motion.nav>
     </motion.header>
   );
 };

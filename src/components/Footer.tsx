@@ -18,9 +18,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#2c2c2d] relative">
-      <div className="container mx-auto px-6 md:px-16 max-w-full">
+      <div className="container mx-auto px-4 md:px-16 max-w-full">
         {/* Top Section - Logo and Navigation */}
-        <div className="pt-8 pb-6">
+        <div className="pt-6 md:pt-8 pb-4 md:pb-6">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             {/* Logo */}
             <img
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-white text-[15px] font-bold hover:text-[#388d71] transition-colors"
+                  className="text-white text-sm md:text-[15px] font-bold hover:text-[#388d71] transition-colors"
                   style={{ fontFamily: 'Pretendard, sans-serif' }}
                 >
                   {link.name}
@@ -52,7 +52,7 @@ const Footer = () => {
               <React.Fragment key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-white text-[15px] font-bold hover:text-gray-300 transition-colors"
+                  className="text-white text-xs md:text-[15px] font-bold hover:text-gray-300 transition-colors"
                   style={{ fontFamily: 'Pretendard, sans-serif' }}
                 >
                   {link.name}
@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="pb-10">
           <div className="space-y-2">
             {/* Company Details - First Line */}
-            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
               <span>대표자 : 산단툴페스타조직위원회</span>
               <span className="hidden md:inline text-gray-600 mx-3">|</span>
               <span>대표전화 : 032.881.0427</span>
@@ -78,18 +78,18 @@ const Footer = () => {
             </div>
 
             {/* Contact Email */}
-            <div className="text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
               제휴/공급문의 : backspace7@naver.com
             </div>
 
             {/* Address */}
-            <div className="text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
               본사 : 인천시 연수구 비류대로 294번길 32-5,(201) / 서울시 중구 서소문로 116 유원빌딩 1607호
             </div>
 
             {/* Copyright */}
             <div className="pt-6">
-              <p className="text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+              <p className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
                 © 2025 산단툴페스타 조직위원회 All rights reserved
               </p>
             </div>

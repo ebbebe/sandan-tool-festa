@@ -8,7 +8,7 @@ const HeroSection = () => {
   const backgroundY = useTransform(scrollY, [0, 500], [0, 50]);
 
   return (
-    <section className="relative min-h-[895px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[600px] md:min-h-[895px] flex items-center justify-center overflow-hidden">
       {/* Background image from Figma with parallax */}
       <motion.div
         className="absolute inset-0"
@@ -31,7 +31,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 md:px-8">
         {/* INDUSTRIAL COMPLEX TOOLFESTA Image */}
         <motion.div
-          className="mb-8 md:mb-12"
+          className="mb-6 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -42,7 +42,7 @@ const HeroSection = () => {
           <img
             src="/assets/toolfesta.png"
             alt="INDUSTRIAL COMPLEX TOOLFESTA"
-            className="w-full max-w-[600px] md:max-w-[762px] h-auto mx-auto"
+            className="w-full max-w-[400px] md:max-w-[762px] h-auto mx-auto"
           />
         </motion.div>
 
@@ -57,7 +57,7 @@ const HeroSection = () => {
             ease: "easeOut"
           }}
         >
-          <h2 className="text-white text-3xl md:text-4xl lg:text-[45px] font-black leading-tight"
+          <h2 className="text-white text-2xl md:text-4xl lg:text-[45px] font-black leading-tight"
               style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
             2025 산단툴페스타 인천
           </h2>

@@ -49,7 +49,7 @@ const EventCards = () => {
   ];
 
   return (
-    <section id="program" className="relative py-16 md:py-24" ref={ref}>
+    <section id="program" className="relative py-12 md:py-24" ref={ref}>
       {/* Top gradient transition from previous section */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#383838] to-transparent z-[5]" />
 
@@ -68,7 +68,7 @@ const EventCards = () => {
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         {/* Section Title - Enlarged */}
         <motion.div
-          className="text-center mb-16 md:mb-20 py-8"
+          className="text-center mb-12 md:mb-20 py-4 md:py-8"
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
@@ -79,21 +79,21 @@ const EventCards = () => {
               alt=""
               className="w-10 h-10 md:w-12 md:h-12 mr-4"
             />
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white"
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white"
                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
               <span>_인천</span>
             </h2>
           </div>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white font-black"
+          <p className="text-xl md:text-3xl lg:text-4xl text-white font-black"
              style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
             주요 행사 안내
           </p>
         </motion.div>
 
         {/* Event Cards */}
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-10 md:space-y-24">
           {eventCards.map((card, index) => (
             <motion.div
               key={card.id}
@@ -107,16 +107,16 @@ const EventCards = () => {
               }}
             >
               {/* Title above everything */}
-              <div className="flex items-start mb-6">
+              <div className="flex items-start mb-4 md:mb-6">
                 <div className="relative mr-3 flex-shrink-0">
-                  <div className="relative w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
-                    <span className="text-white font-black text-lg"
+                  <div className="relative w-6 h-6 md:w-7 md:h-7 bg-[#388d71] rounded-full flex items-center justify-center">
+                    <span className="text-white font-black text-sm md:text-lg"
                           style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                       {card.id}
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-tight"
+                <h3 className="text-lg md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-tight"
                     style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                   {card.title}
                 </h3>
@@ -130,7 +130,7 @@ const EventCards = () => {
                   whileHover={{ scale: 1.01 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="relative h-[375px] rounded-2xl overflow-hidden shadow-2xl group">
+                  <div className="relative h-[250px] md:h-[375px] rounded-2xl overflow-hidden shadow-2xl group">
                     <img
                       src={card.imageUrl}
                       alt={card.title}
@@ -147,7 +147,7 @@ const EventCards = () => {
                     {card.items.map((item, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-[#388d71] mr-3 mt-1 text-base">•</span>
-                        <span className="text-gray-200 text-sm md:text-base leading-relaxed">
+                        <span className="text-gray-200 text-xs md:text-base leading-relaxed">
                           {item}
                         </span>
                       </li>
