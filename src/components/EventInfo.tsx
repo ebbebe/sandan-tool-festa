@@ -70,7 +70,7 @@ const EventInfo = () => {
             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
           >
             {/* Date */}
-            <div className="space-y-2 mb-6 md:mb-8">
+            <div className="mb-6 md:mb-8">
               <div className="flex items-start justify-center">
                 <img
                   src="/assets/dot-icon.png"
@@ -78,7 +78,7 @@ const EventInfo = () => {
                   className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-1 md:mt-2"
                 />
                 <div className="text-white">
-                  <p className="text-lg md:text-3xl lg:text-[34px] font-black flex items-center"
+                  <p className="text-lg md:text-3xl lg:text-[34px] font-black flex flex-wrap items-center"
                      style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                     <span>기간: 2025년 11월 15일</span>
                     <span className="inline-flex items-center align-middle mx-1 md:mx-2">
@@ -94,10 +94,11 @@ const EventInfo = () => {
                         <span className="text-sm md:text-xl font-black">일</span>
                       </span>
                     </span>
+                    <span className="hidden md:inline md:ml-4">(11:00 ~ 18:00)</span>
                   </p>
                 </div>
               </div>
-              <p className="text-base md:text-2xl lg:text-[28px] font-black text-center text-white"
+              <p className="md:hidden text-base font-black text-center text-white mt-2"
                  style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                 시간: 11:00 ~ 18:00
               </p>
@@ -121,7 +122,7 @@ const EventInfo = () => {
 
               {/* CTA Button - positioned below on mobile, right on desktop */}
               <motion.a
-                href="#guide"
+                href="/guide"
                 className="inline-flex items-center justify-center text-white px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-semibold transition-all mt-4 md:mt-0 md:ml-8 mx-auto md:mx-0"
                 style={{
                   backgroundImage: `url('/assets/btn-guide.svg')`,
