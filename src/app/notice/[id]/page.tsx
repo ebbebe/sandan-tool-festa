@@ -1,124 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { supabase, Notice } from '@/lib/supabase'
 
 const imgHeroBg = "/assets/notice-hero-bg.png"
 const imgDivider = "/assets/divider.png"
 const imgNoticeIcon = "/assets/dot-icon.png"
 
-// Type definition for notice
-interface Notice {
-  id: number
-  title: string
-  date: string
-  views: number
-  content: string
-}
-
-// Sample notice detail data - In real app, this would come from API
-const noticeData: Record<number, Notice> = {
-  1: {
-    id: 1,
-    title: "[공지] 2025년 산단툴페스타_인천 모집공고 안내",
-    date: "2025.09.11",
-    views: 123,
-    content: `
-      <h3>2025년 산단툴페스타_인천 모집공고</h3>
-      <br/>
-      <p>안녕하십니까.</p>
-      <p>2025년 산단툴페스타_인천 조직위원회입니다.</p>
-      <br/>
-      <p>올해도 어김없이 찾아온 산단툴페스타! 인천지역 산업단지 기업과 시민이 함께하는 대규모 산업문화 축제가 11월 15일(토)~16일(일) 양일간 소래포구 해오름 광장에서 개최됩니다.</p>
-      <br/>
-      <h4>■ 행사 개요</h4>
-      <ul>
-        <li>• 행사명: 2025 산단툴페스타_인천</li>
-        <li>• 기간: 2025년 11월 15일(토) ~ 16일(일)</li>
-        <li>• 시간: 11:00 ~ 18:00</li>
-        <li>• 장소: 소래포구 해오름 광장</li>
-        <li>• 주최: 산단툴페스타 조직위원회</li>
-      </ul>
-      <br/>
-      <h4>■ 참가 신청 안내</h4>
-      <ul>
-        <li>• 신청기간: 2025년 9월 11일 ~ 10월 15일</li>
-        <li>• 신청방법: 온라인 신청 (www.toolfesta.com)</li>
-        <li>• 신청자격: 인천지역 산업단지 입주기업 및 관련 기업</li>
-        <li>• 참가비: 무료 (부스 제공)</li>
-      </ul>
-      <br/>
-      <h4>■ 제공 사항</h4>
-      <ul>
-        <li>• 기본 부스 (3m x 3m)</li>
-        <li>• 전기 설비 지원</li>
-        <li>• 홍보물 제작 지원</li>
-        <li>• 행사 기간 중 운영 인력 지원</li>
-      </ul>
-      <br/>
-      <p>많은 관심과 참여 부탁드립니다.</p>
-      <p>감사합니다.</p>
-      <br/>
-      <p>문의: 032-881-0427</p>
-      <p>이메일: backspace7@naver.com</p>
-    `
-  },
-  2: {
-    id: 2,
-    title: "[공지] 2025년 산단툴페스타_인천 모집 부스 현황 안내",
-    date: "2025.09.11",
-    views: 12345,
-    content: `
-      <h3>2025년 산단툴페스타_인천 모집 부스 현황 안내</h3>
-      <br/>
-      <p>안녕하십니까.</p>
-      <p>2025년 산단툴페스타_인천 조직위원회입니다.</p>
-      <br/>
-      <p>현재까지 접수된 부스 신청 현황을 안내드립니다.</p>
-      <br/>
-      <h4>■ 부스 신청 현황</h4>
-      <table style="width: 100%; border-collapse: collapse;">
-        <tr style="background: #f5f5f5;">
-          <th style="border: 1px solid #ddd; padding: 10px;">구분</th>
-          <th style="border: 1px solid #ddd; padding: 10px;">총 부스</th>
-          <th style="border: 1px solid #ddd; padding: 10px;">신청 완료</th>
-          <th style="border: 1px solid #ddd; padding: 10px;">잔여 부스</th>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 10px;">A구역 (기업 전시)</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">50</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">42</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">8</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 10px;">B구역 (체험존)</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">30</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">28</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">2</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 10px;">C구역 (판매부스)</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">40</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">35</td>
-          <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">5</td>
-        </tr>
-      </table>
-      <br/>
-      <h4>■ 추가 모집 안내</h4>
-      <p>• 잔여 부스는 선착순으로 마감됩니다.</p>
-      <p>• 신청을 희망하시는 기업은 서둘러 신청해 주시기 바랍니다.</p>
-      <p>• 부스 위치는 신청 순서와 업종을 고려하여 배정됩니다.</p>
-      <br/>
-      <h4>■ 신청 마감일</h4>
-      <p>2025년 10월 15일 (금) 18:00</p>
-      <br/>
-      <p>감사합니다.</p>
-    `
-  }
-}
+const PASSWORD = '!!2025sandan'
 
 export default function NoticeDetailPage() {
   const params = useParams()
@@ -126,30 +19,148 @@ export default function NoticeDetailPage() {
   const [notice, setNotice] = useState<Notice | null>(null)
   const [nextNotice, setNextNotice] = useState<Notice | null>(null)
   const [prevNotice, setPrevNotice] = useState<Notice | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  // Popover states
+  const [showPasswordPopover, setShowPasswordPopover] = useState(false)
+  const [showConfirmPopover, setShowConfirmPopover] = useState(false)
+  const [password, setPassword] = useState('')
+  const [deleteError, setDeleteError] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  const deleteButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    // Get notice data based on ID
-    const id = Number(params.id)
-    const currentNotice = noticeData[id as keyof typeof noticeData]
+    fetchNotice()
+  }, [params.id])
 
-    if (currentNotice) {
+  useEffect(() => {
+    // Close popover when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (!target.closest('.popover-container')) {
+        setShowPasswordPopover(false)
+        setShowConfirmPopover(false)
+        setPassword('')
+        setDeleteError('')
+      }
+    }
+
+    if (showPasswordPopover || showConfirmPopover) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showPasswordPopover, showConfirmPopover])
+
+  const fetchNotice = async () => {
+    setLoading(true)
+    try {
+      const id = Number(params.id)
+
+      // Get current notice
+      const { data: currentNotice, error } = await supabase
+        .from('notices')
+        .select('*')
+        .eq('id', id)
+        .single()
+
+      if (error || !currentNotice) {
+        setNotice(null)
+        return
+      }
+
       setNotice(currentNotice)
 
-      // Set previous and next notices
-      const noticeIds = Object.keys(noticeData).map(Number).sort((a, b) => b - a)
-      const currentIndex = noticeIds.indexOf(id)
+      // Update view count
+      await supabase
+        .from('notices')
+        .update({ views: currentNotice.views + 1 })
+        .eq('id', id)
 
-      if (currentIndex > 0) {
-        setNextNotice(noticeData[noticeIds[currentIndex - 1] as keyof typeof noticeData])
-      }
-      if (currentIndex < noticeIds.length - 1) {
-        setPrevNotice(noticeData[noticeIds[currentIndex + 1] as keyof typeof noticeData])
-      }
+      // Get next notice (newer)
+      const { data: next } = await supabase
+        .from('notices')
+        .select('id, title, created_at')
+        .gt('id', id)
+        .order('id', { ascending: true })
+        .limit(1)
+        .single()
 
-      // Increment view count (in real app, this would be an API call)
-      currentNotice.views += 1
+      setNextNotice(next)
+
+      // Get previous notice (older)
+      const { data: prev } = await supabase
+        .from('notices')
+        .select('id, title, created_at')
+        .lt('id', id)
+        .order('id', { ascending: false })
+        .limit(1)
+        .single()
+
+      setPrevNotice(prev)
+
+    } catch (error) {
+      console.error('Error fetching notice:', error)
+    } finally {
+      setLoading(false)
     }
-  }, [params.id])
+  }
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('ko-KR', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).replace(/\. /g, '.').replace('.', '')
+  }
+
+  const handleDeleteClick = () => {
+    setShowPasswordPopover(true)
+    setPassword('')
+    setDeleteError('')
+  }
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (password === PASSWORD) {
+      setShowPasswordPopover(false)
+      setShowConfirmPopover(true)
+      setPassword('')
+      setDeleteError('')
+    } else {
+      setDeleteError('패스워드가 일치하지 않습니다.')
+    }
+  }
+
+  const handleDeleteConfirm = async () => {
+    setIsDeleting(true)
+    try {
+      const { error } = await supabase
+        .from('notices')
+        .delete()
+        .eq('id', Number(params.id))
+
+      if (error) throw error
+
+      // Redirect with success message
+      router.push('/notice')
+    } catch (error) {
+      console.error('Error deleting notice:', error)
+      setDeleteError('삭제 중 오류가 발생했습니다.')
+      setIsDeleting(false)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col bg-white">
+        <Header />
+        <div className="flex-1 flex items-center justify-center">
+          <p>로딩 중...</p>
+        </div>
+        <Footer />
+      </div>
+    )
+  }
 
   if (!notice) {
     return (
@@ -211,11 +222,119 @@ export default function NoticeDetailPage() {
               <div className="flex items-center justify-between text-sm md:text-base text-gray-600">
                 <div className="flex items-center gap-6">
                   <span style={{ fontFamily: 'Pretendard, sans-serif' }}>
-                    작성일: {notice.date}
+                    작성일: {formatDate(notice.created_at)}
                   </span>
                   <span style={{ fontFamily: 'Pretendard, sans-serif' }}>
                     조회수: {notice.views.toLocaleString()}
                   </span>
+                </div>
+                <div className="flex items-center gap-2 relative">
+                  <Link
+                    href={`/notice/edit/${notice.id}`}
+                    className="px-3 py-1 bg-gray-500 text-white text-sm rounded hover:bg-gray-600 transition-colors"
+                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  >
+                    수정
+                  </Link>
+                  <button
+                    ref={deleteButtonRef}
+                    onClick={handleDeleteClick}
+                    className="px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600 transition-colors"
+                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  >
+                    삭제
+                  </button>
+
+                  {/* Password Popover */}
+                  {showPasswordPopover && (
+                    <div className="popover-container absolute top-full right-0 mt-2 z-50">
+                      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 w-72">
+                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                          패스워드 확인
+                        </h4>
+                        <form onSubmit={handlePasswordSubmit}>
+                          <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#388d71] text-gray-900 text-sm mb-2"
+                            placeholder="패스워드를 입력하세요"
+                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            autoFocus
+                            required
+                          />
+                          {deleteError && (
+                            <p className="text-red-500 text-xs mb-2" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                              {deleteError}
+                            </p>
+                          )}
+                          <div className="flex justify-end gap-2">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setShowPasswordPopover(false)
+                                setPassword('')
+                                setDeleteError('')
+                              }}
+                              className="px-3 py-1.5 text-sm bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors"
+                              style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            >
+                              취소
+                            </button>
+                            <button
+                              type="submit"
+                              className="px-3 py-1.5 text-sm bg-[#388d71] text-white rounded hover:bg-[#2a6f5a] transition-colors"
+                              style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            >
+                              확인
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Delete Confirm Popover */}
+                  {showConfirmPopover && (
+                    <div className="popover-container absolute top-full right-0 mt-2 z-50">
+                      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 w-80">
+                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                          삭제 확인
+                        </h4>
+                        <p className="text-sm text-gray-700 mb-4" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                          정말로 이 공지사항을 삭제하시겠습니까?
+                          <br />
+                          삭제된 내용은 복구할 수 없습니다.
+                        </p>
+                        {deleteError && (
+                          <p className="text-red-500 text-xs mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                            {deleteError}
+                          </p>
+                        )}
+                        <div className="flex justify-end gap-2">
+                          <button
+                            onClick={() => {
+                              setShowConfirmPopover(false)
+                              setDeleteError('')
+                            }}
+                            disabled={isDeleting}
+                            className="px-3 py-1.5 text-sm bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors disabled:opacity-50"
+                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                          >
+                            취소
+                          </button>
+                          <button
+                            onClick={handleDeleteConfirm}
+                            disabled={isDeleting}
+                            className="px-3 py-1.5 text-sm bg-red-500 text-white rounded hover:bg-red-600 transition-colors disabled:opacity-50"
+                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                          >
+                            {isDeleting ? '삭제 중...' : '삭제'}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -239,7 +358,7 @@ export default function NoticeDetailPage() {
                         {nextNotice.title}
                       </span>
                     </div>
-                    <span className="text-gray-500 text-sm">{nextNotice.date}</span>
+                    <span className="text-gray-500 text-sm">{formatDate(nextNotice.created_at)}</span>
                   </Link>
                 )}
                 {prevNotice && (
@@ -250,7 +369,7 @@ export default function NoticeDetailPage() {
                         {prevNotice.title}
                       </span>
                     </div>
-                    <span className="text-gray-500 text-sm">{prevNotice.date}</span>
+                    <span className="text-gray-500 text-sm">{formatDate(prevNotice.created_at)}</span>
                   </Link>
                 )}
               </div>
