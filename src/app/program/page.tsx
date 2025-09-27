@@ -3,20 +3,20 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const imgHeroBg = "http://localhost:3845/assets/adf09b1cf6c64ef3e55dae89fdbabc5b190421cb.png"
+const imgHeroBg = "/assets/program-hero-bg.png"
 const imgIconProgram = "/assets/dot-icon.png"
 const imgDivider = "/assets/divider.png"
 
 // Program images
-const imgProgram1 = "http://localhost:3845/assets/f0b3acd396bb508fc92c707429ef78244726a93a.png"
-const imgProgram2 = "http://localhost:3845/assets/c7bb8088d963cab7be4535ccf6fa923e339c295b.png"
-const imgProgram3 = "http://localhost:3845/assets/b3e42b06bec718db31c48fefb943e2a86d3104f6.png"
+const imgProgram1 = "/assets/program-rect-265.png"
+const imgProgram2 = "/assets/program-rect-261.png"
+const imgProgram3 = "/assets/program-rect-264.png"
 
 // Experience program images
-const imgExperience1 = "http://localhost:3845/assets/f88d02077efb00ee3b22721c65ff798d2068732d.png"
-const imgExperience2 = "http://localhost:3845/assets/e7e091e1463be8f2090db38faa7005cce0cb8ce0.png"
-const imgExperience3 = "http://localhost:3845/assets/8c76be9f07bdf9218ed3ca056c4d1082694d5d3f.png"
-const imgExperience4 = "http://localhost:3845/assets/254b6b73673f17048667942766227ecd0d9efa9a.png"
+const imgExperience1 = "/assets/experience-family.png"  // 가족 중심 시민체험 프로그램
+const imgExperience2 = "/assets/experience-showcar.png"  // 쇼카 존·전기차 전시
+const imgExperience3 = "/assets/experience-photo.png"  // 포토존·인증샷 미션 이벤트
+const imgExperience4 = "/assets/experience-walking.png"  // 건강걷기 대회
 
 export default function ProgramPage() {
   return (
