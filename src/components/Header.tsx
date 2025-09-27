@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 const Header = () => {
+  const pathname = usePathname();
+  const isMainPage = pathname === '/';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -32,9 +35,9 @@ const Header = () => {
         backgroundColor: scrolled ? 'rgba(44, 44, 45, 0.98)' : 'rgba(44, 44, 45, 0.95)',
         backdropFilter: scrolled ? 'blur(10px)' : 'blur(5px)'
       }}
-      initial={{ y: -100 }}
+      initial={isMainPage ? { y: -100 } : { y: 0 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={isMainPage ? { duration: 0.3 } : { duration: 0 }}
     >
       <div className="h-[85px]">
         <div className="container mx-auto h-full px-6 md:px-16 max-w-full">
