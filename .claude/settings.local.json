@@ -15,7 +15,9 @@
       "Bash(curl:*)",
       "mcp__figma-dev-mode__get_code",
       "mcp__figma-dev-mode__get_screenshot",
-      "Read(//c/Users/aa/Desktop/OutSourcingScript/**)"
+      "Read(//c/Users/aa/Desktop/OutSourcingScript/**)",
+      "Bash(npm install:*)",
+      "Bash(del:*)"
     ],
     "deny": [],
     "ask": []

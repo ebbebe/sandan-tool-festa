@@ -1,10 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const EventInfo = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <>
       {/* Combined YouTube and Event Info Section - Rectangle 247 */}
-      <section id="event-info" className="relative py-16 md:py-24 min-h-[800px]">
+      <section id="event-info" className="relative py-16 md:py-24 min-h-[800px]" ref={ref}>
         {/* Top gradient transition from HeroSection */}
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[rgba(51,51,51,0.9)] to-transparent z-[5]" />
 
@@ -22,7 +27,12 @@ const EventInfo = () => {
 
         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
           {/* YouTube Section */}
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-12"
                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               <span>2025 </span>
@@ -31,7 +41,12 @@ const EventInfo = () => {
             </h2>
 
             {/* YouTube Video */}
-            <div className="max-w-4xl mx-auto mb-12">
+            <motion.div
+              className="max-w-4xl mx-auto mb-12"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+            >
               <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
                 <iframe
                   width="100%"
@@ -44,11 +59,16 @@ const EventInfo = () => {
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Date and Location Info */}
-          <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial={{ opacity: 0, y: 15 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+          >
             {/* Date */}
             <div className="flex items-start justify-center mb-8">
               <img
@@ -93,9 +113,9 @@ const EventInfo = () => {
               </div>
 
               {/* CTA Button - positioned to the right of location */}
-              <a
+              <motion.a
                 href="#guide"
-                className="inline-flex items-center justify-center text-white px-8 py-3 text-lg font-semibold hover:opacity-80 transition-opacity ml-8"
+                className="inline-flex items-center justify-center text-white px-8 py-3 text-lg font-semibold transition-all ml-8"
                 style={{
                   backgroundImage: `url('/assets/btn-guide.svg')`,
                   backgroundSize: 'contain',
@@ -104,11 +124,14 @@ const EventInfo = () => {
                   minWidth: '139px',
                   height: '45px'
                 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ duration: 0.15 }}
               >
                 <span style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>행사장 안내</span>
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom gradient transition to next section */}

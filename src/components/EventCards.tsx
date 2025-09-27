@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 interface EventCard {
   id: number;
@@ -8,6 +11,8 @@ interface EventCard {
 }
 
 const EventCards = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const eventCards: EventCard[] = [
     {
       id: 1,
@@ -44,7 +49,7 @@ const EventCards = () => {
   ];
 
   return (
-    <section id="program" className="relative py-16 md:py-24">
+    <section id="program" className="relative py-16 md:py-24" ref={ref}>
       {/* Top gradient transition from previous section */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#383838] to-transparent z-[5]" />
 
@@ -62,7 +67,12 @@ const EventCards = () => {
 
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         {/* Section Title - Enlarged */}
-        <div className="text-center mb-16 md:mb-20 py-8">
+        <motion.div
+          className="text-center mb-16 md:mb-20 py-8"
+          initial={{ opacity: 0, y: 15 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           <div className="flex items-center justify-center mb-10">
             <img
               src="/assets/dot-icon.png"
@@ -80,12 +90,22 @@ const EventCards = () => {
              style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
             주요 행사 안내
           </p>
-        </div>
+        </motion.div>
 
         {/* Event Cards */}
         <div className="space-y-16 md:space-y-24">
-          {eventCards.map((card) => (
-            <div key={card.id} className="relative">
+          {eventCards.map((card, index) => (
+            <motion.div
+              key={card.id}
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+                ease: "easeOut"
+              }}
+            >
               {/* Title above everything */}
               <div className="flex items-start mb-6">
                 <div className="relative mr-3 flex-shrink-0">
@@ -105,16 +125,20 @@ const EventCards = () => {
               {/* Card Container with Image and Content */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 {/* Image - always on the left */}
-                <div className="relative">
-                  <div className="relative h-[375px] rounded-2xl overflow-hidden shadow-2xl">
+                <motion.div
+                  className="relative"
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="relative h-[375px] rounded-2xl overflow-hidden shadow-2xl group">
                     <img
                       src={card.imageUrl}
                       alt={card.title}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Content - always on the right */}
                 <div className="relative pt-4">
@@ -131,7 +155,7 @@ const EventCards = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

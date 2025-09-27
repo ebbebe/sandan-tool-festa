@@ -1,10 +1,22 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { name: '축제소개', href: '/festival-intro' },
@@ -14,7 +26,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#2c2c2d]">
+    <motion.header
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: scrolled ? 'rgba(44, 44, 45, 0.98)' : 'rgba(44, 44, 45, 0.95)',
+        backdropFilter: scrolled ? 'blur(10px)' : 'blur(5px)'
+      }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="h-[85px]">
         <div className="container mx-auto h-full px-6 md:px-16 max-w-full">
           <div className="flex items-center justify-between h-full">
@@ -31,13 +52,16 @@ const Header = () => {
             <nav className="hidden md:flex items-center">
               <ul className="flex items-center space-x-12">
                 {menuItems.map((item) => (
-                  <li key={item.name}>
+                  <li key={item.name} className="relative">
                     <Link
                       href={item.href}
-                      className="text-white text-lg font-bold hover:text-[#388d71] transition-colors"
+                      className="text-white text-lg font-bold hover:text-[#388d71] transition-colors relative group"
                       style={{ fontFamily: 'Pretendard, sans-serif' }}
                     >
                       {item.name}
+                      <span
+                        className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#388d71] group-hover:w-full transition-all duration-200"
+                      />
                     </Link>
                   </li>
                 ))}
@@ -46,27 +70,39 @@ const Header = () => {
 
             {/* Social Icons (Desktop) */}
             <div className="hidden md:flex items-center space-x-7">
-              <a href="#">
+              <motion.a
+                href="#"
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <img
                   src="/assets/social-1.png"
                   alt="Social Icon 1"
-                  className="w-[11px] h-[24px]"
+                  className="w-[11px] h-[24px] transition-opacity duration-200"
                 />
-              </a>
-              <a href="#">
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <img
                   src="/assets/social-2.png"
                   alt="Social Icon 2"
-                  className="w-[24px] h-[24px]"
+                  className="w-[24px] h-[24px] transition-opacity duration-200"
                 />
-              </a>
-              <a href="#">
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <img
                   src="/assets/social-3.png"
                   alt="Social Icon 3"
-                  className="w-[26px] h-[18px]"
+                  className="w-[26px] h-[18px] transition-opacity duration-200"
                 />
-              </a>
+              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -107,27 +143,27 @@ const Header = () => {
               <img
                 src="/assets/social-1.png"
                 alt="Social Icon 1"
-                className="w-[11px] h-[24px]"
+                className="w-[11px] h-[24px] transition-opacity duration-200"
               />
             </a>
             <a href="#">
               <img
                 src="/assets/social-2.png"
                 alt="Social Icon 2"
-                className="w-[24px] h-[24px]"
+                className="w-[24px] h-[24px] transition-opacity duration-200"
               />
             </a>
             <a href="#">
               <img
                 src="/assets/social-3.png"
                 alt="Social Icon 3"
-                className="w-[26px] h-[18px]"
+                className="w-[26px] h-[18px] transition-opacity duration-200"
               />
             </a>
           </div>
         </nav>
       )}
-    </header>
+    </motion.header>
   );
 };
 
