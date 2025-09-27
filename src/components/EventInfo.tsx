@@ -71,14 +71,14 @@ const EventInfo = () => {
           >
             {/* Date */}
             <div className="mb-6 md:mb-8">
-              <div className="flex items-start justify-center">
+              <div className="flex items-center justify-center">
                 <img
                   src="/assets/dot-icon.png"
                   alt=""
-                  className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-1 md:mt-2"
+                  className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-0.5"
                 />
                 <div className="text-white">
-                  <p className="text-lg md:text-3xl lg:text-[34px] font-black flex flex-wrap items-center"
+                  <p className="text-lg md:text-3xl lg:text-[34px] font-black flex flex-wrap items-center leading-none"
                      style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                     <span>기간: 2025년 11월 15일</span>
                     <span className="inline-flex items-center align-middle mx-1 md:mx-2">
@@ -106,18 +106,16 @@ const EventInfo = () => {
 
             {/* Location with Button */}
             <div className="flex flex-col md:flex-row items-start md:items-start md:justify-center">
-              <div className="flex items-start w-full md:w-auto justify-center md:justify-start">
+              <div className="flex items-center w-full md:w-auto justify-center md:justify-start">
                 <img
                   src="/assets/dot-icon.png"
                   alt=""
-                  className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-1 md:mt-2"
+                  className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-0.5"
                 />
-                <div className="text-white flex items-center">
-                  <p className="text-lg md:text-3xl lg:text-[34px] font-black"
-                   style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
-                  장소: 소래포구 해오름 광장
-                  </p>
-                </div>
+                <p className="text-lg md:text-3xl lg:text-[34px] font-black leading-none text-white"
+                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                장소: 소래포구 해오름 광장
+                </p>
               </div>
 
               {/* CTA Button - positioned below on mobile, right on desktop */}

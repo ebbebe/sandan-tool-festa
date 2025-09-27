@@ -77,9 +77,9 @@ const EventCards = () => {
             <img
               src="/assets/dot-icon.png"
               alt=""
-              className="w-10 h-10 md:w-12 md:h-12 mr-4"
+              className="w-10 h-10 md:w-12 md:h-12 mr-4 mt-1"
             />
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white"
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-none"
                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
@@ -107,7 +107,7 @@ const EventCards = () => {
               }}
             >
               {/* Title above everything */}
-              <div className="flex items-start mb-4 md:mb-6">
+              <div className="flex items-center mb-4 md:mb-6">
                 <div className="relative mr-3 flex-shrink-0">
                   <div className="relative w-6 h-6 md:w-7 md:h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                     <span className="text-white font-black text-sm md:text-lg"
@@ -116,7 +116,7 @@ const EventCards = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-lg md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-tight"
+                <h3 className="text-lg md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-none"
                     style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
                   {card.title}
                 </h3>

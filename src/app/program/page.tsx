@@ -50,8 +50,8 @@ export default function ProgramPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgIconProgram} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgIconProgram} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               주요 콘텐츠 소개
             </h2>
           </div>
@@ -63,7 +63,7 @@ export default function ProgramPage() {
                 <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">1</span>
                 </div>
-                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
+                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] leading-none">
                   산업용 제품·부품·소재·공구 전시·판매관
                 </h3>
               </div>
@@ -89,7 +89,7 @@ export default function ProgramPage() {
                 <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">2</span>
                 </div>
-                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
+                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] leading-none">
                   채용·취업 연계 프로그램
                 </h3>
               </div>
@@ -113,7 +113,7 @@ export default function ProgramPage() {
                 <div className="w-7 h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                   <span className="text-white font-black text-base">3</span>
                 </div>
-                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d]">
+                <h3 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl font-black text-[#2c2c2d] leading-none">
                   산업문화·체험 콘텐츠
                 </h3>
               </div>
@@ -138,8 +138,8 @@ export default function ProgramPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgIconProgram} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgIconProgram} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               시민 중심 체험 프로그램
             </h2>
           </div>
@@ -208,8 +208,8 @@ export default function ProgramPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgIconProgram} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgIconProgram} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               무대공연 & 프로그램 일정표
             </h2>
           </div>

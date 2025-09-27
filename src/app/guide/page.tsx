@@ -149,8 +149,8 @@ export default function GuidePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgLocationIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               오시는 길
             </h2>
           </div>
@@ -193,8 +193,8 @@ export default function GuidePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-12">
-            <img src={imgLocationIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               주차장 안내
             </h2>
           </div>
@@ -238,8 +238,8 @@ export default function GuidePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-12">
-            <img src={imgLocationIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               부스 배치도
             </h2>
           </div>

@@ -83,8 +83,8 @@ export default function FestivalIntroPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgWhatIs} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgWhatIs} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               산단툴페스타 란?
             </h2>
           </div>
@@ -161,8 +161,8 @@ export default function FestivalIntroPage() {
       <section className="relative pt-14 pb-20 bg-[#338e72]">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgToolfesta} alt="" className="w-[41px] h-[41px]" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif', textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px' }} className="text-3xl md:text-[40px] font-black text-white">
+            <img src={imgToolfesta} alt="" className="w-[41px] h-[41px] mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif', textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px' }} className="text-3xl md:text-[40px] font-black text-white leading-none">
               협력사
             </h2>
           </div>

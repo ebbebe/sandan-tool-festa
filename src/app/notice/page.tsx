@@ -102,8 +102,8 @@ export default function NoticePage() {
       <section className="pt-16 md:pt-20 pb-32 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
-            <img src={imgNoticeIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <img src={imgNoticeIcon} alt="" className="w-9 h-9 mt-1" />
+            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               공지사항
             </h2>
           </div>
