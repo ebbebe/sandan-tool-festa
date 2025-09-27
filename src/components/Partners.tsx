@@ -82,9 +82,9 @@ const Partners = () => {
             <img
               src="/assets/dot-icon.png"
               alt=""
-              className="w-9 h-9 mr-4"
+              className="w-9 h-9 mr-4 mt-1"
             />
-            <h2 className="text-2xl md:text-4xl font-black text-white"
+            <h2 className="text-2xl md:text-4xl font-black text-white leading-none"
                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
               협력사
             </h2>
