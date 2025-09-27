@@ -85,7 +85,7 @@ export default function NoticeDetailPage() {
         .limit(1)
         .single()
 
-      setNextNotice(next)
+      setNextNotice(next as Notice | null)
 
       // Get previous notice (older)
       const { data: prev } = await supabase
@@ -96,7 +96,7 @@ export default function NoticeDetailPage() {
         .limit(1)
         .single()
 
-      setPrevNotice(prev)
+      setPrevNotice(prev as Notice | null)
 
     } catch (error) {
       console.error('Error fetching notice:', error)
