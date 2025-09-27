@@ -220,8 +220,8 @@ export default function NoticeWritePage() {
       {/* Toast Messages */}
       {error && (
         <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-[#2c2c2d] text-white px-6 py-3 rounded-lg shadow-xl border border-red-500/30 flex items-center gap-2">
+            <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span style={{ fontFamily: 'Pretendard, sans-serif' }}>{error}</span>
@@ -231,7 +231,7 @@ export default function NoticeWritePage() {
 
       {showSuccess && (
         <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
+          <div className="bg-[#388d71] text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-2">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
             </svg>
