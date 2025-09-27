@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const imgHeroBg = "http://localhost:3845/assets/945208d7854e1b74af3b553f15b0752fe5f3493e.png"
+const imgHeroBg = "/assets/notice-hero-bg.png"
 const imgDivider = "/assets/divider.png"
 const imgNoticeIcon = "/assets/dot-icon.png"
 

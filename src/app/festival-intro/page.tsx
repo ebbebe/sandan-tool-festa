@@ -22,33 +22,33 @@ const imgToolfesta = "/assets/toolfesta-icon.png"
 
 // Company logos organized by rows
 const companyLogosRow1 = [
-  "http://localhost:3845/assets/caad686db2ea78c1f64c190306b551871ef9fe09.png",
-  "http://localhost:3845/assets/7bdcb28ae355e2c26918dd74430f72ed7f838ac8.png",
-  "http://localhost:3845/assets/a0c12736db6832c596e6d6649e6e9beda11d305e.png",
-  "http://localhost:3845/assets/8720a1b7e3424275d7c3a2b212fb7e44e277eb8c.png",
-  "http://localhost:3845/assets/5492befe73b07950e13816bc53c4c29b44d8d6c3.png"
+  "/assets/partner-1.png",  // Asset 22-8
+  "/assets/partner-2.png",  // Asset 23-8
+  "/assets/partner-3.png",  // Asset 24-8
+  "/assets/partner-4.png",  // Asset 25-8
+  "/assets/partner-5.png"   // Asset 26-8
 ]
 
 const companyLogosRow2 = [
-  "http://localhost:3845/assets/53452348a813bf938417e473904db6b4af161ac1.png",
-  "http://localhost:3845/assets/ed5b0351d88e45401bb33ba389a93563acd2d88a.png",
-  "http://localhost:3845/assets/b5e4c8326108a7436aeb9ba4e2ffc4b533445a3f.png",
-  "http://localhost:3845/assets/46b4694b68135bfdf99f3984c4d28f09df68cab7.png",
-  "http://localhost:3845/assets/f0941ce8c827b13b657e88d6c25b1fddcf92edc9.png"
+  "/assets/partner-6.png",   // Asset 27-8
+  "/assets/partner-7.png",   // Asset 28-8
+  "/assets/partner-8.png",   // Asset 29-8
+  "/assets/partner-9.png",   // Asset 30-8
+  "/assets/partner-10.png"  // Asset 34-8
 ]
 
 const companyLogosRow3 = [
-  "http://localhost:3845/assets/8cc0c9dbe7d5e65c01bc531692562aefb730b87f.png",
-  "http://localhost:3845/assets/f663c2d74e5846d33677adc032736ad40ac92eee.png",
-  "http://localhost:3845/assets/dff792148478a824c4fa655e8b728ac800435dc4.png",
-  "http://localhost:3845/assets/cf07a186fa8cf5628aa2d8f563d1e777903e6e3f.png"
+  "/assets/partner-11.png",  // Asset 31-8
+  "/assets/partner-12.png",  // Asset 32-8
+  "/assets/partner-13.png",  // Asset 33-8
+  "/assets/partner-14.png"   // Asset 36-8
 ]
 
 const companyLogosRow4 = [
-  "http://localhost:3845/assets/946545957981c1d430eff783815b1542f63afe3f.png",
-  "http://localhost:3845/assets/89348c9db527d63718a88f5b2ebc7e585908f421.png",
-  "http://localhost:3845/assets/b8983fe2e941dad303bf1121d105f6ca758b53f2.png",
-  "http://localhost:3845/assets/1f2de7f9e6556761bcbac559a9e1a3096d87dd6f.png"
+  "/assets/partner-15.png",  // Asset 35-8
+  "/assets/partner-16.png",  // Asset 37-8
+  "/assets/partner-17.png",  // Asset 38-8
+  "/assets/partner-18.png"   // Asset 39-8
 ]
 
 export default function FestivalIntroPage() {
