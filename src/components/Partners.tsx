@@ -102,7 +102,7 @@ const Partners = () => {
         {/* Partners Grid - Mobile */}
         <div className="block md:hidden">
           <motion.div
-            className="grid grid-cols-2 gap-3 px-2"
+            className="grid grid-cols-2 gap-2 px-2"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

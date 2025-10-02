@@ -178,7 +178,7 @@ export default function FestivalIntroPage() {
 
           {/* Company Logos Grid - Mobile */}
           <div className="block md:hidden px-2">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2">
               {allCompanyLogos.map((logo, index) => (
                 <div key={index} className="flex items-center justify-center min-h-[60px]">
                   <img src={logo} alt="" className="max-h-[30px] max-w-[130px] object-contain" />
