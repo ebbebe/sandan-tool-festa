@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useRef, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -8,8 +9,70 @@ const imgDivider = "/assets/divider.png"
 const imgParking1 = "/assets/guide-parking-1.png"
 const imgParking2 = "/assets/guide-parking-2.png"
 const imgLocationIcon = "/assets/dot-icon.png"
+const imgBoothMap = "/assets/booth_map.png"
 
 export default function GuidePage() {
+  const [scale, setScale] = useState(1)
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (!containerRef.current?.contains(e.target as Node)) return
+
+      e.preventDefault()
+      const delta = e.deltaY > 0 ? 0.9 : 1.1
+      setScale(prev => Math.min(Math.max(prev * delta, 0.5), 3))
+    }
+
+    window.addEventListener('wheel', handleWheel, { passive: false })
+    return () => window.removeEventListener('wheel', handleWheel)
+  }, [])
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true)
+    setDragStart({
+      x: e.clientX - position.x,
+      y: e.clientY - position.y
+    })
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return
+    setPosition({
+      x: e.clientX - dragStart.x,
+      y: e.clientY - dragStart.y
+    })
+  }
+
+  const handleMouseUp = () => {
+    setIsDragging(false)
+  }
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      setIsDragging(true)
+      setDragStart({
+        x: e.touches[0].clientX - position.x,
+        y: e.touches[0].clientY - position.y
+      })
+    }
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || e.touches.length !== 1) return
+    setPosition({
+      x: e.touches[0].clientX - dragStart.x,
+      y: e.touches[0].clientY - dragStart.y
+    })
+  }
+
+  const handleReset = () => {
+    setScale(1)
+    setPosition({ x: 0, y: 0 })
+  }
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
@@ -130,70 +193,94 @@ export default function GuidePage() {
             </h2>
           </div>
 
-          {/* Placeholder for booth layout */}
-          <div className="bg-[#d9d9d9] rounded-[13px] h-[501px] relative flex items-center justify-center">
-            <div className="text-center">
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[40px] font-black text-[#be2e2e] mb-8">
-                제공 예정
-              </p>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-[40px] font-black text-[#be2e2e] leading-tight mb-8">
-              </p>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-[40px] font-black text-[#00e82a]">
-              </p>
+          {/* Booth Layout Map - Interactive */}
+          <div
+            ref={containerRef}
+            className="relative rounded-[13px] overflow-hidden bg-[#fbfbfb] h-[500px] cursor-move"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleMouseUp}
+            style={{ userSelect: 'none' }}
+          >
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+                transformOrigin: 'center',
+                transition: isDragging ? 'none' : 'transform 0.2s'
+              }}
+            >
+              <img
+                src={imgBoothMap}
+                alt="부스 배치도"
+                className="max-w-none h-full"
+                draggable="false"
+              />
+            </div>
+            {/* Zoom Controls */}
+            <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
+              <button
+                onClick={() => setScale(prev => Math.min(prev * 1.2, 3))}
+                className="bg-white/90 hover:bg-white w-10 h-10 rounded-lg shadow-md flex items-center justify-center text-xl font-bold text-[#2c2c2d] transition-colors"
+              >
+                +
+              </button>
+              <button
+                onClick={() => setScale(prev => Math.max(prev * 0.8, 0.5))}
+                className="bg-white/90 hover:bg-white w-10 h-10 rounded-lg shadow-md flex items-center justify-center text-xl font-bold text-[#2c2c2d] transition-colors"
+              >
+                −
+              </button>
+              <button
+                onClick={handleReset}
+                className="bg-white/90 hover:bg-white w-10 h-10 rounded-lg shadow-md flex items-center justify-center text-xs font-bold text-[#2c2c2d] transition-colors"
+                title="초기화"
+              >
+                ⟲
+              </button>
             </div>
           </div>
 
-          {/* Zone Information */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                A ZONE
-              </h4>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                BLABLABLALBLALBBLALBLA
-              </p>
-              <div className="mt-8">
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                  화장실
+          {/* Zone Information - Simple */}
+          <div className="mt-12 flex justify-center gap-24">
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-[#DC663B] rounded-full"></div>
+                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                  A ZONE
                 </h4>
-                <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                  BLABLABLALBLALBBLALBLA
-                </p>
               </div>
+              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+                24개소
+              </p>
             </div>
 
-            <div className="text-center">
-              <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                B ZONE
-              </h4>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                BLABLABLALBLALBBLALBLA
-              </p>
-              <div className="mt-8">
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                  의무실
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-[#DC663B] rounded-full"></div>
+                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                  B ZONE
                 </h4>
-                <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                  BLABLABLALBLALBBLALBLA
-                </p>
               </div>
+              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+                150개소
+              </p>
             </div>
 
-            <div className="text-center">
-              <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                C ZONE
-              </h4>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                BLABLABLALBLALBBLALBLA
-              </p>
-              <div className="mt-8">
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d] mb-2">
-                  운영본부
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-[#2174A8] rounded-full"></div>
+                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                  C ZONE
                 </h4>
-                <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
-                  BLABLABLALBLALBBLALBLA
-                </p>
               </div>
+              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+                180개소
+              </p>
             </div>
           </div>
         </div>
