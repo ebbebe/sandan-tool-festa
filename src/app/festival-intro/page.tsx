@@ -177,11 +177,22 @@ export default function FestivalIntroPage() {
           </p>
 
           {/* Company Logos Grid - Mobile */}
-          <div className="block md:hidden">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="block md:hidden px-2">
+            <div className="grid grid-cols-2 gap-3">
               {allCompanyLogos.map((logo, index) => (
-                <div key={index} className="flex items-center justify-center min-h-[50px]">
-                  <img src={logo} alt="" className="max-h-[45px] w-auto object-contain" />
+                <div key={index} className="flex items-center justify-center min-h-[60px]">
+                  <img src={logo} alt="" className={`w-auto object-contain ${
+                    // 가로로 매우 긴 로고들 - 높이 줄임
+                    [5, 9, 10, 11, 16, 17].includes(index) ? 'max-h-[30px]' :
+                    // 세로로 긴 로고들 - 높이 늘림
+                    index === 13 ? 'max-h-[55px]' : // 민천일보
+                    index === 12 ? 'max-h-[40px]' : // 신한은행
+                    index === 2 ? 'max-h-[40px]' : // 고용노동부
+                    // 작은 로고들
+                    [4, 15, 18].includes(index) ? 'max-h-[35px]' :
+                    // 나머지 일반 로고들
+                    'max-h-[45px]'
+                  }`} />
                 </div>
               ))}
             </div>
