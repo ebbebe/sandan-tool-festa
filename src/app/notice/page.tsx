@@ -69,7 +69,7 @@ function NoticeList() {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit'
-    }).replace(/\. /g, '.').replace('.', '')
+    }).replace(/\. /g, '.').replace(/\.$/, '')
   }
 
   return (
