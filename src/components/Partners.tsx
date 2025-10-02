@@ -118,18 +118,7 @@ const Partners = () => {
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className={`w-auto object-contain ${
-                      // 가로로 매우 긴 로고들 - 높이 줄임
-                      [6, 10, 11, 12, 17, 18].includes(partner.id) ? 'max-h-[30px]' :
-                      // 세로로 긴 로고들 - 높이 늘림
-                      partner.id === 14 ? 'max-h-[55px]' : // 민천일보
-                      partner.id === 13 ? 'max-h-[40px]' : // 신한은행
-                      partner.id === 3 ? 'max-h-[40px]' : // 고용노동부
-                      // 작은 로고들
-                      [5, 16, 19].includes(partner.id) ? 'max-h-[35px]' :
-                      // 나머지 일반 로고들
-                      'max-h-[45px]'
-                    }`}
+                    className="max-h-[30px] max-w-[130px] object-contain"
                   />
                 </div>
               </motion.div>
