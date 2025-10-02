@@ -260,7 +260,7 @@ export default function GuidePage() {
           </div>
 
           {/* Zone Information - Simple */}
-          <div className="mt-12 flex justify-center gap-24">
+          <div className="mt-12 flex justify-center gap-6 md:gap-24">
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-[#DC663B] rounded-full"></div>
@@ -275,7 +275,7 @@ export default function GuidePage() {
 
             <div>
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-[#DC663B] rounded-full"></div>
+                <div className="w-3 h-3 bg-[#F3A54E] rounded-full"></div>
                 <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                   B ZONE
                 </h4>
