@@ -96,13 +96,15 @@ const Header = () => {
                 />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://youtu.be/dv3BymxoEJ4"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ opacity: 0.7 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <img
                   src="/assets/social-3.png"
-                  alt="Social Icon 3"
+                  alt="YouTube"
                   className="w-[26px] h-[18px] transition-opacity duration-200"
                 />
               </motion.a>
@@ -171,10 +173,14 @@ const Header = () => {
                 className="w-[24px] h-[24px] transition-opacity duration-200"
               />
             </a>
-            <a href="#">
+            <a
+              href="https://youtu.be/dv3BymxoEJ4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="/assets/social-3.png"
-                alt="Social Icon 3"
+                alt="YouTube"
                 className="w-[26px] h-[18px] transition-opacity duration-200"
               />
             </a>
