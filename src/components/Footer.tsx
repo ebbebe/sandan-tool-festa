@@ -70,21 +70,21 @@ const Footer = () => {
           <div className="space-y-2">
             {/* Company Details - First Line */}
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
-              <span>대표자 : 산단툴페스타조직위원회</span>
+              <span>대표자 : (주)산업인</span>
               <span className="hidden md:inline text-gray-600 mx-3">|</span>
               <span>대표전화 : 032.881.0427</span>
               <span className="hidden md:inline text-gray-600 mx-3">|</span>
-              <span>사업자등록번호 : 000-00-00000</span>
+              <span>사업자등록번호 : 717-88-02273</span>
             </div>
 
             {/* Contact Email */}
             <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
-              제휴/공급문의 : backspace7@naver.com
+              참가문의 : backspace7@naver.com
             </div>
 
             {/* Address */}
             <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
-              본사 : 인천시 연수구 비류대로 294번길 32-5,(201) / 서울시 중구 서소문로 116 유원빌딩 1607호
+              본사 : 서울시 중구 서소문로 116 유원빌딩 1607호 / 인천시 연수구 비류대로 294번길 32-5,(201)
             </div>
 
             {/* Copyright */}
