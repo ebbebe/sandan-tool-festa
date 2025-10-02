@@ -10,7 +10,7 @@ const imgLocationIcon = "/assets/dot-icon.png"
 const imgBoothMap = "/assets/booth_map.png"
 
 export default function GuidePage() {
-  const [scale, setScale] = useState(1)
+  const [scale, setScale] = useState(0.5)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isDragging, setIsDragging] = useState(false)
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
