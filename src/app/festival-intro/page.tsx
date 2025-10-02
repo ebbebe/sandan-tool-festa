@@ -37,6 +37,7 @@ const allCompanyLogos = [
   "/assets/partner-logo-13.png",
   "/assets/partner-logo-14.png",
   "/assets/partner-logo-15.png",
+  "/assets/partner-logo-extra.png",
   "/assets/partner-logo-16.png",
   "/assets/partner-logo-17.png",
   "/assets/partner-logo-18.png"
@@ -45,8 +46,8 @@ const allCompanyLogos = [
 // Company logos organized by rows for desktop
 const companyLogosRow1 = allCompanyLogos.slice(0, 5)
 const companyLogosRow2 = allCompanyLogos.slice(5, 9)
-const companyLogosRow3 = allCompanyLogos.slice(9, 13)
-const companyLogosRow4 = allCompanyLogos.slice(13, 18)
+const companyLogosRow3 = allCompanyLogos.slice(9, 14)  // 신한은행, 민천일보 포함
+const companyLogosRow4 = allCompanyLogos.slice(14, 19)
 
 export default function FestivalIntroPage() {
   return (
@@ -157,12 +158,23 @@ export default function FestivalIntroPage() {
       {/* Partners Section */}
       <section className="relative pt-14 pb-20 bg-[#338e72]">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="flex items-center justify-center gap-4 mb-16">
+          <div className="flex items-center justify-center gap-4 mb-4">
             <img src={imgToolfesta} alt="" className="w-[41px] h-[41px] mt-1" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif', textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px' }} className="text-3xl md:text-[40px] font-black text-white leading-none">
-              협력사
+            <h2 style={{
+              fontFamily: 'Wanted Sans, WantedGothic, sans-serif',
+              textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px'
+            }} className="text-3xl md:text-[40px] font-black text-white leading-none">
+              후원사
             </h2>
           </div>
+          <p className="text-center text-base md:text-[20px] text-white/90 mb-12"
+             style={{
+               fontFamily: 'Wanted Sans, Pretendard, sans-serif',
+               fontWeight: 500,
+               textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px'
+             }}>
+            (일부 기관은 후원 예정)
+          </p>
 
           {/* Company Logos Grid - Mobile */}
           <div className="block md:hidden">
@@ -179,10 +191,10 @@ export default function FestivalIntroPage() {
           <div className="hidden md:block">
             {/* Row 1 - 5 items */}
             <div className="mb-10">
-              <div className="flex justify-between items-center gap-4">
+              <div className="flex justify-between items-center">
                 {companyLogosRow1.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                    <img src={logo} alt="" className="max-h-[50px] w-auto" />
                   </div>
                 ))}
               </div>
@@ -190,21 +202,25 @@ export default function FestivalIntroPage() {
 
             {/* Row 2 - 4 items */}
             <div className="mb-10">
-              <div className="grid grid-cols-4 gap-4">
+              <div className="flex justify-between items-center">
                 {companyLogosRow2.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                    <img src={logo} alt="" className="max-h-[50px] w-auto" />
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Row 3 - 4 items */}
+            {/* Row 3 - 5 items */}
             <div className="mb-10">
-              <div className="grid grid-cols-4 gap-4">
+              <div className="flex justify-between items-center">
                 {companyLogosRow3.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                    <img src={logo} alt="" className={`w-auto ${
+                      index === 3 ? 'max-h-[38px]' : // 신한은행 더 작게
+                      index === 4 ? 'max-h-[58px]' : // 민천일보 더 크게
+                      'max-h-[45px]'
+                    }`} />
                   </div>
                 ))}
               </div>
@@ -212,10 +228,10 @@ export default function FestivalIntroPage() {
 
             {/* Row 4 - 5 items */}
             <div>
-              <div className="flex justify-between items-center gap-4">
+              <div className="flex justify-between items-center">
                 {companyLogosRow4.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                    <img src={logo} alt="" className="max-h-[40px] w-auto" />
                   </div>
                 ))}
               </div>

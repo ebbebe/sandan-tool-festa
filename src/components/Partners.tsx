@@ -51,15 +51,16 @@ const Partners = () => {
     { id: 13, name: "신한은행", logoUrl: "/assets/partner-logo-13.png", width: 207, height: 63 },
     { id: 14, name: "민천일보", logoUrl: "/assets/partner-logo-14.png", width: 108, height: 78 },
     { id: 15, name: "한국공학대학교", logoUrl: "/assets/partner-logo-15.png", width: 263, height: 61 },
-    { id: 16, name: "(사)한충경제문화교류종심", logoUrl: "/assets/partner-logo-16.png", width: 354, height: 36 },
-    { id: 17, name: "에코환경산업기술협동조합", logoUrl: "/assets/partner-logo-17.png", width: 359, height: 33 },
-    { id: 18, name: "The bike", logoUrl: "/assets/partner-logo-18.png", width: 137, height: 33 }
+    { id: 16, name: "인천상공회의소", logoUrl: "/assets/partner-logo-extra.png", width: 207, height: 34 },
+    { id: 17, name: "(사)한충경제문화교류종심", logoUrl: "/assets/partner-logo-16.png", width: 354, height: 36 },
+    { id: 18, name: "에코환경산업기술협동조합", logoUrl: "/assets/partner-logo-17.png", width: 359, height: 33 },
+    { id: 19, name: "The bike", logoUrl: "/assets/partner-logo-18.png", width: 137, height: 33 }
   ];
 
   const partnersRow1 = allPartners.slice(0, 5);
   const partnersRow2 = allPartners.slice(5, 9);
-  const partnersRow3 = allPartners.slice(9, 13);
-  const partnersRow4 = allPartners.slice(13, 18);
+  const partnersRow3 = allPartners.slice(9, 14);  // 신한은행, 민천일보 포함
+  const partnersRow4 = allPartners.slice(14, 19);
 
   return (
     <section className="relative py-12 md:py-24 bg-[#2c2c2d]" ref={ref}>
@@ -74,17 +75,28 @@ const Partners = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center mb-4">
             <img
               src="/assets/dot-icon.png"
               alt=""
               className="w-9 h-9 mr-4 mt-1"
             />
-            <h2 className="text-2xl md:text-4xl font-black text-white leading-none"
-                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
-              협력사
+            <h2 className="text-3xl md:text-[40px] font-black text-white leading-none"
+                style={{
+                  fontFamily: "WantedGothic, Wanted Sans, sans-serif",
+                  textShadow: "rgba(0,0,0,0.25) 3px 2px 4px"
+                }}>
+              후원사
             </h2>
           </div>
+          <p className="text-base md:text-[20px] text-white/90 mb-8"
+             style={{
+               fontFamily: "Wanted Sans, Pretendard, sans-serif",
+               fontWeight: 500,
+               textShadow: "rgba(0,0,0,0.25) 3px 2px 4px"
+             }}>
+            (일부 기관은 후원 예정)
+          </p>
         </motion.div>
 
         {/* Partners Grid - Mobile */}
@@ -115,10 +127,10 @@ const Partners = () => {
         </div>
 
         {/* Partners Grid - Desktop */}
-        <div className="hidden md:block space-y-12">
+        <div className="hidden md:block space-y-10 max-w-6xl mx-auto">
           {/* Row 1 - 5 items */}
           <motion.div
-            className="grid md:grid-cols-3 lg:grid-cols-5 md:gap-8"
+            className="flex justify-between items-center"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -130,11 +142,11 @@ const Partners = () => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <div className="w-full h-full flex items-center justify-center px-2">
+                <div className="flex items-center justify-center px-2">
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className="md:max-h-[55px] w-auto object-contain"
+                    className="md:max-h-[50px] w-auto object-contain"
                   />
                 </div>
               </motion.div>
@@ -143,7 +155,7 @@ const Partners = () => {
 
           {/* Row 2 - 4 items */}
           <motion.div
-            className="grid md:grid-cols-4 md:gap-8"
+            className="flex justify-between items-center"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -155,20 +167,20 @@ const Partners = () => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <div className="w-full h-full flex items-center justify-center px-2">
+                <div className="flex items-center justify-center px-2">
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className="md:max-h-[55px] w-auto object-contain"
+                    className="md:max-h-[50px] w-auto object-contain"
                   />
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Row 3 - 4 items */}
+          {/* Row 3 - 5 items */}
           <motion.div
-            className="grid md:grid-cols-4 md:gap-8"
+            className="flex justify-between items-center"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -180,11 +192,15 @@ const Partners = () => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <div className="w-full h-full flex items-center justify-center px-2">
+                <div className="flex items-center justify-center px-2">
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className="md:max-h-[55px] w-auto object-contain"
+                    className={`w-auto object-contain ${
+                      partner.id === 13 ? 'md:max-h-[38px]' : // 신한은행 크기 더 줄임
+                      partner.id === 14 ? 'md:max-h-[58px]' : // 민천일보 크기 더 크게 (세로로 긴 로고)
+                      'md:max-h-[45px]'
+                    }`}
                   />
                 </div>
               </motion.div>
@@ -193,7 +209,7 @@ const Partners = () => {
 
           {/* Row 4 - 5 items */}
           <motion.div
-            className="grid md:grid-cols-3 lg:grid-cols-5 md:gap-8"
+            className="flex justify-between items-center"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -205,11 +221,11 @@ const Partners = () => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <div className="w-full h-full flex items-center justify-center px-2">
+                <div className="flex items-center justify-center px-2">
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className="md:max-h-[55px] w-auto object-contain"
+                    className="md:max-h-[40px] w-auto object-contain"
                   />
                 </div>
               </motion.div>

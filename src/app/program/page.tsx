@@ -260,8 +260,8 @@ export default function ProgramPage() {
             <table className="w-full border-collapse min-w-[350px] md:min-w-[500px]">
               <tbody>
                 <tr className="border-b border-gray-500">
-                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">11:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/>~<br className="md:hidden"/><span className="hidden md:inline">12:00</span><span className="md:hidden">12:00</span></td>
-                  <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">소래포구 트레일런</td>
+                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">11:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/>~<br className="md:hidden"/><span className="hidden md:inline">18:00</span><span className="md:hidden">18:00</span></td>
+                  <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">시민과 함께하는 이벤트</td>
                 </tr>
                 <tr>
                   <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500 align-top">15:00<br/>~<br/>18:00</td>
