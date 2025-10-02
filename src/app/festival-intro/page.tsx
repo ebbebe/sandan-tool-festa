@@ -20,36 +20,33 @@ const toolIcons = [
 
 const imgToolfesta = "/assets/toolfesta-icon.png"
 
-// Company logos organized by rows
-const companyLogosRow1 = [
-  "/assets/partner-1.png",  // Asset 22-8
-  "/assets/partner-2.png",  // Asset 23-8
-  "/assets/partner-3.png",  // Asset 24-8
-  "/assets/partner-4.png",  // Asset 25-8
-  "/assets/partner-5.png"   // Asset 26-8
+// Company logos - all partners
+const allCompanyLogos = [
+  "/assets/partner-logo-1.png",
+  "/assets/partner-logo-2.png",
+  "/assets/partner-logo-3.png",
+  "/assets/partner-logo-4.png",
+  "/assets/partner-logo-5.png",
+  "/assets/partner-logo-6.png",
+  "/assets/partner-logo-7.png",
+  "/assets/partner-logo-8.png",
+  "/assets/partner-logo-9.png",
+  "/assets/partner-logo-10.png",
+  "/assets/partner-logo-11.png",
+  "/assets/partner-logo-12.png",
+  "/assets/partner-logo-13.png",
+  "/assets/partner-logo-14.png",
+  "/assets/partner-logo-15.png",
+  "/assets/partner-logo-16.png",
+  "/assets/partner-logo-17.png",
+  "/assets/partner-logo-18.png"
 ]
 
-const companyLogosRow2 = [
-  "/assets/partner-6.png",   // Asset 27-8
-  "/assets/partner-7.png",   // Asset 28-8
-  "/assets/partner-8.png",   // Asset 29-8
-  "/assets/partner-9.png",   // Asset 30-8
-  "/assets/partner-10.png"  // Asset 34-8
-]
-
-const companyLogosRow3 = [
-  "/assets/partner-11.png",  // Asset 31-8
-  "/assets/partner-12.png",  // Asset 32-8
-  "/assets/partner-13.png",  // Asset 33-8
-  "/assets/partner-14.png"   // Asset 36-8
-]
-
-const companyLogosRow4 = [
-  "/assets/partner-15.png",  // Asset 35-8
-  "/assets/partner-16.png",  // Asset 37-8
-  "/assets/partner-17.png",  // Asset 38-8
-  "/assets/partner-18.png"   // Asset 39-8
-]
+// Company logos organized by rows for desktop
+const companyLogosRow1 = allCompanyLogos.slice(0, 5)
+const companyLogosRow2 = allCompanyLogos.slice(5, 9)
+const companyLogosRow3 = allCompanyLogos.slice(9, 13)
+const companyLogosRow4 = allCompanyLogos.slice(13, 18)
 
 export default function FestivalIntroPage() {
   return (
@@ -167,45 +164,61 @@ export default function FestivalIntroPage() {
             </h2>
           </div>
 
-          {/* Company Logos Grid - Row 1 */}
-          <div className="mb-10">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow1[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
-              <img src={companyLogosRow1[1]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
-              <img src={companyLogosRow1[2]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
-              <img src={companyLogosRow1[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
-              <img src={companyLogosRow1[4]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
+          {/* Company Logos Grid - Mobile */}
+          <div className="block md:hidden">
+            <div className="grid grid-cols-2 gap-4">
+              {allCompanyLogos.map((logo, index) => (
+                <div key={index} className="flex items-center justify-center min-h-[50px]">
+                  <img src={logo} alt="" className="max-h-[45px] w-auto object-contain" />
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Company Logos Grid - Row 2 */}
-          <div className="mb-10">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow2[0]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
-              <img src={companyLogosRow2[1]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
-              <img src={companyLogosRow2[2]} alt="" className="h-[25px] md:h-[35px] w-auto mx-auto" />
-              <img src={companyLogosRow2[3]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
-              <img src={companyLogosRow2[4]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
+          {/* Company Logos Grid - Desktop */}
+          <div className="hidden md:block">
+            {/* Row 1 - 5 items */}
+            <div className="mb-10">
+              <div className="flex justify-between items-center gap-4">
+                {companyLogosRow1.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Company Logos Grid - Row 3 */}
-          <div className="mb-10">
-            <div className="grid grid-cols-2 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow3[0]} alt="" className="h-[30px] md:h-[43px] w-auto mx-auto" />
-              <img src={companyLogosRow3[1]} alt="" className="h-[30px] md:h-[44px] w-auto mx-auto" />
-              <img src={companyLogosRow3[2]} alt="" className="h-[35px] md:h-[56px] w-auto mx-auto" />
-              <img src={companyLogosRow3[3]} alt="" className="h-[18px] md:h-[24px] w-auto mx-auto" />
+            {/* Row 2 - 4 items */}
+            <div className="mb-10">
+              <div className="grid grid-cols-4 gap-4">
+                {companyLogosRow2.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Company Logos Grid - Row 4 */}
-          <div>
-            <div className="grid grid-cols-2 md:flex md:justify-between items-center gap-4">
-              <img src={companyLogosRow4[0]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
-              <img src={companyLogosRow4[1]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
-              <img src={companyLogosRow4[2]} alt="" className="h-[20px] md:h-[27px] w-auto mx-auto" />
-              <img src={companyLogosRow4[3]} alt="" className="h-[18px] md:h-[23px] w-auto mx-auto" />
+            {/* Row 3 - 4 items */}
+            <div className="mb-10">
+              <div className="grid grid-cols-4 gap-4">
+                {companyLogosRow3.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 4 - 5 items */}
+            <div>
+              <div className="flex justify-between items-center gap-4">
+                {companyLogosRow4.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <img src={logo} alt="" className="max-h-[55px] w-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
