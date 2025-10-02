@@ -234,7 +234,7 @@ export default function ProgramPage() {
                 </tr>
                 <tr className="border-b border-gray-500">
                   <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">12:00</td>
-                  <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">아라곳 오케스트라 공연 (35인조)</td>
+                  <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">시민과 함께하는 이벤트</td>
                 </tr>
                 <tr className="border-b border-gray-500">
                   <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">15:00</td>
