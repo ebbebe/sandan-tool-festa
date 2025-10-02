@@ -6,8 +6,6 @@ import Footer from '@/components/Footer'
 
 const imgHeroBg = "/assets/image-96.png"
 const imgDivider = "/assets/divider.png"
-const imgParking1 = "/assets/guide-parking-1.png"
-const imgParking2 = "/assets/guide-parking-2.png"
 const imgLocationIcon = "/assets/dot-icon.png"
 const imgBoothMap = "/assets/booth_map.png"
 
@@ -113,7 +111,7 @@ export default function GuidePage() {
           {/* Google Map Embed */}
           <div className="mb-12">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD74TBJ2wioDVaBJIqHHjccIfIk1NJHKuQ&q=37.4082,126.6742&zoom=16&maptype=roadmap"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD74TBJ2wioDVaBJIqHHjccIfIk1NJHKuQ&q=인천+남동구+논현동+775+소래포구+해오름+광장&zoom=16&maptype=roadmap"
               className="rounded-[13px] overflow-hidden h-[500px] mb-4 w-full"
               style={{ border: 0 }}
               allowFullScreen
@@ -158,7 +156,15 @@ export default function GuidePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-3">
               <div className="rounded-[13px] overflow-hidden h-[500px]">
-                <img src={imgParking1} alt="소래 제1 공영 주차장" className="w-full h-full object-cover" />
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD74TBJ2wioDVaBJIqHHjccIfIk1NJHKuQ&q=인천+남동구+논현동+754-4&zoom=17&maptype=roadmap"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="소래 제1 공영 주차장"
+                ></iframe>
               </div>
               <h3 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                 소래 제1 공영 주차장
@@ -170,7 +176,15 @@ export default function GuidePage() {
 
             <div className="space-y-3">
               <div className="rounded-[13px] overflow-hidden h-[500px]">
-                <img src={imgParking2} alt="소래 제2공영 주차장" className="w-full h-full object-cover" />
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD74TBJ2wioDVaBJIqHHjccIfIk1NJHKuQ&q=인천+남동구+논현동+750-2&zoom=17&maptype=roadmap"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="소래 제2공영 주차장"
+                ></iframe>
               </div>
               <h3 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                 소래 제2공영 주차장
