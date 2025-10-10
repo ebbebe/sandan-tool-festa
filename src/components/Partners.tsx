@@ -48,6 +48,7 @@ const Partners = () => {
     { id: 10, name: "한국장애인고용공단인천지사", logoUrl: "/assets/partner-logo-10.png", width: 448, height: 61 },
     { id: 11, name: "(사)인천산업진흥협의", logoUrl: "/assets/partner-logo-11.png", width: 361, height: 53 },
     { id: 12, name: "소래포구전통어시장", logoUrl: "/assets/partner-logo-12.png", width: 318, height: 33 },
+    { id: 20, name: "ITP 인천테크노파크", logoUrl: "/assets/itp_로고 1.png", width: 183, height: 22 },
     { id: 13, name: "신한은행", logoUrl: "/assets/partner-logo-13.png", width: 207, height: 63 },
     { id: 14, name: "민천일보", logoUrl: "/assets/partner-logo-14.png", width: 108, height: 78 },
     { id: 15, name: "한국공학대학교", logoUrl: "/assets/partner-logo-15.png", width: 263, height: 61 },
@@ -59,8 +60,9 @@ const Partners = () => {
 
   const partnersRow1 = allPartners.slice(0, 5);
   const partnersRow2 = allPartners.slice(5, 9);
-  const partnersRow3 = allPartners.slice(9, 14);  // 신한은행, 민천일보 포함
-  const partnersRow4 = allPartners.slice(14, 19);
+  const partnersRow3 = allPartners.slice(9, 13);  // ITP 인천테크노파크까지
+  const partnersRow4 = allPartners.slice(13, 18);  // 신한은행 ~ 한중경제문화교류중심
+  const partnersRow5 = allPartners.slice(18, 20);  // 에코환경, Bike
 
   return (
     <section className="relative py-12 md:py-24 bg-[#2c2c2d]" ref={ref}>
@@ -178,7 +180,7 @@ const Partners = () => {
             ))}
           </motion.div>
 
-          {/* Row 3 - 5 items */}
+          {/* Row 3 - 4 items (ITP까지) */}
           <motion.div
             className="flex justify-between items-center"
             variants={containerVariants}
@@ -186,6 +188,31 @@ const Partners = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             {partnersRow3.map((partner) => (
+              <motion.div
+                key={partner.id}
+                className="relative flex items-center justify-center md:min-h-[60px] cursor-pointer"
+                variants={itemVariants}
+                whileHover="hover"
+              >
+                <div className="flex items-center justify-center px-2">
+                  <img
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    className="md:max-h-[50px] w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Row 4 - 5 items (신한은행 ~ 한중경제문화교류중심) */}
+          <motion.div
+            className="flex justify-between items-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            {partnersRow4.map((partner) => (
               <motion.div
                 key={partner.id}
                 className="relative flex items-center justify-center md:min-h-[60px] cursor-pointer"
@@ -207,14 +234,14 @@ const Partners = () => {
             ))}
           </motion.div>
 
-          {/* Row 4 - 5 items */}
+          {/* Row 5 - 2 items (에코환경, Bike) */}
           <motion.div
-            className="flex justify-between items-center"
+            className="flex justify-start items-center gap-8"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            {partnersRow4.map((partner) => (
+            {partnersRow5.map((partner) => (
               <motion.div
                 key={partner.id}
                 className="relative flex items-center justify-center md:min-h-[60px] cursor-pointer"

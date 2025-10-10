@@ -34,6 +34,7 @@ const allCompanyLogos = [
   "/assets/partner-logo-10.png",
   "/assets/partner-logo-11.png",
   "/assets/partner-logo-12.png",
+  "/assets/itp_로고 1.png",  // ITP 인천테크노파크 추가
   "/assets/partner-logo-13.png",
   "/assets/partner-logo-14.png",
   "/assets/partner-logo-15.png",
@@ -46,8 +47,9 @@ const allCompanyLogos = [
 // Company logos organized by rows for desktop
 const companyLogosRow1 = allCompanyLogos.slice(0, 5)
 const companyLogosRow2 = allCompanyLogos.slice(5, 9)
-const companyLogosRow3 = allCompanyLogos.slice(9, 14)  // 신한은행, 민천일보 포함
-const companyLogosRow4 = allCompanyLogos.slice(14, 19)
+const companyLogosRow3 = allCompanyLogos.slice(9, 13)  // ITP 인천테크노파크까지
+const companyLogosRow4 = allCompanyLogos.slice(13, 18)  // 신한은행 ~ 한중경제문화교류중심
+const companyLogosRow5 = allCompanyLogos.slice(18, 20)  // 에코환경, Bike
 
 export default function FestivalIntroPage() {
   return (
@@ -211,14 +213,25 @@ export default function FestivalIntroPage() {
               </div>
             </div>
 
-            {/* Row 3 - 5 items */}
+            {/* Row 3 - 4 items (ITP까지) */}
             <div className="mb-10">
               <div className="flex justify-between items-center">
                 {companyLogosRow3.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
+                    <img src={logo} alt="" className="max-h-[50px] w-auto" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 4 - 5 items (신한은행 ~ 한중경제문화교류중심) */}
+            <div className="mb-10">
+              <div className="flex justify-between items-center">
+                {companyLogosRow4.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
                     <img src={logo} alt="" className={`w-auto ${
-                      index === 3 ? 'max-h-[38px]' : // 신한은행 더 작게
-                      index === 4 ? 'max-h-[58px]' : // 민천일보 더 크게
+                      index === 0 ? 'max-h-[38px]' : // 신한은행 더 작게
+                      index === 1 ? 'max-h-[58px]' : // 민천일보 더 크게
                       'max-h-[45px]'
                     }`} />
                   </div>
@@ -226,10 +239,10 @@ export default function FestivalIntroPage() {
               </div>
             </div>
 
-            {/* Row 4 - 5 items */}
+            {/* Row 5 - 2 items (에코환경, Bike) */}
             <div>
-              <div className="flex justify-between items-center">
-                {companyLogosRow4.map((logo, index) => (
+              <div className="flex justify-start items-center gap-8">
+                {companyLogosRow5.map((logo, index) => (
                   <div key={index} className="flex items-center justify-center">
                     <img src={logo} alt="" className="max-h-[40px] w-auto" />
                   </div>
