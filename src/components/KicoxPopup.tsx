@@ -41,7 +41,7 @@ const KicoxPopup = () => {
       <div className="fixed inset-0 z-50 flex items-start justify-end p-4 lg:pr-[calc(50%-650px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-[400px] lg:mt-[440px] pointer-events-auto"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-32 lg:mt-40 pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
