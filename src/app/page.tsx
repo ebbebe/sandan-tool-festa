@@ -4,6 +4,8 @@ import EventInfo from '@/components/EventInfo';
 import EventCards from '@/components/EventCards';
 import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
+import SeminarPopup from '@/components/SeminarPopup';
+import ItpPopup from '@/components/ItpPopup';
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <Partners />
       </main>
       <Footer />
+      <SeminarPopup />
+      <ItpPopup />
     </div>
   );
 }

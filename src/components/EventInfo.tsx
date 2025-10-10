@@ -94,13 +94,13 @@ const EventInfo = () => {
                         <span className="text-sm md:text-xl font-black">일</span>
                       </span>
                     </span>
-                    <span className="hidden md:inline md:ml-4">(11:00 ~ 18:00)</span>
+                    <span className="hidden md:inline md:ml-4">(09:00 ~ 18:00)</span>
                   </p>
                 </div>
               </div>
               <p className="md:hidden text-base font-black text-center text-white mt-2"
                  style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
-                시간: 11:00 ~ 18:00
+                시간: 09:00 ~ 18:00
               </p>
             </div>
 
