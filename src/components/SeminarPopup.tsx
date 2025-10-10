@@ -38,19 +38,10 @@ const SeminarPopup = () => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-start p-4 lg:pl-[calc(50%-700px)]">
-        {/* Backdrop */}
-        <motion.div
-          className="absolute inset-0 bg-black/50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={handleClose}
-        />
-
+      <div className="fixed inset-0 z-50 flex items-start justify-start p-4 lg:pl-[calc(50%-650px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-8 lg:mt-16"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-32 lg:mt-40 pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}

@@ -38,10 +38,10 @@ const ItpPopup = () => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-end p-4 lg:pr-[calc(50%-700px)] pointer-events-none">
+      <div className="fixed inset-0 z-50 flex items-start justify-end p-4 lg:pr-[calc(50%-650px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-8 lg:mt-16 pointer-events-auto"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-32 lg:mt-40 pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -59,7 +59,7 @@ const ItpPopup = () => {
           </button>
 
           {/* Content Section */}
-          <div className="relative bg-[rgba(44,44,44,0.95)] p-8 md:p-10 text-white text-center">
+          <div className="relative bg-[rgba(25,25,25,0.75)] p-8 md:p-10 text-white text-center">
             {/* Title */}
             <h1 className="text-2xl md:text-3xl font-black mb-4" style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
               ITP 인천테크노파크
@@ -72,7 +72,7 @@ const ItpPopup = () => {
           </div>
 
           {/* Button Section */}
-          <div className="bg-[rgba(44,44,44,0.95)] px-3 pb-3 md:px-4 md:pb-4">
+          <div className="bg-[rgba(25,25,25,0.75)] px-3 pb-3 md:px-4 md:pb-4">
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={handleHideToday}
@@ -83,7 +83,7 @@ const ItpPopup = () => {
               </button>
               <button
                 onClick={handleViewMore}
-                className="flex-[6] bg-[rgba(56,141,113,0.95)] hover:bg-[rgba(45,122,96,0.95)] text-white py-4 px-6 text-sm md:text-base font-semibold transition-colors"
+                className="flex-[6] bg-[rgba(56,141,113,0.75)] hover:bg-[rgba(45,122,96,0.75)] text-white py-4 px-6 text-sm md:text-base font-semibold transition-colors"
                 style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}
               >
                 링크 바로가기
