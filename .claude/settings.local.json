@@ -24,7 +24,8 @@
       "mcp__supabase__get_anon_key",
       "Bash(npx next:*)",
       "WebFetch(domain:www.figma.com)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "mcp__supabase__execute_sql"
     ],
     "deny": [],
     "ask": []
