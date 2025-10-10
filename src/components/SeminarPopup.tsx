@@ -3,7 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SeminarPopup = () => {
+interface SeminarPopupProps {
+  onClose?: () => void;
+}
+
+const SeminarPopup = ({ onClose }: SeminarPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,6 +22,7 @@ const SeminarPopup = () => {
 
   const handleClose = () => {
     setIsVisible(false);
+    onClose?.();
   };
 
   const handleHideToday = () => {
@@ -26,6 +31,7 @@ const SeminarPopup = () => {
     tomorrow.setHours(24, 0, 0, 0);
     localStorage.setItem('seminarPopupHideUntil', tomorrow.getTime().toString());
     setIsVisible(false);
+    onClose?.();
   };
 
   const handleViewMore = () => {
@@ -38,10 +44,10 @@ const SeminarPopup = () => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-start p-4 lg:pl-[calc(50%-650px)] pointer-events-none">
+      <div className="fixed inset-0 z-50 flex items-start justify-center lg:justify-start p-4 lg:pl-[calc(50%-650px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-32 lg:mt-40 pointer-events-auto"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-24 lg:mt-32 xl:mt-40 pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}

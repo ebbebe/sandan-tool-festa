@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import EventInfo from '@/components/EventInfo';
@@ -9,6 +12,23 @@ import ItpPopup from '@/components/ItpPopup';
 import KicoxPopup from '@/components/KicoxPopup';
 
 export default function Home() {
+  const [currentPopupIndex, setCurrentPopupIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePopupClose = () => {
+    setCurrentPopupIndex(prev => prev + 1);
+  };
+
   return (
     <div className="min-h-screen bg-[#1a1a1a]">
       <Header />
@@ -19,9 +39,24 @@ export default function Home() {
         <Partners />
       </main>
       <Footer />
-      <SeminarPopup />
-      <ItpPopup />
-      <KicoxPopup />
+
+      {/* 데스크톱: 모든 팝업 표시 */}
+      {!isMobile && (
+        <>
+          <SeminarPopup />
+          <KicoxPopup />
+          <ItpPopup />
+        </>
+      )}
+
+      {/* 모바일: 순차적으로 하나씩 표시 */}
+      {isMobile && (
+        <>
+          {currentPopupIndex === 0 && <SeminarPopup onClose={handlePopupClose} />}
+          {currentPopupIndex === 1 && <KicoxPopup onClose={handlePopupClose} />}
+          {currentPopupIndex === 2 && <ItpPopup onClose={handlePopupClose} />}
+        </>
+      )}
     </div>
   );
 }

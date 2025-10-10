@@ -3,7 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ItpPopup = () => {
+interface ItpPopupProps {
+  onClose?: () => void;
+}
+
+const ItpPopup = ({ onClose }: ItpPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,6 +22,7 @@ const ItpPopup = () => {
 
   const handleClose = () => {
     setIsVisible(false);
+    onClose?.();
   };
 
   const handleHideToday = () => {
@@ -26,6 +31,7 @@ const ItpPopup = () => {
     tomorrow.setHours(24, 0, 0, 0);
     localStorage.setItem('itpPopupHideUntil', tomorrow.getTime().toString());
     setIsVisible(false);
+    onClose?.();
   };
 
   const handleViewMore = () => {
@@ -38,10 +44,10 @@ const ItpPopup = () => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-end p-4 lg:pr-[calc(50%-650px)] pointer-events-none">
+      <div className="fixed inset-0 z-50 flex items-start justify-center lg:justify-end p-4 lg:pr-[calc(50%-650px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-[400px] lg:mt-[440px] pointer-events-auto"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-24 lg:mt-[400px] xl:mt-[440px] pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
