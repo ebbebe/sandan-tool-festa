@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ItpPopup = () => {
+const KicoxPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // 오늘 하루 그만보기 체크
-    const hideUntil = localStorage.getItem('itpPopupHideUntil');
+    const hideUntil = localStorage.getItem('kicoxPopupHideUntil');
     const now = new Date().getTime();
 
     if (!hideUntil || now > parseInt(hideUntil)) {
@@ -24,13 +24,13 @@ const ItpPopup = () => {
     // 오늘 자정까지 숨기기
     const tomorrow = new Date();
     tomorrow.setHours(24, 0, 0, 0);
-    localStorage.setItem('itpPopupHideUntil', tomorrow.getTime().toString());
+    localStorage.setItem('kicoxPopupHideUntil', tomorrow.getTime().toString());
     setIsVisible(false);
   };
 
   const handleViewMore = () => {
-    // ITP 인천테크노파크 웹사이트로 이동
-    window.open('https://www.itp.or.kr/', '_blank');
+    // 한국산업단지공단 웹사이트로 이동
+    window.open('https://www.kicox.or.kr/index.do', '_blank');
     setIsVisible(false);
   };
 
@@ -41,7 +41,7 @@ const ItpPopup = () => {
       <div className="fixed inset-0 z-50 flex items-start justify-end p-4 lg:pr-[calc(50%-700px)] pointer-events-none">
         {/* Popup */}
         <motion.div
-          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-8 lg:mt-16 pointer-events-auto"
+          className="relative shadow-2xl w-full max-w-[600px] overflow-hidden mt-[280px] lg:mt-[340px] pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -62,12 +62,12 @@ const ItpPopup = () => {
           <div className="relative bg-[rgba(44,44,44,0.95)] p-8 md:p-10 text-white text-center">
             {/* Title */}
             <h1 className="text-2xl md:text-3xl font-black mb-4" style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
-              ITP 인천테크노파크
+              한국산업단지공단
             </h1>
 
             {/* Subtitle */}
             <p className="text-base md:text-lg font-medium" style={{ fontFamily: 'Pretendard, sans-serif' }}>
-              인천의 기술혁신 허브, 기업성장의 중심
+              산업혁신과 지역경제를 이끄는 힘
             </p>
           </div>
 
@@ -96,4 +96,4 @@ const ItpPopup = () => {
   );
 };
 
-export default ItpPopup;
+export default KicoxPopup;

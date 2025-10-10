@@ -6,6 +6,7 @@ import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
 import SeminarPopup from '@/components/SeminarPopup';
 import ItpPopup from '@/components/ItpPopup';
+import KicoxPopup from '@/components/KicoxPopup';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Footer />
       <SeminarPopup />
       <ItpPopup />
+      <KicoxPopup />
     </div>
   );
 }
