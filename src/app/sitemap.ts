@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://your-domain.com'; // 실제 배포 도메인으로 변경 필요
+  const baseUrl = 'https://www.sandantoolfesta.co.kr';
 
   return [
     {

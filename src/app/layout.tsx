@@ -71,17 +71,17 @@ export default function RootLayout({
               "organizer": {
                 "@type": "Organization",
                 "name": "산업단지공단",
-                "url": "https://your-domain.com"
+                "url": "https://www.sandantoolfesta.co.kr"
               },
               "image": [
-                "https://your-domain.com/assets/meta.png"
+                "https://www.sandantoolfesta.co.kr/assets/meta.png"
               ],
               "offers": {
                 "@type": "Offer",
                 "availability": "https://schema.org/InStock",
                 "price": "0",
                 "priceCurrency": "KRW",
-                "url": "https://your-domain.com"
+                "url": "https://www.sandantoolfesta.co.kr"
               }
             })
           }}
