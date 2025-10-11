@@ -166,7 +166,7 @@ export default function FestivalIntroPage() {
               fontFamily: 'Wanted Sans, WantedGothic, sans-serif',
               textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px'
             }} className="text-3xl md:text-[40px] font-black text-white leading-none">
-              후원사
+              후원
             </h2>
           </div>
           <p className="text-center text-base md:text-[20px] text-white/90 mb-12"

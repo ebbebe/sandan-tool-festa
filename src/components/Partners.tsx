@@ -88,7 +88,7 @@ const Partners = () => {
                   fontFamily: "WantedGothic, Wanted Sans, sans-serif",
                   textShadow: "rgba(0,0,0,0.25) 3px 2px 4px"
                 }}>
-              후원사
+              후원
             </h2>
           </div>
           <p className="text-base md:text-[20px] text-white/90 mb-8"

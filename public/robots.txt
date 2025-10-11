@@ -1,0 +1,11 @@
+# 2025 산단툴페스타 인천 - Robots.txt
+# 모든 검색엔진 허용
+
+User-agent: *
+Allow: /
+
+# Sitemap 위치
+Sitemap: https://your-domain.com/sitemap.xml
+
+# 크롤링 속도 조절 (선택사항)
+Crawl-delay: 1

@@ -47,6 +47,45 @@ export default function RootLayout({
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/npm/wantedgothic@1.0.3/css/wantedgothic.css"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": "2025 산단툴페스타 인천",
+              "description": "산업용 제품·부품·소재·공구 전시 및 채용 박람회",
+              "startDate": "2025-11-15T10:00:00+09:00",
+              "endDate": "2025-11-16T18:00:00+09:00",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "location": {
+                "@type": "Place",
+                "name": "소래포구 해오름 광장",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "인천",
+                  "addressCountry": "KR"
+                }
+              },
+              "organizer": {
+                "@type": "Organization",
+                "name": "산업단지공단",
+                "url": "https://your-domain.com"
+              },
+              "image": [
+                "https://your-domain.com/assets/meta.png"
+              ],
+              "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "price": "0",
+                "priceCurrency": "KRW",
+                "url": "https://your-domain.com"
+              }
+            })
+          }}
+        />
       </head>
       <body className="antialiased">
         {children}
