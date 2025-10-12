@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "2025년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천. 산업용 제품·부품·소재·공구 전시 및 채용 박람회",
   keywords: "산단툴페스타, 인천, 산업박람회, 공구전시회, 채용박람회",
   verification: {
+    google: "FTYPh0ZGWso4MFlypJy3-JiTTTFEig5zy4mDJos-J4Q",
     other: {
       "naver-site-verification": "d808f0a639f2323e7cebb39a268347424ff887c7",
     },
