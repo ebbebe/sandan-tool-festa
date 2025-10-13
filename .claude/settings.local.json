@@ -27,7 +27,8 @@
       "Bash(findstr:*)",
       "mcp__supabase__execute_sql",
       "Bash(mkdir:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(copy C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festamap.jpg C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festapublicassetsmap.jpg)"
     ],
     "deny": [],
     "ask": []
