@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 interface SeminarPopupProps {
   onClose?: () => void;
@@ -9,6 +10,7 @@ interface SeminarPopupProps {
 
 const SeminarPopup = ({ onClose }: SeminarPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // 오늘 하루 그만보기 체크
@@ -35,8 +37,8 @@ const SeminarPopup = ({ onClose }: SeminarPopupProps) => {
   };
 
   const handleViewMore = () => {
-    // 원글 바로가기 - 인하대학교 산학협력단 페이지로 이동
-    window.open('https://www.inha.ac.kr', '_blank');
+    // 공지사항 8번 게시글로 이동
+    router.push('/notice/8');
     setIsVisible(false);
   };
 
