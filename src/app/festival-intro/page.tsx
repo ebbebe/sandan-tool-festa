@@ -68,7 +68,7 @@ export default function FestivalIntroPage() {
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
             <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
-              축제 소개
+              행사 소개
             </p>
           </div>
         </div>

@@ -22,7 +22,7 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: '축제소개', href: '/festival-intro' },
+    { name: '행사소개', href: '/festival-intro' },
     { name: '프로그램', href: '/program' },
     { name: '현장안내', href: '/guide' },
     { name: '공지사항', href: '/notice' }
