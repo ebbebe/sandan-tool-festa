@@ -241,7 +241,7 @@ export default function ProgramPage() {
                   <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">기술경진대회</td>
                 </tr>
                 <tr>
-                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">15:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/>~<br className="md:hidden"/><span className="hidden md:inline">18:00</span><span className="md:hidden">18:00</span></td>
+                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">15:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/><span className="md:hidden">~</span><br className="md:hidden"/><span className="hidden md:inline">18:00</span><span className="md:hidden">18:00</span></td>
                   <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">산업제품 시연 + 전시관, 체험존, 채용박람회 운영</td>
                 </tr>
               </tbody>
@@ -260,7 +260,7 @@ export default function ProgramPage() {
             <table className="w-full border-collapse min-w-[350px] md:min-w-[500px]">
               <tbody>
                 <tr className="border-b border-gray-500">
-                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">11:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/>~<br className="md:hidden"/><span className="hidden md:inline">18:00</span><span className="md:hidden">18:00</span></td>
+                  <td className="w-[30%] md:w-1/6 p-2 md:p-4 text-center font-bold text-sm md:text-xl text-[#2c2c2d] border-r border-gray-500">11:00<span className="hidden md:inline"> ~ </span><br className="md:hidden"/><span className="md:hidden">~</span><br className="md:hidden"/><span className="hidden md:inline">18:00</span><span className="md:hidden">18:00</span></td>
                   <td className="p-2 md:p-4 font-bold text-sm md:text-xl text-[#2c2c2d]">시민과 함께하는 이벤트</td>
                 </tr>
                 <tr>
