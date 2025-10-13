@@ -1,0 +1,122 @@
+UPDATE notices
+SET content = $content$<div style="font-family: Pretendard, sans-serif; font-size: 18px; line-height: 1.6; color: #2c2c2d;">
+  <p style="margin-bottom: 0;">안녕하세요. 산단툴페스타 관리자 입니다.</p>
+  <p style="margin-bottom: 0;">참가 신청을 방법 및 환불 규정 안내 공유드립니다.</p>
+  <p style="margin-bottom: 0;">&nbsp;</p>
+  <p style="margin-bottom: 0; font-weight: bold;">■ 참가 신청 안내</p>
+  <p style="margin-bottom: 0;">• 신청기간: 2025년 9월 11일 ~ 11월 07일 18:00</p>
+  <p style="margin-bottom: 0;">• 신청방법: 하단 다운로드 클릭 후 서식 다운로드 -> 참가신청서 작성 후 메일 공유 (backspace7@naver.com)</p>
+  <p style="margin-bottom: 0;">• 신청자격: 인천지역 산업단지 입주기업 및 관련 기업</p>
+  <p style="margin-bottom: 0;">• 참가비: 각 ZONE별 참가 신청서 서식 및 환불 규정 안내에 표기.</p>
+  <p style="margin-bottom: 0;">&nbsp;&nbsp;(각 ZONE 별로 위치가 상이 하오니 첨부 파일 부스 배치도를 꼭 확인 해주시기 바랍니다.)</p>
+  <p style="margin-bottom: 0;">&nbsp;</p>
+  <p style="margin-bottom: 0;">문의:032-881-0427</p>
+  <p style="margin-bottom: 0;">이메일: backspace7@naver.com</p>
+  <p style="margin-bottom: 0;">&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <!-- 스크롤 가능한 환불규정 영역 -->
+  <div style="position: relative; background: #f8f8f8; padding: 24px 32px; height: 636px; overflow-y: auto; margin-bottom: 24px; border-radius: 8px;">
+    <style>
+      .scroll-box::-webkit-scrollbar {
+        width: 6px;
+      }
+      .scroll-box::-webkit-scrollbar-track {
+        background: #9f9f9f;
+        border-radius: 3px;
+      }
+      .scroll-box::-webkit-scrollbar-thumb {
+        background: #388d71;
+        border-radius: 3px;
+        height: 88px;
+      }
+      .scroll-box {
+        scrollbar-width: thin;
+        scrollbar-color: #388d71 #9f9f9f;
+      }
+    </style>
+    <div class="scroll-box" style="height: 100%; overflow-y: auto; padding-right: 16px;">
+      <p style="margin-bottom: 0; font-weight: bold;">■환불규정안내</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제1조 | 용어의 정의</p>
+      <p style="margin-bottom: 0;">1. 「전시자」라 함은 본 박람회 참가를 위해 소정의 참가신청서를 제출하고 참가비를 완납한 개인, 회사, 기관 및 단체 등의 전시참가자를 말한다.</p>
+      <p style="margin-bottom: 0;">2. 「박람회」라 함은 '산단툴페스타2025(SANDANTOOLFESTA2025)'를 말한다.</p>
+      <p style="margin-bottom: 0;">3. 「주최자」라 함은 주식회사 ㈜산업인을 말한다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제2조 | 참가신청 및 계약</p>
+      <p style="margin-bottom: 0;">1. 참가신청을 하고자 하는 자는 본 참가신청서를 작성하여 주최자에게 제출 후 10일 이내에 참가비 전액을 납부하여야 한다. 참가신청서의 제출 후 주최자의 승인이 있을 때 참가계약이 성립된 것으로 한다.</p>
+      <p style="margin-bottom: 0;">2. 참가비는 AZone 3,000,000원/1부스, BZone 1,500,000원/1부스 CZone 1,000,000원 부가가치세 별도)를 정가로 한다.</p>
+      <p style="margin-bottom: 0;">3. 전시부스 공사는 전시자의 신청에 따라 주최자가 제공하며, 참가신청서상 내용에 변동사항이 발생할 경우 즉시 주최자에게 이를 통보하여야 한다. 미통보로 인한 불이익은 전시자의 책임으로 한다.</p>
+      <p style="margin-bottom: 0;">4. 전시자는 전시부스 신청상의 내용에 변동사항이 발생할 경우 즉시 주최자에게 이를 통보하여야 한다, 미통보로 인한 불이익에 대해서는 전시자의 책임으로 한다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제3조 | 전시부스 배정</p>
+      <p style="margin-bottom: 0;">1. 주최자는 전시품 성격, 신청 순서 및 참가비 납입 순에 따라 전시 위치를 배정한다.</p>
+      <p style="margin-bottom: 0;">2. 주최자는 전시장의 공간 조화와 관람 효율 및 전시 효과 등을 고려하여 배정함을 원칙으로 하되, 전반적으로 박람회 운영상 필요하다고 인정할 경우, 전시자에게 기 배정된 부스위치를 변경할 수 있다. 이 같은 변경은 주최자의 재량이며, 전시자는 동 변경의 결과에 대한 이의를 제기할 수 없다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제4조 | 전시실 관리</p>
+      <p style="margin-bottom: 0;">1. 전시자는 참가신청서에 명시한 전시품을 전시하고 상주요원을 배치하여 자사 부스(Booth) 관리에 신의와 성실로 임하여야 한다.</p>
+      <p style="margin-bottom: 0;">2. 전시자가 참가신청서에 명시한 전시품과 상이한 물품을 전시하거나 전시성격에 부합되지 않는 물품을 전시할 경우, 또는 주최자의 허가 없는 직매행위가 발견될 시 주최자는 즉시 전시의 중지, 전시품의 철거 또는 반출을 명할 수 있으며, 본 계약을 해지할 수 있다. 이 경우 참가비는 반환하지 아니하며, 전시자는 이에 따른 배상을 청구할 수 없다.</p>
+      <p style="margin-bottom: 0;">3. 주최자는 필요한 경우 특정인의 전시장 출입을 제한할 수 있다.</p>
+      <p style="margin-bottom: 0;">4. 전시자는 주최자의 사전승인 없이 임대한 전시면적 이외의 장소에서 전시품을 전시할 수 없다.</p>
+      <p style="margin-bottom: 0;">5. 전시자는 주최자의 서면 동의 없이 배정된 전시면적의 전부 또는 일부를 타인에게 전대할 수 없다.</p>
+      <p style="margin-bottom: 0;">6. 전시장 내에서 특별행위(이벤트 등)를 진행하고자 하는 전시자는 사전에 주최자에게 그 내용을 통보하여 승인을 얻어야 한다. 호객행위나 고성 방가는 엄격히 금한다. 만약 지나친 소음 또는 주변 부스의 홍보 활동에 피해를 준다고 판단 될 때에 주최자는 해당 행위의 중단을 청구할 수 있으며, 전시자는 즉시 이를 이행하여야 한다.</p>
+      <p style="margin-bottom: 0;">7. 전시자는 전시실의 바닥, 천정, 기둥, 벽면 등에 페인트칠 등 전시장의 원상태가 손상될 위험이 있는 일체의 행위를 금한다. 이로 인한 전시장의 손상이 있을때에는 전시자는 원상회복의무를 부담하며 주최자는 손해의 배상을 청구 할 수 있다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제5조 | 납입 조건</p>
+      <p style="margin-bottom: 0;">1. 전시자는 참가신청서를 온라인 신청, E-mail 또는 Fax 등의 방법으로 전시사무국으로 제출하여야 한다. 온라인 신청 시, 전시부스 신청 완료 시를 참가신청서 제출 시기로 한다.</p>
+      <p style="margin-bottom: 0;">2. 전시자는 인보이스 수령 후 참가비 전액을 7일 이내에 납부하여야 한다.</p>
+      <p style="margin-bottom: 0;">3. 전시자가 참가비 전액을 기간 내 납부치 않을 경우, 주최자는 참가 계약을 취소할 수 있으며, 이 경우 전시자는 계약금 반환을 청구할 수 없고 본 약정 제6조와 제7조의 규정에 따라 처리한다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제6조 | 전시회의 취소 또는 변경</p>
+      <p style="margin-bottom: 0;">1. 주최자가 박람회 개최를 취소하는 경우 납입된 참가비 전액을 전시자에게 반환한다.</p>
+      <p style="margin-bottom: 0;">2.「재난 및 안전관리 기본법」 상의 "재난" 으로 규정된 사정으로 인하여 전시회가 취소 또는 변경되었을 경우, 주최자의 참가비 반환의무는 면제된다.</p>
+      <p style="margin-bottom: 0;">3. 본조 2항의 사항으로 전시회가 취소되었을 경우, 전시자는 주최자에게 손해에 따른 보상을 청구 할 수 없다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제7조 | 참가취소 및 위약금</p>
+      <p style="margin-bottom: 0;">1. 전시자가 약정된 전시면적 전부 또는 일부를 취소할 경우, 전시자는 즉시 주최자에게 서면으로 취소 통보를 해야 한다.</p>
+      <p style="margin-bottom: 0;">2. 위약금은 기납입된 참가비에서 우선정산하며, 과부족시 추가납입 또는 환불한다.</p>
+      <p style="margin-bottom: 0;">3. 취소통보 시기에 따른 위약금 및 환불규정은 다음과 같다.</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 박람회 개막일 기준 21일 이전 : 참가비의 10%를 위약금으로 납부</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 박람회 개막일 기준 14일 이전 : 참가비의 80%를 위약금으로 납부</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 박람회 개막일 기준 7일 이전 : 참가비의 100%를 위약금으로 납부</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제8조 | 장치 및 전시품 진열</p>
+      <p style="margin-bottom: 0;">1. 전시자는 배정된 전시면적 내에서 지정기간 내에 장치 및 전시품을 반입, 진열을 완료하여야 하며, 전시 개최일 오픈 시작 전까지 전시품 진열이 완료되지 않을 경우, 주최자는 본 계약을 해지할 수 있으며, 이에 따른 손해배상을 청구할 수 있다.</p>
+      <p style="margin-bottom: 0;">2. 주최자가 전시품 장치 및 진열을 위하여 전시장을 개방하는 시간 외 전시자는 주최자에게 추가시간을 요청할 수 없다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제9조 | 전시품 및 장치물 반출</p>
+      <p style="margin-bottom: 0;">1. 전시자는 주최자가 반입/반출에 관하여 사전에 고지하는 지정시기 내에만 모든 전시품 및 장치물을 반입/반출 하여야 하며, 지정시기 외 전시품과 장치물의 반입/반출을 할 수 없다.</p>
+      <p style="margin-bottom: 0;">2. 반입/반출의 지연으로 인하여 발생하는 주최자 부담의 제반비용은 즉시 주최자에게 납입하여야 한다.</p>
+      <p style="margin-bottom: 0;">3. 전시품 및 장치물의 반입/반출시 (주)산업인의 안전관리 규정을 준수하여야 한다.</p>
+      <p style="margin-bottom: 0;">4. 본조 1항의 '지정시기' 외의 반입/반출 행위 및 본조 3항의 '(주)산업인의 안전관리 규정'을 위반한 반입/반출 행위로 발생하는 모든 피해와 손해는 전시자의 부담으로 하며, 이를 이유로 주최자에게 어떠한 민-형사상 손해배상을 구할 수 없다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제10조 | 전시장의 경비, 위험부담 및 보험</p>
+      <p style="margin-bottom: 0;">1. 주최자는 전시자 및 방문객을 위하여전시장 규정에 의거한 적절한 경비조치를 취한다.</p>
+      <p style="margin-bottom: 0;">2. 전시자는 전시기간 및 장치, 철거기간 중 발생되는 배당면적 내 장치물 및 전시품에 대한 훼손 및 도난에 대하여 전적인 책임을 진다.</p>
+      <p style="margin-bottom: 0;">3. 전시자가 고의 또는 과실로 화재, 도난, 파손, 기타 사고를 발생하게 하여 주최자 또는 타인에게 손해를 입힌 때에는 전시자가 전적인 배상 책임을 지며 전시품 등에 대한 보험가입 역시 전시자의 책임으로 한다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제11조 | 방화 규칙</p>
+      <p style="margin-bottom: 0;">1. 장치물 및 전시장 내의 모든 자재는 소방법규에 따라 적절한 불연처리가 되어야 한다.</p>
+      <p style="margin-bottom: 0;">2. 주최자는 필요에 따라 전시자에게 화재방지와 관련한 시정을 요구할 수 있다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제12조 | 보충 규정</p>
+      <p style="margin-bottom: 0;">1. 주최자는 필요한 경우 참가규정에 명시되지 않은 보충 규정을 제정할 수 있으며 전시자는 이를 준수해야 한다.</p>
+      <p style="margin-bottom: 0;">2. 보충되는 규정은 참가규정의 일부가 되며, 전시자는 이를 준수하여야한다.</p>
+      <p style="margin-bottom: 0;">3. 전시자는 (주)산업인 전시장의 제규정을 준수하여야 한다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제13조 | 채권추심</p>
+      <p style="margin-bottom: 0;">1. 본 박람회 종료 후, 주최자는 본 박람회로 인하여 발생한 채권 중 미수채권 발생시, 채권추심을 위탁 받은 자에게 해당채권에 대한 추심을 위탁 할 수 있다.</p>
+      <p style="margin-bottom: 0;">2. 본 조 1항의 경우, 채무자 관련정보를 채권추심 수탁자에게 전달 할 수 있다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">제14조 | 분쟁 해결</p>
+      <p style="margin-bottom: 0;">본 참가약관의 해석에 관한 주최자와 전시자 간에 발생되는 분쟁 및 기타 쌍방의 권리, 의무에 관한 분쟁은 대한상사중재원의 중재, 판정에 따르며 그 판정에 대하여 법원에 제소할 수 없다.</p>
+      <p style="margin-top: 16px; margin-bottom: 0; font-weight: bold;">개인정보 이용 및 취급 방침</p>
+      <p style="margin-bottom: 0;">(주)산업인은 개인정보 보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고, 개인정보와 관련된 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">수집/이용 목적</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 전시회의 원활한 진행을 위하여 각종 고지/통지 및 전시장 운영 전반을 위한 목적으로 개인정보를 처리합니다.</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- (주)산업인의 전시회나 이벤트에 대한 정보 안내의 목적으로 수집되어 이용됩니다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">수집/이용 항목 : 성명, 소속, 전화번호, 휴대전화번호, 팩스, 주소, 이메일주소</p>
+      <p style="margin-bottom: 0; font-weight: bold;">개인정보 보유 및 이용기간</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 박람회 사업운영 기간 내 보유. 삭제요청시 지체없이 파기</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 관련 법령에서 정한 소비자 열람제공을 위한 거래기록의 경우, 법령에서 정한 보존기간에 따라 보존됩니다.</p>
+      <p style="margin-bottom: 0; font-weight: bold;">개인정보 제3자 위탁</p>
+      <p style="margin-bottom: 0; padding-left: 20px;">- 전시회 출입 및 출입증 제작을 위한 출입, 등록 등 입장서비스 제공, 전자명함시스템, 홈페이지 운영, 산업통상자원부가 운영하는 국내전시회 인증제도의 일환으로 본 전시회 참가확인을 위한 성명과 연락처가 관련기관에 제공될 수 있습니다.</p>
+      <p style="padding-left: 20px;">- 위탁목적 외 용도로 사용되지 않으며, 개인정보의 제3자 위탁을 거부할 수 있습니다. 거부권 행사 시 박람회 출입, 등록, 참가, 부대행사 참가 등 박람회 서비스를 이용할 수 없습니다.</p>
+    </div>
+
+    <!-- 다운로드 버튼 -->
+    <div style="position: absolute; bottom: 24px; right: 32px;">
+      <button id="download-forms-btn" data-download="true" style="background: #388d71; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; font-family: 'Wanted Sans', WantedGothic, sans-serif; box-shadow: 0 2px 8px rgba(56, 141, 113, 0.3); transition: background 0.3s;">
+        서식 다운로드
+      </button>
+    </div>
+  </div>
+</div>$content$,
+updated_at = NOW()
+WHERE id = 9;

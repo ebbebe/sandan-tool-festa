@@ -33,6 +33,37 @@ export default function NoticeDetailPage() {
     fetchNotice()
   }, [params.id])
 
+  // Handle download button clicks
+  useEffect(() => {
+    const handleDownloadClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      const downloadBtn = target.closest('#download-forms-btn')
+
+      if (downloadBtn) {
+        e.preventDefault()
+        const files = [
+          '/downloads/2025 산단툴페스타_인천 참가신청서(A).hwp',
+          '/downloads/2025 산단툴페스타_인천 참가신청서(B).hwp',
+          '/downloads/2025 산단툴페스타_인천 참가신청서(C).hwp'
+        ]
+
+        files.forEach((file, index) => {
+          setTimeout(() => {
+            const link = document.createElement('a')
+            link.href = file
+            link.download = file.split('/').pop() || ''
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+          }, index * 300)
+        })
+      }
+    }
+
+    document.addEventListener('click', handleDownloadClick)
+    return () => document.removeEventListener('click', handleDownloadClick)
+  }, [])
+
   useEffect(() => {
     // Close popover when clicking outside
     const handleClickOutside = (event: MouseEvent) => {

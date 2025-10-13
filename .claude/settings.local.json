@@ -25,7 +25,9 @@
       "Bash(npx next:*)",
       "WebFetch(domain:www.figma.com)",
       "Bash(findstr:*)",
-      "mcp__supabase__execute_sql"
+      "mcp__supabase__execute_sql",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
