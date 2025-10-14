@@ -28,7 +28,10 @@
       "mcp__supabase__execute_sql",
       "Bash(mkdir:*)",
       "Bash(cat:*)",
-      "Bash(copy C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festamap.jpg C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festapublicassetsmap.jpg)"
+      "Bash(copy C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festamap.jpg C:UsersaaDesktopOutSourcingScriptnext_jssandan-tool-festapublicassetsmap.jpg)",
+      "Bash(copy:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []

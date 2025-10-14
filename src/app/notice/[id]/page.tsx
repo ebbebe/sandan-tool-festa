@@ -44,7 +44,9 @@ export default function NoticeDetailPage() {
         const files = [
           '/downloads/2025 산단툴페스타_인천 참가신청서(A).hwp',
           '/downloads/2025 산단툴페스타_인천 참가신청서(B).hwp',
-          '/downloads/2025 산단툴페스타_인천 참가신청서(C).hwp'
+          '/downloads/2025 산단툴페스타_인천 참가신청서(C).hwp',
+          '/downloads/2025_산단툴페스타_행사장안내.jpg',
+          '/downloads/2025_산단툴페스타_정보안내.jpg'
         ]
 
         files.forEach((file, index) => {
