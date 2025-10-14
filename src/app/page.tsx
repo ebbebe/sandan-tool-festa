@@ -8,7 +8,6 @@ import EventCards from '@/components/EventCards';
 import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
 import SeminarPopup from '@/components/SeminarPopup';
-import ItpPopup from '@/components/ItpPopup';
 import KicoxPopup from '@/components/KicoxPopup';
 
 export default function Home() {
@@ -45,7 +44,6 @@ export default function Home() {
         <>
           <SeminarPopup />
           <KicoxPopup />
-          <ItpPopup />
         </>
       )}
 
@@ -54,7 +52,6 @@ export default function Home() {
         <>
           {currentPopupIndex === 0 && <SeminarPopup onClose={handlePopupClose} />}
           {currentPopupIndex === 1 && <KicoxPopup onClose={handlePopupClose} />}
-          {currentPopupIndex === 2 && <ItpPopup onClose={handlePopupClose} />}
         </>
       )}
     </div>

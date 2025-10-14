@@ -48,7 +48,6 @@ const Partners = () => {
     { id: 10, name: "한국장애인고용공단인천지사", logoUrl: "/assets/partner-logo-10.png", width: 448, height: 61 },
     { id: 11, name: "(사)인천산업진흥협의", logoUrl: "/assets/partner-logo-11.png", width: 361, height: 53 },
     { id: 12, name: "소래포구전통어시장", logoUrl: "/assets/partner-logo-12.png", width: 318, height: 33 },
-    { id: 20, name: "ITP 인천테크노파크", logoUrl: "/assets/itp_로고 1.png", width: 183, height: 22 },
     { id: 13, name: "신한은행", logoUrl: "/assets/partner-logo-13.png", width: 207, height: 63 },
     { id: 14, name: "민천일보", logoUrl: "/assets/partner-logo-14.png", width: 108, height: 78 },
     { id: 15, name: "한국공학대학교", logoUrl: "/assets/partner-logo-15.png", width: 263, height: 61 },
@@ -60,9 +59,9 @@ const Partners = () => {
 
   const partnersRow1 = allPartners.slice(0, 5);
   const partnersRow2 = allPartners.slice(5, 9);
-  const partnersRow3 = allPartners.slice(9, 13);  // ITP 인천테크노파크까지
-  const partnersRow4 = allPartners.slice(13, 18);  // 신한은행 ~ 한중경제문화교류중심
-  const partnersRow5 = allPartners.slice(18, 20);  // 에코환경, Bike
+  const partnersRow3 = allPartners.slice(9, 13);  // 신한은행까지
+  const partnersRow4 = allPartners.slice(13, 17);
+  const partnersRow5 = allPartners.slice(17, 19);
 
   return (
     <section className="relative py-12 md:py-24 bg-[#2c2c2d]" ref={ref}>
@@ -180,7 +179,7 @@ const Partners = () => {
             ))}
           </motion.div>
 
-          {/* Row 3 - 4 items (ITP까지) */}
+          {/* Row 3 - 4 items (신한은행까지) */}
           <motion.div
             className="flex justify-between items-center"
             variants={containerVariants}
@@ -198,14 +197,17 @@ const Partners = () => {
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    className="md:max-h-[50px] w-auto object-contain"
+                    className={`w-auto object-contain ${
+                      partner.id === 13 ? 'md:max-h-[38px]' : // 신한은행 크기 더 줄임
+                      'md:max-h-[50px]'
+                    }`}
                   />
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Row 4 - 5 items (신한은행 ~ 한중경제문화교류중심) */}
+          {/* Row 4 - 4 items */}
           <motion.div
             className="flex justify-between items-center"
             variants={containerVariants}
@@ -224,7 +226,6 @@ const Partners = () => {
                     src={partner.logoUrl}
                     alt={partner.name}
                     className={`w-auto object-contain ${
-                      partner.id === 13 ? 'md:max-h-[38px]' : // 신한은행 크기 더 줄임
                       partner.id === 14 ? 'md:max-h-[58px]' : // 민천일보 크기 더 크게 (세로로 긴 로고)
                       'md:max-h-[45px]'
                     }`}
