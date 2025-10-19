@@ -83,10 +83,10 @@ export default function GuidePage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-3xl md:text-5xl font-black text-white">
+            <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-3xl md:text-5xl font-black text-white">
               현장안내
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function GuidePage() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
+            <h2 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               오시는 길
             </h2>
           </div>
@@ -122,12 +122,12 @@ export default function GuidePage() {
 
             <div className="flex flex-col md:flex-row justify-between items-start gap-4">
               <div>
-                <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-lg md:text-xl text-[#2c2c2d]">
+                <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-lg md:text-xl text-[#2c2c2d]">
                   <span className="font-black">소재지:</span> 인천 남동구 논현동 775, 소래포구 해오름 광장
                 </p>
               </div>
               <div>
-                <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-lg md:text-xl text-[#2c2c2d]">
+                <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-lg md:text-xl text-[#2c2c2d]">
                   <span className="font-black">지하철:</span> 수인분당선 소래포구역 1번출구: 도보 8분
                 </p>
               </div>
@@ -141,13 +141,13 @@ export default function GuidePage() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-12">
             <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
+            <h2 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               주차장 안내
             </h2>
           </div>
 
           <div className="text-center mb-16">
-            <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] leading-relaxed">
+            <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] leading-relaxed">
               산단툴페스타 행사는 야외에서 진행되기에 행사장 내 주차장이 없습니다.<br />
               <span className="font-black">행사장 주변 공용주차장</span> 또는 <span className="font-black">소래포구역 공용주차장을</span> 이용해주시기 바랍니다.
             </p>
@@ -166,10 +166,10 @@ export default function GuidePage() {
                   title="소래 제1 공영 주차장"
                 ></iframe>
               </div>
-              <h3 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+              <h3 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                 소래 제1 공영 주차장
               </h3>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
+              <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
                 <span className="font-black">소재지:</span> 인천 남동구 논현동 754-4
               </p>
             </div>
@@ -186,10 +186,10 @@ export default function GuidePage() {
                   title="소래 제2공영 주차장"
                 ></iframe>
               </div>
-              <h3 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+              <h3 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                 소래 제2공영 주차장
               </h3>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
+              <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d]">
                 <span className="font-black">소재지:</span> 인천 남동구 논현동 750-2
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function GuidePage() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-12">
             <img src={imgLocationIcon} alt="" className="w-9 h-9 mt-1" />
-            <h2 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
+            <h2 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               부스 배치도
             </h2>
           </div>
@@ -264,11 +264,11 @@ export default function GuidePage() {
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-[#DC663B] rounded-full"></div>
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                <h4 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                   A ZONE
                 </h4>
               </div>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+              <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
                 24개소
               </p>
             </div>
@@ -276,11 +276,11 @@ export default function GuidePage() {
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-[#F3A54E] rounded-full"></div>
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                <h4 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                   B ZONE
                 </h4>
               </div>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+              <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
                 150개소
               </p>
             </div>
@@ -288,11 +288,11 @@ export default function GuidePage() {
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-[#2174A8] rounded-full"></div>
-                <h4 style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
+                <h4 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-xl md:text-2xl font-black text-[#2c2c2d]">
                   C ZONE
                 </h4>
               </div>
-              <p style={{ fontFamily: "Wanted Sans, WantedGothic, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
+              <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-base md:text-lg text-[#2c2c2d] text-right mt-1">
                 180개소
               </p>
             </div>

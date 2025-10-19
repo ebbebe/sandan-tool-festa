@@ -84,7 +84,7 @@ const Partners = () => {
             />
             <h2 className="text-3xl md:text-[40px] font-black text-white leading-none"
                 style={{
-                  fontFamily: "WantedGothic, Wanted Sans, sans-serif",
+                  fontFamily: "NanumSquare, sans-serif",
                   textShadow: "rgba(0,0,0,0.25) 3px 2px 4px"
                 }}>
               후원
@@ -92,7 +92,7 @@ const Partners = () => {
           </div>
           <p className="text-base md:text-[20px] text-white/90 mb-8"
              style={{
-               fontFamily: "Wanted Sans, Pretendard, sans-serif",
+               fontFamily: "NanumSquare, sans-serif",
                fontWeight: 500,
                textShadow: "rgba(0,0,0,0.25) 3px 2px 4px"
              }}>

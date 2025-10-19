@@ -36,7 +36,7 @@ const Footer = () => {
                   key={link.name}
                   href={link.href}
                   className="text-white text-sm md:text-[15px] font-bold hover:text-[#388d71] transition-colors"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   {link.name}
                 </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
                 <Link
                   href={link.href}
                   className="text-white text-xs md:text-[15px] font-bold hover:text-gray-300 transition-colors"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   {link.name}
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="pb-10">
           <div className="space-y-2">
             {/* Company Details - First Line */}
-            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-0 text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
               <span>대표자 : (주)산업인</span>
               <span className="hidden md:inline text-gray-600 mx-3">|</span>
               <span>대표전화 : 032.881.0427</span>
@@ -78,18 +78,18 @@ const Footer = () => {
             </div>
 
             {/* Contact Email */}
-            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
               참가문의 : backspace7@naver.com
             </div>
 
             {/* Address */}
-            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <div className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
               본사 : 서울시 중구 서소문로 116 유원빌딩 1607호 / 인천시 연수구 비류대로 294번길 32-5,(201)
             </div>
 
             {/* Copyright */}
             <div className="pt-6">
-              <p className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+              <p className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                 © 2025 산단툴페스타 조직위원회 All rights reserved
               </p>
             </div>

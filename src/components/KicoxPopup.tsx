@@ -67,12 +67,12 @@ const KicoxPopup = ({ onClose }: KicoxPopupProps) => {
           {/* Content Section */}
           <div className="relative bg-[rgba(25,25,25,0.75)] p-8 md:p-10 text-white text-center">
             {/* Title */}
-            <h1 className="text-2xl md:text-3xl font-black mb-4" style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}>
+            <h1 className="text-2xl md:text-3xl font-black mb-4" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
               한국산업단지공단
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base md:text-lg font-medium" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+            <p className="text-base md:text-lg font-medium" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
               산업혁신과 지역경제를 이끄는 힘
             </p>
           </div>
@@ -83,14 +83,14 @@ const KicoxPopup = ({ onClose }: KicoxPopupProps) => {
               <button
                 onClick={handleHideToday}
                 className="flex-[4] bg-transparent hover:bg-white/5 text-white border border-white/30 py-4 px-6 text-sm md:text-base font-semibold transition-colors"
-                style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}
+                style={{ fontFamily: 'NanumSquare, sans-serif' }}
               >
                 오늘 하루 그만보기
               </button>
               <button
                 onClick={handleViewMore}
                 className="flex-[6] bg-[rgba(56,141,113,0.75)] hover:bg-[rgba(45,122,96,0.75)] text-white py-4 px-6 text-sm md:text-base font-semibold transition-colors"
-                style={{ fontFamily: 'WantedGothic, Wanted Sans, sans-serif' }}
+                style={{ fontFamily: 'NanumSquare, sans-serif' }}
               >
                 링크 바로가기
               </button>

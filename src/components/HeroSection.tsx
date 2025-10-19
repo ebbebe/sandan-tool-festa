@@ -58,7 +58,7 @@ const HeroSection = () => {
           }}
         >
           <h2 className="text-white text-2xl md:text-4xl lg:text-[45px] font-black leading-tight"
-              style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+              style={{ fontFamily: "NanumSquare, sans-serif" }}>
             2025 산단툴페스타 인천
           </h2>
         </motion.div>

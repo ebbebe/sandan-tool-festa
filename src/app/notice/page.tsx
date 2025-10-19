@@ -79,7 +79,7 @@ function NoticeList() {
         <Link
           href="/notice/write"
           className="inline-flex items-center px-6 py-2.5 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors"
-          style={{ fontFamily: 'Pretendard, sans-serif' }}
+          style={{ fontFamily: 'NanumSquare, sans-serif' }}
         >
           글쓰기
         </Link>
@@ -108,7 +108,7 @@ function NoticeList() {
                     <span className="text-[#388d71] font-bold text-lg md:text-xl">
                       {totalCount - ((currentPage - 1) * ITEMS_PER_PAGE) - index}
                     </span>
-                    <h3 style={{ fontFamily: 'Pretendard, sans-serif' }} className="text-base md:text-lg font-medium text-[#363636]">
+                    <h3 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base md:text-lg font-medium text-[#363636]">
                       {notice.title}
                     </h3>
                   </div>
@@ -219,10 +219,10 @@ export default function NoticePage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               공지사항
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function NoticePage() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgNoticeIcon} alt="" className="w-9 h-9 mt-1" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
+            <h2 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               공지사항
             </h2>
           </div>

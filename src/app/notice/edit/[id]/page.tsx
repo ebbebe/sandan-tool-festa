@@ -130,10 +130,10 @@ export default function NoticeEditPage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               공지사항
             </p>
           </div>
@@ -151,7 +151,7 @@ export default function NoticeEditPage() {
           {/* Section Title */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <img src={imgNoticeIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <h2 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
               공지사항 수정
             </h2>
           </div>
@@ -164,7 +164,7 @@ export default function NoticeEditPage() {
                   <label
                     htmlFor="password"
                     className="block mb-2 text-sm font-bold text-gray-700"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   >
                     패스워드
                   </label>
@@ -175,7 +175,7 @@ export default function NoticeEditPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#388d71] text-gray-900"
                     placeholder="패스워드를 입력하세요"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                     required
                   />
                 </div>
@@ -183,14 +183,14 @@ export default function NoticeEditPage() {
                   <Link
                     href={`/notice/${params.id}`}
                     className="px-6 py-3 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-600 transition-colors"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   >
                     취소
                   </Link>
                   <button
                     type="submit"
                     className="px-6 py-3 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   >
                     확인
                   </button>
@@ -204,7 +204,7 @@ export default function NoticeEditPage() {
                 <label
                   htmlFor="title"
                   className="block mb-2 text-sm font-bold text-gray-700"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   제목
                 </label>
@@ -215,7 +215,7 @@ export default function NoticeEditPage() {
                   onChange={(e) => setTitle(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#388d71] text-gray-900"
                   placeholder="제목을 입력하세요"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   required
                   disabled={saving}
                 />
@@ -225,7 +225,7 @@ export default function NoticeEditPage() {
                 <label
                   htmlFor="content"
                   className="block mb-2 text-sm font-bold text-gray-700"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   내용
                 </label>
@@ -235,11 +235,11 @@ export default function NoticeEditPage() {
                   onChange={(e) => setContent(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#388d71] min-h-[400px] text-gray-900"
                   placeholder="내용을 입력하세요 (HTML 태그 사용 가능)"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   required
                   disabled={saving}
                 />
-                <p className="mt-2 text-sm text-gray-500" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                <p className="mt-2 text-sm text-gray-500" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                   * HTML 태그를 사용하여 서식을 지정할 수 있습니다. (예: &lt;h3&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;table&gt; 등)
                 </p>
               </div>
@@ -248,7 +248,7 @@ export default function NoticeEditPage() {
                 <Link
                   href={`/notice/${params.id}`}
                   className="px-8 py-3 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-600 transition-colors"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   취소
                 </Link>
@@ -256,7 +256,7 @@ export default function NoticeEditPage() {
                   type="submit"
                   disabled={saving || showSuccess}
                   className="px-8 py-3 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   {saving ? '수정 중...' : '수정'}
                 </button>
@@ -273,7 +273,7 @@ export default function NoticeEditPage() {
             <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span style={{ fontFamily: 'Pretendard, sans-serif' }}>{error}</span>
+            <span style={{ fontFamily: 'NanumSquare, sans-serif' }}>{error}</span>
           </div>
         </div>
       )}
@@ -284,7 +284,7 @@ export default function NoticeEditPage() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span style={{ fontFamily: 'Pretendard, sans-serif' }}>공지사항이 수정되었습니다.</span>
+            <span style={{ fontFamily: 'NanumSquare, sans-serif' }}>공지사항이 수정되었습니다.</span>
           </div>
         </div>
       )}

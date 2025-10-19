@@ -219,10 +219,10 @@ export default function NoticeDetailPage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.8)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               공지사항
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function NoticeDetailPage() {
           {/* Section Title */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <img src={imgNoticeIcon} alt="" className="w-9 h-9" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
+            <h2 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636]">
               공지사항
             </h2>
           </div>
@@ -249,15 +249,15 @@ export default function NoticeDetailPage() {
           <div className="bg-white rounded-lg">
             {/* Notice Header */}
             <div className="border-b-4 border-[#2c2c2d] pb-4 mb-8">
-              <h3 style={{ fontFamily: 'Pretendard, sans-serif' }} className="text-xl md:text-2xl font-bold text-[#2c2c2d] mb-4">
+              <h3 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-xl md:text-2xl font-bold text-[#2c2c2d] mb-4">
                 {notice.title}
               </h3>
               <div className="flex items-center justify-between text-sm md:text-base text-gray-600">
                 <div className="flex items-center gap-6">
-                  <span style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                  <span style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                     작성일: {formatDate(notice.created_at)}
                   </span>
-                  <span style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                  <span style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                     조회수: {notice.views.toLocaleString()}
                   </span>
                 </div>
@@ -265,7 +265,7 @@ export default function NoticeDetailPage() {
                   <Link
                     href={`/notice/edit/${notice.id}`}
                     className="px-3 py-1 bg-gray-500 text-white text-sm rounded hover:bg-gray-600 transition-colors"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   >
                     수정
                   </Link>
@@ -273,7 +273,7 @@ export default function NoticeDetailPage() {
                     ref={deleteButtonRef}
                     onClick={handleDeleteClick}
                     className="px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600 transition-colors"
-                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                    style={{ fontFamily: 'NanumSquare, sans-serif' }}
                   >
                     삭제
                   </button>
@@ -282,7 +282,7 @@ export default function NoticeDetailPage() {
                   {showPasswordPopover && (
                     <div className="popover-container absolute top-full right-0 mt-2 z-50">
                       <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 w-72">
-                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                           패스워드 확인
                         </h4>
                         <form onSubmit={handlePasswordSubmit}>
@@ -292,12 +292,12 @@ export default function NoticeDetailPage() {
                             onChange={(e) => setPassword(e.target.value)}
                             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#388d71] text-gray-900 text-sm mb-2"
                             placeholder="패스워드를 입력하세요"
-                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            style={{ fontFamily: 'NanumSquare, sans-serif' }}
                             autoFocus
                             required
                           />
                           {deleteError && (
-                            <p className="text-red-500 text-xs mb-2" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                            <p className="text-red-500 text-xs mb-2" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                               {deleteError}
                             </p>
                           )}
@@ -310,14 +310,14 @@ export default function NoticeDetailPage() {
                                 setDeleteError('')
                               }}
                               className="px-3 py-1.5 text-sm bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors"
-                              style={{ fontFamily: 'Pretendard, sans-serif' }}
+                              style={{ fontFamily: 'NanumSquare, sans-serif' }}
                             >
                               취소
                             </button>
                             <button
                               type="submit"
                               className="px-3 py-1.5 text-sm bg-[#388d71] text-white rounded hover:bg-[#2a6f5a] transition-colors"
-                              style={{ fontFamily: 'Pretendard, sans-serif' }}
+                              style={{ fontFamily: 'NanumSquare, sans-serif' }}
                             >
                               확인
                             </button>
@@ -331,16 +331,16 @@ export default function NoticeDetailPage() {
                   {showConfirmPopover && (
                     <div className="popover-container absolute top-full right-0 mt-2 z-50">
                       <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 w-80">
-                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                        <h4 className="text-sm font-bold mb-3" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                           삭제 확인
                         </h4>
-                        <p className="text-sm text-gray-700 mb-4" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                        <p className="text-sm text-gray-700 mb-4" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                           정말로 이 공지사항을 삭제하시겠습니까?
                           <br />
                           삭제된 내용은 복구할 수 없습니다.
                         </p>
                         {deleteError && (
-                          <p className="text-red-500 text-xs mb-3" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+                          <p className="text-red-500 text-xs mb-3" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
                             {deleteError}
                           </p>
                         )}
@@ -352,7 +352,7 @@ export default function NoticeDetailPage() {
                             }}
                             disabled={isDeleting}
                             className="px-3 py-1.5 text-sm bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors disabled:opacity-50"
-                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            style={{ fontFamily: 'NanumSquare, sans-serif' }}
                           >
                             취소
                           </button>
@@ -360,7 +360,7 @@ export default function NoticeDetailPage() {
                             onClick={handleDeleteConfirm}
                             disabled={isDeleting}
                             className="px-3 py-1.5 text-sm bg-red-500 text-white rounded hover:bg-red-600 transition-colors disabled:opacity-50"
-                            style={{ fontFamily: 'Pretendard, sans-serif' }}
+                            style={{ fontFamily: 'NanumSquare, sans-serif' }}
                           >
                             {isDeleting ? '삭제 중...' : '삭제'}
                           </button>
@@ -375,7 +375,7 @@ export default function NoticeDetailPage() {
             {/* Notice Body */}
             <div
               className="prose max-w-none mb-12 text-[#2c2c2d]"
-              style={{ fontFamily: 'Pretendard, sans-serif' }}
+              style={{ fontFamily: 'NanumSquare, sans-serif' }}
               dangerouslySetInnerHTML={{ __html: notice.content }}
             />
 
@@ -387,7 +387,7 @@ export default function NoticeDetailPage() {
                   <Link href={`/notice/${nextNotice.id}`} className="flex items-center justify-between p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors">
                     <div className="flex items-center gap-4">
                       <span className="text-gray-500">다음글 ▲</span>
-                      <span style={{ fontFamily: 'Pretendard, sans-serif' }} className="text-[#2c2c2d] font-medium">
+                      <span style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-[#2c2c2d] font-medium">
                         {nextNotice.title}
                       </span>
                     </div>
@@ -398,7 +398,7 @@ export default function NoticeDetailPage() {
                   <Link href={`/notice/${prevNotice.id}`} className="flex items-center justify-between p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors">
                     <div className="flex items-center gap-4">
                       <span className="text-gray-500">이전글 ▼</span>
-                      <span style={{ fontFamily: 'Pretendard, sans-serif' }} className="text-[#2c2c2d] font-medium">
+                      <span style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-[#2c2c2d] font-medium">
                         {prevNotice.title}
                       </span>
                     </div>
@@ -412,7 +412,7 @@ export default function NoticeDetailPage() {
                 <Link
                   href="/notice"
                   className="inline-flex items-center px-8 py-3 bg-[#388d71] text-white font-bold rounded-lg hover:bg-[#2a6f5a] transition-colors"
-                  style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  style={{ fontFamily: 'NanumSquare, sans-serif' }}
                 >
                   목록으로
                 </Link>

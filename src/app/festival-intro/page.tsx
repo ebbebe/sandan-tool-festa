@@ -63,10 +63,10 @@ export default function FestivalIntroPage() {
         <div className="absolute inset-0 bg-[rgba(44,44,45,0.9)]" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
               2025 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               행사 소개
             </p>
           </div>
@@ -83,13 +83,13 @@ export default function FestivalIntroPage() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgWhatIs} alt="" className="w-9 h-9 mt-1" />
-            <h2 style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
+            <h2 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-2xl md:text-[34px] font-black text-[#363636] leading-none">
               산단툴페스타 란?
             </h2>
           </div>
 
           <div className="text-center mb-20 px-4">
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#363636] mb-8">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#363636] mb-8">
               <span className="font-black">『산단툴페스타_인천』</span>
               <span className="font-medium">은 한국산업단지공단 인천지역에</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
@@ -109,7 +109,7 @@ export default function FestivalIntroPage() {
           </div>
 
           <div className="text-center mb-20 px-4">
-            <p style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#2c2c2d]">
+            <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#2c2c2d]">
               시민이 직접 만나 교류하는 이 행사는<br />
               <span className="font-bold">산업계</span>와 <span className="font-bold">시민</span> 모두에게 <span className="font-bold">실질적 도움과 경험을 제공</span>
             </p>
@@ -125,7 +125,7 @@ export default function FestivalIntroPage() {
           </div>
 
           <div className="text-center">
-            <div style={{ fontFamily: 'Wanted Sans, WantedGothic, sans-serif' }} className="space-y-2 text-lg md:text-[25px] text-[#2c2c2d] inline-block text-left">
+            <div style={{ fontFamily: 'NanumSquare, sans-serif' }} className="space-y-2 text-lg md:text-[25px] text-[#2c2c2d] inline-block text-left">
               <p className="font-medium">
                 <span className="font-bold">'기술'</span>이 시민과 만나는 산업문화의 대중화
               </p>
@@ -162,7 +162,7 @@ export default function FestivalIntroPage() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <img src={imgToolfesta} alt="" className="w-[41px] h-[41px] mt-1" />
             <h2 style={{
-              fontFamily: 'Wanted Sans, WantedGothic, sans-serif',
+              fontFamily: 'NanumSquare, sans-serif',
               textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px'
             }} className="text-3xl md:text-[40px] font-black text-white leading-none">
               후원
@@ -170,7 +170,7 @@ export default function FestivalIntroPage() {
           </div>
           <p className="text-center text-base md:text-[20px] text-white/90 mb-12"
              style={{
-               fontFamily: 'Wanted Sans, Pretendard, sans-serif',
+               fontFamily: 'NanumSquare, sans-serif',
                fontWeight: 500,
                textShadow: 'rgba(0,0,0,0.25) 3px 2px 4px'
              }}>

@@ -34,7 +34,7 @@ const EventInfo = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-8 md:mb-12"
-                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                style={{ fontFamily: "NanumSquare, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
               <span>_인천</span>
@@ -79,7 +79,7 @@ const EventInfo = () => {
                 />
                 <div className="text-white">
                   <p className="text-lg md:text-3xl lg:text-[34px] font-black flex flex-wrap items-center leading-none"
-                     style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                     style={{ fontFamily: "NanumSquare, sans-serif" }}>
                     <span>기간: 2025년 11월 15일</span>
                     <span className="inline-flex items-center align-middle mx-1 md:mx-2">
                       <span className="inline-flex items-center justify-center w-8 h-8 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center"
@@ -99,7 +99,7 @@ const EventInfo = () => {
                 </div>
               </div>
               <p className="md:hidden text-base font-black text-center text-white mt-2"
-                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                 style={{ fontFamily: "NanumSquare, sans-serif" }}>
                 시간: 09:00 ~ 18:00
               </p>
             </div>
@@ -113,7 +113,7 @@ const EventInfo = () => {
                   className="w-7 md:w-9 h-7 md:h-9 min-w-[28px] md:min-w-[36px] mr-3 md:mr-6 mt-0.5"
                 />
                 <p className="text-lg md:text-3xl lg:text-[34px] font-black leading-none text-white"
-                 style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                 style={{ fontFamily: "NanumSquare, sans-serif" }}>
                 장소: 소래포구 해오름 광장
                 </p>
               </div>
@@ -134,7 +134,7 @@ const EventInfo = () => {
                 whileTap={{ scale: 0.99 }}
                 transition={{ duration: 0.15 }}
               >
-                <span style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>행사장 안내</span>
+                <span style={{ fontFamily: "NanumSquare, sans-serif" }}>행사장 안내</span>
               </motion.a>
             </div>
           </motion.div>

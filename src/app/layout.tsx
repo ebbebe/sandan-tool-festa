@@ -41,18 +41,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-        />
-        <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/npm/wantedgothic@1.0.3/css/wantedgothic.css"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

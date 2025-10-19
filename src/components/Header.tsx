@@ -59,7 +59,7 @@ const Header = () => {
                     <Link
                       href={item.href}
                       className="text-white text-lg font-bold hover:text-[#388d71] transition-colors relative group"
-                      style={{ fontFamily: 'Pretendard, sans-serif' }}
+                      style={{ fontFamily: 'NanumSquare, sans-serif' }}
                     >
                       {item.name}
                       <span
@@ -152,7 +152,7 @@ const Header = () => {
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
               className="block px-6 py-5 text-lg text-white hover:bg-[#388d71]/20 transition-colors border-b border-gray-700/50"
-              style={{ fontFamily: 'Pretendard, sans-serif' }}
+              style={{ fontFamily: 'NanumSquare, sans-serif' }}
             >
               {item.name}
             </Link>

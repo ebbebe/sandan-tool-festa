@@ -80,14 +80,14 @@ const EventCards = () => {
               className="w-10 h-10 md:w-12 md:h-12 mr-4 mt-1"
             />
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-none"
-                style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                style={{ fontFamily: "NanumSquare, sans-serif" }}>
               <span>2025 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
               <span>_인천</span>
             </h2>
           </div>
           <p className="text-xl md:text-3xl lg:text-4xl text-white font-black"
-             style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+             style={{ fontFamily: "NanumSquare, sans-serif" }}>
             주요 행사 안내
           </p>
         </motion.div>
@@ -111,13 +111,13 @@ const EventCards = () => {
                 <div className="relative mr-3 flex-shrink-0">
                   <div className="relative w-6 h-6 md:w-7 md:h-7 bg-[#388d71] rounded-full flex items-center justify-center">
                     <span className="text-white font-black text-sm md:text-lg"
-                          style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                          style={{ fontFamily: "NanumSquare, sans-serif" }}>
                       {card.id}
                     </span>
                   </div>
                 </div>
                 <h3 className="text-lg md:text-2xl lg:text-[26px] font-black text-white flex-1 leading-none"
-                    style={{ fontFamily: "WantedGothic, Wanted Sans, sans-serif" }}>
+                    style={{ fontFamily: "NanumSquare, sans-serif" }}>
                   {card.title}
                 </h3>
               </div>
