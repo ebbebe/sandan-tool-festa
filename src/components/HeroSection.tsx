@@ -59,7 +59,7 @@ const HeroSection = () => {
         >
           <h2 className="text-white text-2xl md:text-4xl lg:text-[45px] font-black leading-tight"
               style={{ fontFamily: "NanumSquare, sans-serif" }}>
-            2025 산단툴페스타 인천
+            2026 산단툴페스타
           </h2>
         </motion.div>
       </div>

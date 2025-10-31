@@ -32,7 +32,7 @@ export default function ProgramPage() {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
-              2025 <span className="text-[#338e72]">산단툴페스타</span>
+              2026 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
             <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               프로그램
@@ -99,7 +99,7 @@ export default function ProgramPage() {
               </div>
               <div style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base md:text-[18px] text-[#2c2c2d] space-y-2">
                 <ul className="list-disc space-y-2 ml-6">
-                  <li>인천지역 청년 및 구직자 대상 현장 면접·채용 상담</li>
+                  <li>청년 및 구직자 대상 현장 면접·채용 상담</li>
                   <li>입주기업 인력난 해소 및 우수 인재 확보 지원</li>
                   <li>창업 준비 중인 구직자를 위한 지원 정책·멘토링 제공 청년 창업 상담 부스</li>
                 </ul>
@@ -204,8 +204,8 @@ export default function ProgramPage() {
         </div>
       </section>
 
-      {/* Schedule Section */}
-      <section className="py-16 md:py-20 bg-white">
+      {/* Schedule Section - 임시 비활성화 */}
+      {/* <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="flex items-center justify-center gap-4 mb-16">
             <img src={imgIconProgram} alt="" className="w-9 h-9 mt-1" />
@@ -214,7 +214,6 @@ export default function ProgramPage() {
             </h2>
           </div>
 
-          {/* Saturday */}
           <div className="mb-8 border border-gray-500 overflow-x-auto">
             <div className="bg-[#388d71] text-white text-center py-2 md:py-3">
               <h3 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-lg md:text-2xl font-black">
@@ -249,7 +248,6 @@ export default function ProgramPage() {
             </div>
           </div>
 
-          {/* Sunday */}
           <div className="border border-gray-500 overflow-x-auto">
             <div className="bg-[#388d71] text-white text-center py-2 md:py-3">
               <h3 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-lg md:text-2xl font-black">
@@ -272,7 +270,7 @@ export default function ProgramPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

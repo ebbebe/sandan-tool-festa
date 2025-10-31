@@ -64,7 +64,7 @@ export default function FestivalIntroPage() {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white mb-4">
-              2025 <span className="text-[#338e72]">산단툴페스타</span>
+              2026 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
             <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-3xl md:text-5xl font-black text-white">
               행사 소개
@@ -90,7 +90,7 @@ export default function FestivalIntroPage() {
 
           <div className="text-center mb-20 px-4">
             <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#363636] mb-8">
-              <span className="font-black">『산단툴페스타_인천』</span>
+              <span className="font-black">『산단툴페스타』</span>
               <span className="font-medium">은 한국산업단지공단 인천지역에</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">입주한 기업들이 중심이 되어, 최신 산업기술과 제품을 전시·홍보하고,</span>

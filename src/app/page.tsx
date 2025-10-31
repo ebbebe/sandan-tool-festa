@@ -39,21 +39,20 @@ export default function Home() {
       </main>
       <Footer />
 
-      {/* 데스크톱: 모든 팝업 표시 */}
-      {!isMobile && (
+      {/* 팝업 비활성화 */}
+      {/* {!isMobile && (
         <>
           <SeminarPopup />
           <KicoxPopup />
         </>
       )}
 
-      {/* 모바일: 순차적으로 하나씩 표시 */}
       {isMobile && (
         <>
           {currentPopupIndex === 0 && <SeminarPopup onClose={handlePopupClose} />}
           {currentPopupIndex === 1 && <KicoxPopup onClose={handlePopupClose} />}
         </>
-      )}
+      )} */}
     </div>
   );
 }

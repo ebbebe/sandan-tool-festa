@@ -84,7 +84,7 @@ export default function GuidePage() {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-3xl md:text-5xl font-black text-white mb-4">
-              2025 <span className="text-[#338e72]">산단툴페스타</span>
+              2026 <span className="text-[#338e72]">산단툴페스타</span>
             </h1>
             <p style={{ fontFamily: "NanumSquare, sans-serif" }} className="text-3xl md:text-5xl font-black text-white">
               현장안내
