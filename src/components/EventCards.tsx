@@ -81,9 +81,8 @@ const EventCards = () => {
             />
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-none"
                 style={{ fontFamily: "NanumSquare, sans-serif" }}>
-              <span>2025 </span>
+              <span>2026 </span>
               <span className="text-[#388d71]">산단 툴페스타</span>
-              <span>_인천</span>
             </h2>
           </div>
           <p className="text-xl md:text-3xl lg:text-4xl text-white font-black"
