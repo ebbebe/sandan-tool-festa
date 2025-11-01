@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "2025 산단툴페스타 인천 | INDUSTRIAL COMPLEX TOOLFESTA",
-  description: "2025년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천. 산업용 제품·부품·소재·공구 전시 및 채용 박람회",
+  title: "2026 산단툴페스타 인천 | INDUSTRIAL COMPLEX TOOLFESTA",
+  description: "2026년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천. 산업용 제품·부품·소재·공구 전시 및 채용 박람회",
   keywords: "산단툴페스타, 인천, 산업박람회, 공구전시회, 채용박람회",
   verification: {
     google: "FTYPh0ZGWso4MFlypJy3-JiTTTFEig5zy4mDJos-J4Q",
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "2025 산단툴페스타 인천",
-    description: "2025년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천",
+    title: "2026 산단툴페스타 인천",
+    description: "2026년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천",
     images: [
       {
         url: "/assets/meta.png",
         width: 1200,
         height: 630,
-        alt: "2025 산단툴페스타 인천",
+        alt: "2026 산단툴페스타 인천",
       },
     ],
     locale: "ko_KR",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "2025 산단툴페스타 인천",
-    description: "2025년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천",
+    title: "2026 산단툴페스타 인천",
+    description: "2026년 11월 15일-16일, 소래포구 해오름 광장에서 개최되는 산업단지 툴페스타 인천",
     images: ["/assets/meta.png"],
   },
 };
@@ -47,7 +47,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              "name": "2025 산단툴페스타 인천",
+              "name": "2026 산단툴페스타 인천",
               "description": "산업용 제품·부품·소재·공구 전시 및 채용 박람회",
               "startDate": "2025-11-15T10:00:00+09:00",
               "endDate": "2025-11-16T18:00:00+09:00",

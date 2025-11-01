@@ -90,7 +90,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="pt-6">
               <p className="text-xs md:text-[15px] text-[#999999]" style={{ fontFamily: 'NanumSquare, sans-serif' }}>
-                © 2025 산단툴페스타 조직위원회 All rights reserved
+                © 2026 산단툴페스타 조직위원회 All rights reserved
               </p>
             </div>
           </div>
