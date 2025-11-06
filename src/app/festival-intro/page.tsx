@@ -91,14 +91,14 @@ export default function FestivalIntroPage() {
           <div className="text-center mb-20 px-4">
             <p style={{ fontFamily: 'NanumSquare, sans-serif' }} className="text-base sm:text-lg md:text-[25px] leading-relaxed text-[#363636] mb-8">
               <span className="font-black">『산단툴페스타』</span>
-              <span className="font-medium">은 한국산업단지공단 인천지역에</span>
+              <span className="font-medium">은 한국산업단지공단 지역에</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">입주한 기업들이 중심이 되어, 최신 산업기술과 제품을 전시·홍보하고,</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">산업현장에 필요한 공구·자재·시스템을 제조·유통하는</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">기업들과의 실질적 협업을 강화하는 산업 교류형 페스티벌입니다.</span><br /><br />
-              <span className="font-medium">특히, 인천지역 산업단지 입주기업에게 직접적이고 실질적인 가치를 제공</span>
+              <span className="font-medium">특히, 지역 산업단지 입주기업에게 직접적이고 실질적인 가치를 제공</span>
               <span className="hidden sm:inline"><br /></span><span className="inline sm:hidden"> </span>
               <span className="font-medium">하는 것을 최우선 목표로 하고 있습니다.</span>
             </p>
